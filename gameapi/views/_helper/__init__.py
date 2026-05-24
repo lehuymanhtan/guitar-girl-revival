@@ -9,7 +9,7 @@ from django.http import HttpRequest, HttpResponse
 from thrift.protocol import TBinaryProtocol
 from thrift.transport import TTransport
 
-from general import ttypes as generalTypes
+import thrift_gen.tapsonic.common.ttypes as common_type
 
 DOTNET_EPOCH = datetime(1, 1, 1)
 
@@ -49,10 +49,10 @@ def datetime_to_unix_msec(dt) -> int:
     return int(dt.timestamp() * 1000)
 
 
-def auto_response_time() -> generalTypes.ResponseTime:
-    return generalTypes.ResponseTime(
-        unix_time=int(time.time()),
-        local_time=int(time.strftime("%Y%m%d%H%M%S", time.localtime())),
+def auto_response_time() -> common_type.serverTimeRet:
+    return common_type.serverTimeRet(
+        time=int(time.time()),
+        datetime=int(time.strftime("%Y%m%d%H%M%S", time.localtime())),
     )
 
 

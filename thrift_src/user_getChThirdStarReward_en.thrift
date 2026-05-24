@@ -1,0 +1,49 @@
+// Auto-generated from IL2CPP dump + Burp capture
+// Endpoint: /user/getChThirdStarReward/en/
+
+namespace py tapsonic.user_getChThirdStarReward_en
+
+include "common.thrift"
+
+struct getChThirdStarRewardDataInfo {
+    1: optional i32 u_seq,
+    2: optional string u_id,
+    3: optional string uuid,
+    4: optional string device_uuid,
+    5: optional i32 i_id,
+    6: optional i32 reward_num,
+}
+
+struct getChThirdStarReward {
+    1: optional string call,
+    2: optional getChThirdStarRewardDataInfo data,
+    3: optional common.paramData common_data,
+}
+
+struct UserApData {
+    1: optional i32 i_Ap,
+    2: optional i32 i_FullApTime,
+    3: optional i32 i_MaxAp,
+}
+
+struct retReward {
+    1: optional i16 reward_type,
+    2: optional i32 reward_id,
+    3: optional i64 reward_value,
+}
+
+struct getChThirdStarRewardRetDataInfo {
+    1: optional i32 i_id,
+    2: optional i32 reward_num,
+    3: optional UserApData user_ap,
+    4: optional list<retReward> reward_data,
+}
+
+struct getChThirdStarRewardReturn {
+    1: optional common.errorRetCode error,
+    2: optional common.serverTimeRet server_time,
+    3: optional string mode,
+    4: optional string call,
+    5: optional getChThirdStarRewardRetDataInfo data,
+    6: optional common.maintenanceData maintenance,
+}

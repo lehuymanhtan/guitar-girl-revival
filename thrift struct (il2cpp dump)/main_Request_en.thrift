@@ -3,6 +3,8 @@
 
 namespace py tapsonic
 
+// ── Request ──────────────────────────────────────────────────────────────────
+
 struct initDataInfo {
     1: optional string type,
     2: optional i16 os,
@@ -22,6 +24,8 @@ struct Request {
     3: optional paramData common_data,
 }
 
+// ── Response ─────────────────────────────────────────────────────────────────
+
 struct errorRetCode {
     1: optional i32 code,
     2: optional string errmsg,
@@ -32,8 +36,12 @@ struct serverTimeRet {
     2: optional i64 datetime,
 }
 
-struct buyCheckRetDataInfo {
-    1: optional string result,
+// Field 5 of initReturn — verified from decoded response:
+//   {1: I16 (253), 2: STRING (game_url), 3: STRING (cdn_url)}
+struct initRetDataInfo {
+    1: optional i16 idx,
+    2: optional string game_url,
+    3: optional string cdn_url,
 }
 
 struct maintenanceData {
@@ -46,11 +54,18 @@ struct maintenanceData {
     7: optional string end_datetime,
 }
 
-struct buyCheckReturn {
+// Decoded response structure (6 fields):
+//   1: errorRetCode   {code=0, errmsg=''}
+//   2: serverTimeRet  {time=1768405976, datetime=20260115005256}
+//   3: string         'main'
+//   4: string         'init'
+//   5: initRetDataInfo {idx=253, game_url='https://game.gtgl.pmang.cloud', cdn_url='https://dl.gtgl.pmang.cloud'}
+//   6: maintenanceData {}
+struct initReturn {
     1: optional errorRetCode error,
     2: optional serverTimeRet server_time,
     3: optional string mode,
     4: optional string call,
-    5: optional buyCheckRetDataInfo data,
+    5: optional initRetDataInfo data,
     6: optional maintenanceData maintenance,
 }
