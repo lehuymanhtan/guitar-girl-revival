@@ -8,15 +8,15 @@ from .. import _helper as helper
 @helper.wrapper_helper
 def getServerTime(request):
     data = main_getServerTime_en.getServerTimeReturn(
-        header=common_type.errorRetCode(code=0, message=""),
-        responseTime=helper.auto_response_time(),
-        service="main",
-        method="getServerTime",
+        error=common_type.errorRetCode(code=0, errmsg=""),
+        server_time=helper.auto_response_time(),
+        mode="main",
+        call="getServerTime",
         data=main_getServerTime_en.getServerTimeRetDataInfo(
             time=int(time.time()),
             datetime=int(time.strftime("%Y%m%d%H%M%S", time.localtime()))
         ),
-        footer=common_type.maintenanceData()
+        maintenance=common_type.maintenanceData()
     )
     
     return data

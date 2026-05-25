@@ -12,7 +12,7 @@ from thrift.TRecursive import fix_spec
 from uuid import UUID
 
 import sys
-import general.ttypes
+from .. import general
 
 from thrift.transport import TTransport
 all_structs = []

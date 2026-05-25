@@ -215,9 +215,39 @@ class getEventRewardList(object):
         return not (self == other)
 
 
-class getEventRewardListRetDataInfo(object):
+class getEventRewardListData(object):
+    """
+    Attributes:
+     - idx
+     - event_name
+     - event_type
+     - reward_idx
+     - reward_num
+     - reward_type
+     - reward_id
+     - reward_value
+     - reward_flg
+     - get_date
+     - s_CustomIconType
+     - s_CustomIconSprite
+
+    """
     thrift_spec = None
 
+
+    def __init__(self, idx = None, event_name = None, event_type = None, reward_idx = None, reward_num = None, reward_type = None, reward_id = None, reward_value = None, reward_flg = None, get_date = None, s_CustomIconType = None, s_CustomIconSprite = None,):
+        self.idx = idx
+        self.event_name = event_name
+        self.event_type = event_type
+        self.reward_idx = reward_idx
+        self.reward_num = reward_num
+        self.reward_type = reward_type
+        self.reward_id = reward_id
+        self.reward_value = reward_value
+        self.reward_flg = reward_flg
+        self.get_date = get_date
+        self.s_CustomIconType = s_CustomIconType
+        self.s_CustomIconSprite = s_CustomIconSprite
 
     def read(self, iprot):
         if iprot._fast_decode is not None and isinstance(iprot.trans, TTransport.CReadableTransport) and self.thrift_spec is not None:
@@ -228,6 +258,182 @@ class getEventRewardListRetDataInfo(object):
             (fname, ftype, fid) = iprot.readFieldBegin()
             if ftype == TType.STOP:
                 break
+            if fid == 1:
+                if ftype == TType.I64:
+                    self.idx = iprot.readI64()
+                else:
+                    iprot.skip(ftype)
+            elif fid == 2:
+                if ftype == TType.STRING:
+                    self.event_name = iprot.readString().decode('utf-8', errors='replace') if sys.version_info[0] == 2 else iprot.readString()
+                else:
+                    iprot.skip(ftype)
+            elif fid == 3:
+                if ftype == TType.STRING:
+                    self.event_type = iprot.readString().decode('utf-8', errors='replace') if sys.version_info[0] == 2 else iprot.readString()
+                else:
+                    iprot.skip(ftype)
+            elif fid == 4:
+                if ftype == TType.I64:
+                    self.reward_idx = iprot.readI64()
+                else:
+                    iprot.skip(ftype)
+            elif fid == 5:
+                if ftype == TType.I32:
+                    self.reward_num = iprot.readI32()
+                else:
+                    iprot.skip(ftype)
+            elif fid == 6:
+                if ftype == TType.I32:
+                    self.reward_type = iprot.readI32()
+                else:
+                    iprot.skip(ftype)
+            elif fid == 7:
+                if ftype == TType.I32:
+                    self.reward_id = iprot.readI32()
+                else:
+                    iprot.skip(ftype)
+            elif fid == 8:
+                if ftype == TType.I32:
+                    self.reward_value = iprot.readI32()
+                else:
+                    iprot.skip(ftype)
+            elif fid == 9:
+                if ftype == TType.STRING:
+                    self.reward_flg = iprot.readString().decode('utf-8', errors='replace') if sys.version_info[0] == 2 else iprot.readString()
+                else:
+                    iprot.skip(ftype)
+            elif fid == 10:
+                if ftype == TType.I32:
+                    self.get_date = iprot.readI32()
+                else:
+                    iprot.skip(ftype)
+            elif fid == 11:
+                if ftype == TType.STRING:
+                    self.s_CustomIconType = iprot.readString().decode('utf-8', errors='replace') if sys.version_info[0] == 2 else iprot.readString()
+                else:
+                    iprot.skip(ftype)
+            elif fid == 12:
+                if ftype == TType.STRING:
+                    self.s_CustomIconSprite = iprot.readString().decode('utf-8', errors='replace') if sys.version_info[0] == 2 else iprot.readString()
+                else:
+                    iprot.skip(ftype)
+            else:
+                iprot.skip(ftype)
+            iprot.readFieldEnd()
+        iprot.readStructEnd()
+
+    def write(self, oprot):
+        self.validate()
+        if oprot._fast_encode is not None and self.thrift_spec is not None:
+            oprot.trans.write(oprot._fast_encode(self, [self.__class__, self.thrift_spec]))
+            return
+        oprot.writeStructBegin('getEventRewardListData')
+        if self.idx is not None:
+            oprot.writeFieldBegin('idx', TType.I64, 1)
+            oprot.writeI64(self.idx)
+            oprot.writeFieldEnd()
+        if self.event_name is not None:
+            oprot.writeFieldBegin('event_name', TType.STRING, 2)
+            oprot.writeString(self.event_name.encode('utf-8') if sys.version_info[0] == 2 else self.event_name)
+            oprot.writeFieldEnd()
+        if self.event_type is not None:
+            oprot.writeFieldBegin('event_type', TType.STRING, 3)
+            oprot.writeString(self.event_type.encode('utf-8') if sys.version_info[0] == 2 else self.event_type)
+            oprot.writeFieldEnd()
+        if self.reward_idx is not None:
+            oprot.writeFieldBegin('reward_idx', TType.I64, 4)
+            oprot.writeI64(self.reward_idx)
+            oprot.writeFieldEnd()
+        if self.reward_num is not None:
+            oprot.writeFieldBegin('reward_num', TType.I32, 5)
+            oprot.writeI32(self.reward_num)
+            oprot.writeFieldEnd()
+        if self.reward_type is not None:
+            oprot.writeFieldBegin('reward_type', TType.I32, 6)
+            oprot.writeI32(self.reward_type)
+            oprot.writeFieldEnd()
+        if self.reward_id is not None:
+            oprot.writeFieldBegin('reward_id', TType.I32, 7)
+            oprot.writeI32(self.reward_id)
+            oprot.writeFieldEnd()
+        if self.reward_value is not None:
+            oprot.writeFieldBegin('reward_value', TType.I32, 8)
+            oprot.writeI32(self.reward_value)
+            oprot.writeFieldEnd()
+        if self.reward_flg is not None:
+            oprot.writeFieldBegin('reward_flg', TType.STRING, 9)
+            oprot.writeString(self.reward_flg.encode('utf-8') if sys.version_info[0] == 2 else self.reward_flg)
+            oprot.writeFieldEnd()
+        if self.get_date is not None:
+            oprot.writeFieldBegin('get_date', TType.I32, 10)
+            oprot.writeI32(self.get_date)
+            oprot.writeFieldEnd()
+        if self.s_CustomIconType is not None:
+            oprot.writeFieldBegin('s_CustomIconType', TType.STRING, 11)
+            oprot.writeString(self.s_CustomIconType.encode('utf-8') if sys.version_info[0] == 2 else self.s_CustomIconType)
+            oprot.writeFieldEnd()
+        if self.s_CustomIconSprite is not None:
+            oprot.writeFieldBegin('s_CustomIconSprite', TType.STRING, 12)
+            oprot.writeString(self.s_CustomIconSprite.encode('utf-8') if sys.version_info[0] == 2 else self.s_CustomIconSprite)
+            oprot.writeFieldEnd()
+        oprot.writeFieldStop()
+        oprot.writeStructEnd()
+
+    def validate(self):
+        return
+
+    def __repr__(self):
+        L = ['%s=%r' % (key, value)
+             for key, value in self.__dict__.items()]
+        return '%s(%s)' % (self.__class__.__name__, ', '.join(L))
+
+    def __eq__(self, other):
+        return isinstance(other, self.__class__) and self.__dict__ == other.__dict__
+
+    def __ne__(self, other):
+        return not (self == other)
+
+
+class getEventRewardListRetDataInfo(object):
+    """
+    Attributes:
+     - reward_list
+     - group_idx
+
+    """
+    thrift_spec = None
+
+
+    def __init__(self, reward_list = None, group_idx = None,):
+        self.reward_list = reward_list
+        self.group_idx = group_idx
+
+    def read(self, iprot):
+        if iprot._fast_decode is not None and isinstance(iprot.trans, TTransport.CReadableTransport) and self.thrift_spec is not None:
+            iprot._fast_decode(self, iprot, [self.__class__, self.thrift_spec])
+            return
+        iprot.readStructBegin()
+        while True:
+            (fname, ftype, fid) = iprot.readFieldBegin()
+            if ftype == TType.STOP:
+                break
+            if fid == 1:
+                if ftype == TType.LIST:
+                    self.reward_list = []
+                    (_etype3, _size0) = iprot.readListBegin()
+                    for _i4 in range(_size0):
+                        _elem5 = getEventRewardListData()
+                        _elem5.read(iprot)
+                        self.reward_list.append(_elem5)
+                    iprot.readListEnd()
+                else:
+                    iprot.skip(ftype)
+            elif fid == 2:
+                if ftype == TType.I32:
+                    self.group_idx = iprot.readI32()
+                else:
+                    iprot.skip(ftype)
             else:
                 iprot.skip(ftype)
             iprot.readFieldEnd()
@@ -239,6 +445,17 @@ class getEventRewardListRetDataInfo(object):
             oprot.trans.write(oprot._fast_encode(self, [self.__class__, self.thrift_spec]))
             return
         oprot.writeStructBegin('getEventRewardListRetDataInfo')
+        if self.reward_list is not None:
+            oprot.writeFieldBegin('reward_list', TType.LIST, 1)
+            oprot.writeListBegin(TType.STRUCT, len(self.reward_list))
+            for iter6 in self.reward_list:
+                iter6.write(oprot)
+            oprot.writeListEnd()
+            oprot.writeFieldEnd()
+        if self.group_idx is not None:
+            oprot.writeFieldBegin('group_idx', TType.I32, 2)
+            oprot.writeI32(self.group_idx)
+            oprot.writeFieldEnd()
         oprot.writeFieldStop()
         oprot.writeStructEnd()
 
@@ -313,12 +530,12 @@ class getEventRewardListReturn(object):
             elif fid == 5:
                 if ftype == TType.MAP:
                     self.data = {}
-                    (_ktype1, _vtype2, _size0) = iprot.readMapBegin()
-                    for _i4 in range(_size0):
-                        _key5 = iprot.readI32()
-                        _val6 = getEventRewardListRetDataInfo()
-                        _val6.read(iprot)
-                        self.data[_key5] = _val6
+                    (_ktype8, _vtype9, _size7) = iprot.readMapBegin()
+                    for _i11 in range(_size7):
+                        _key12 = iprot.readI32()
+                        _val13 = getEventRewardListRetDataInfo()
+                        _val13.read(iprot)
+                        self.data[_key12] = _val13
                     iprot.readMapEnd()
                 else:
                     iprot.skip(ftype)
@@ -358,9 +575,9 @@ class getEventRewardListReturn(object):
         if self.data is not None:
             oprot.writeFieldBegin('data', TType.MAP, 5)
             oprot.writeMapBegin(TType.I32, TType.STRUCT, len(self.data))
-            for kiter7, viter8 in self.data.items():
-                oprot.writeI32(kiter7)
-                viter8.write(oprot)
+            for kiter14, viter15 in self.data.items():
+                oprot.writeI32(kiter14)
+                viter15.write(oprot)
             oprot.writeMapEnd()
             oprot.writeFieldEnd()
         if self.maintenance is not None:
@@ -400,8 +617,27 @@ getEventRewardList.thrift_spec = (
     (3, TType.STRING, 'sub_mode', 'UTF8', None, ),  # 3
     (4, TType.STRUCT, 'common_data', [tapsonic.common.ttypes.paramData, None], None, ),  # 4
 )
+all_structs.append(getEventRewardListData)
+getEventRewardListData.thrift_spec = (
+    None,  # 0
+    (1, TType.I64, 'idx', None, None, ),  # 1
+    (2, TType.STRING, 'event_name', 'UTF8', None, ),  # 2
+    (3, TType.STRING, 'event_type', 'UTF8', None, ),  # 3
+    (4, TType.I64, 'reward_idx', None, None, ),  # 4
+    (5, TType.I32, 'reward_num', None, None, ),  # 5
+    (6, TType.I32, 'reward_type', None, None, ),  # 6
+    (7, TType.I32, 'reward_id', None, None, ),  # 7
+    (8, TType.I32, 'reward_value', None, None, ),  # 8
+    (9, TType.STRING, 'reward_flg', 'UTF8', None, ),  # 9
+    (10, TType.I32, 'get_date', None, None, ),  # 10
+    (11, TType.STRING, 's_CustomIconType', 'UTF8', None, ),  # 11
+    (12, TType.STRING, 's_CustomIconSprite', 'UTF8', None, ),  # 12
+)
 all_structs.append(getEventRewardListRetDataInfo)
 getEventRewardListRetDataInfo.thrift_spec = (
+    None,  # 0
+    (1, TType.LIST, 'reward_list', (TType.STRUCT, [getEventRewardListData, None], False), None, ),  # 1
+    (2, TType.I32, 'group_idx', None, None, ),  # 2
 )
 all_structs.append(getEventRewardListReturn)
 getEventRewardListReturn.thrift_spec = (

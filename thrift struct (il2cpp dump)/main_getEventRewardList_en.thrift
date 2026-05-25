@@ -17,6 +17,26 @@ struct paramData {
     3: optional i16 os,
 }
 
+struct getEventRewardListData {
+    1:  optional i64    idx
+    2:  optional string event_name
+    3:  optional string event_type
+    4:  optional i64    reward_idx
+    5:  optional i32    reward_num
+    6:  optional i32    reward_type
+    7:  optional i32    reward_id
+    8:  optional i32    reward_value
+    9:  optional string reward_flg
+    10: optional i32    get_date
+    11: optional string s_CustomIconType
+    12: optional string s_CustomIconSprite
+}
+
+struct getEventRewardListRetDataInfo {
+    1: optional list<getEventRewardListData> reward_list
+    2: optional i32                          group_idx
+}
+
 struct getEventRewardList {
     1: optional string call,
     2: optional getEventRewardListDataInfo data,

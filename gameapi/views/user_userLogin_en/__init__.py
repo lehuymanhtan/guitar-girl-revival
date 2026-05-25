@@ -1,3 +1,5 @@
+from datetime import datetime
+
 from django.http import HttpRequest, HttpResponse
 
 import thrift_gen.tapsonic.common.ttypes as common_type
@@ -16,34 +18,34 @@ def userLogin(request: HttpRequest):
     req.read(helper.decodeToBinary(raw_data))
     
     
-    user_id = req.data.u_seq
+    u_seq = req.data.u_seq
     
-    if not user_id:
-        externalUserId = req.data.uuid
-        if not externalUserId:
+    if not u_seq:
+        uuid = req.data.uuid
+        if not uuid:
             return user_userLogin_en.userLoginReturn(
                 error=common_type.errorRetCode(code=900, errmsg="[userLogin] Invalid parameters."),
-                serverTimeRet=helper.auto_response_time(),
+                server_time=helper.auto_response_time(),
                 mode="main",
                 call="userLogin",
                 data=None,
-                footer=common_type.maintenanceData()
+                maintenance=common_type.maintenanceData()
             )
         
-        user:models.Player = models.Player.objects.filter(external_user_id=externalUserId).first()
+        user:models.Player = models.Player.objects.filter(uuid=uuid).first()
         if user is None:
             return user_userLogin_en.userLoginReturn(
                 error=common_type.errorRetCode(code=998, errmsg="Sorry. Not a registered user."),
-                serverTimeRet=helper.auto_response_time(),
+                server_time=helper.auto_response_time(),
                 mode="main",
                 call="userLogin",
                 data=None,
-                footer=common_type.maintenanceData()
+                maintenance=common_type.maintenanceData()
             )
             
         return user_userLogin_en.userLoginReturn(
                 error=common_type.errorRetCode(code=0, errmsg=""),
-                serverTimeRet=helper.auto_response_time(),
+                server_time=helper.auto_response_time(),
                 mode="main",
                 call="userLogin",
                 data=user_userLogin_en.userLoginRetDataInfo(
@@ -52,49 +54,49 @@ def userLogin(request: HttpRequest):
                         u_id=user.u_id
                     )
                 ),
-                footer=common_type.maintenanceData()
+                maintenance=common_type.maintenanceData()
             )
     
-    user:models.Player = models.Player.objects.filter(id=user_id).first()
+    user:models.Player = models.Player.objects.filter(u_seq=u_seq).first()
     if user is None:
         return user_userLogin_en.userLoginReturn(
-            error=common_type.errorRetCode(code=998, message="Sorry. Not a registered user."),
+            error=common_type.errorRetCode(code=998, errmsg="Sorry. Not a registered user."),
             server_time=helper.auto_response_time(),
             service="main",
             method="userLogin",
             data=None,
-            footer=common_type.maintenanceData()
+            maintenance=common_type.maintenanceData()
         )
     
     ch1_data:models.UserAreaInfo = user.areas.filter(u_area_num=1).first()
     ch2_data:models.UserAreaInfo = user.areas.filter(u_area_num=2).first()
-    return user_userLogin_en.userLoginReturn(
-        error=common_type.errorRetCode(code=0, message=""),
+    data = user_userLogin_en.userLoginReturn(
+        error=common_type.errorRetCode(code=0, errmsg=""),
         server_time=helper.auto_response_time(),
         service="main",
         method="userLogin",
         data=user_userLogin_en.userLoginRetDataInfo(
             user=user_userLogin_en.userData(
                 u_seq=user.u_seq,
-                u_id=user.u_id, #unix timestamp in miliseconds
-                u_name=user.u_nickname,
-                u_nick=user.u_nickname,
+                u_id=user.u_id,
+                u_name=f'Player{user.u_seq}',
+                u_nick=f'Player{user.u_seq}',
                 u_cp=user.u_cp,
                 u_candy=user.u_candy,
                 u_like=0,
                 u_fans=0,
                 u_fans_grade=0,
-                u_selected_costume_id=user.u_selected_costume_id,
-                u_selected_music_id=user.u_selected_music_id,
+                u_selected_costume_id=0,
+                u_selected_music_id=0,
                 u_retain_continuous_tap=0,
                 u_join_type=1,
                 u_last_login=(user.u_last_login if user.u_last_login else user.created_at).strftime("%Y-%m-%d %H:%M:%S"),
                 u_last_communication=user.u_last_communication.strftime("%Y-%m-%d %H:%M:%S") if user.u_last_communication else "",
-                u_save_date=str(int(helper.datetime_to_unix_sec(user.u_save_date))) if user.u_save_date else None,
-                u_create_time=str(int(helper.datetime_to_unix_sec(user.created_at))),
+                u_save_date=str(helper.datetime_to_unix_sec(user.u_save_date)) if user.u_save_date else None,
+                u_create_time=str(helper.datetime_to_unix_sec(user.created_at)),
                 u_tutorial_step=user.u_tutorial_step,
                 u_review_popup=user.u_review_popup,
-                device_uuid=user.device_uuid,
+                device_uuid="",
                 numberOfFreeChoco=user.u_cp,
                 numberOfPaidChoco=0
             ),
@@ -142,7 +144,7 @@ def userLogin(request: HttpRequest):
                         i_ActiveTime = buff.i_ActiveTime,
                         i_EndTime = buff.i_EndTime
                     ) for buff in user.buffs.all()
-                ],
+                ] if user.buffs.exists() else None,
                 user_candy_shop=[
                     common_type.userCandyShop(
                         i_id=shop.i_id,
@@ -150,7 +152,7 @@ def userLogin(request: HttpRequest):
                         i_TotalBuyCount=shop.i_TotalBuyCount,
                         l_LastBuyTick=shop.l_LastBuyTick
                     ) for shop in user.candy_shops.all()
-                ],
+                ] if user.candy_shops.exists() else None,
                 user_character=[
                     common_type.userCharacter(
                         i_id=char.i_id,
@@ -179,7 +181,7 @@ def userLogin(request: HttpRequest):
                         i_Level=char.i_Level,
                         i_BonusLevel=char.i_BonusLevel
                     ) for char in user.followers.all()
-                ],
+                ] if user.followers.exists() else None,
                 user_music=[
                     common_type.userMusic(
                         i_id=song.i_id,
@@ -338,5 +340,9 @@ def userLogin(request: HttpRequest):
                 ]
             )
         ),
-        footer=common_type.maintenanceData()
+        maintenance=common_type.maintenanceData()
     )
+    
+    user.u_last_login = datetime.now()
+    user.save()
+    return data

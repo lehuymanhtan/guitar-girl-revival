@@ -1,15 +1,12 @@
+import uuid
 from django.db import models
 
 class Player(models.Model):
-    u_seq = models.BigAutoField(primary_key=True)
-    u_id = models.CharField(max_length=64, blank=True, null=True)
-    uuid = models.CharField(max_length=128, blank=True, null=True)
-    device_uuid = models.CharField(max_length=128, blank=True, null=True)
+    u_seq = models.BigAutoField(primary_key=True, )
+    u_id = models.UUIDField(unique=True, default=uuid.uuid4, editable=False)
+    uuid = models.CharField(max_length=128) # external id
     u_cp = models.BigIntegerField(default=0)
-    u_nickname = models.CharField(max_length=128, blank=True, null=True)
     u_candy = models.FloatField(default=0)
-    u_selected_costume_id = models.BigIntegerField(default=0)
-    u_selected_music_id = models.BigIntegerField(default=0)
     u_last_login = models.DateTimeField(null=True)
     u_last_communication = models.DateTimeField(null=True)
     u_save_date = models.DateTimeField(null=True)
@@ -22,15 +19,15 @@ class UserAreaInfo(models.Model):
     player = models.ForeignKey(Player, on_delete=models.CASCADE, related_name='areas')
     u_area_num = models.SmallIntegerField()
     d_Like = models.FloatField(default=0)
-    i_UserFanCount = models.BigIntegerField(default=0)
-    i_UserFanGrade = models.SmallIntegerField(default=0)
-    i_SelectedCostumeId = models.BigIntegerField(default=0)
-    i_SelectedMusicId = models.BigIntegerField(default=0)
-    i_SelectedGuitarId = models.BigIntegerField(default=0)
     d_Candy = models.FloatField(default=0)
-    s_TutorialList = models.TextField(blank=True)
-    s_Gp1 = models.TextField(blank=True, null=True)
-    s_Gp2 = models.TextField(blank=True, null=True)
+    i_UserFanCount = models.BigIntegerField(default=0)
+    i_UserFanGrade = models.SmallIntegerField(default=1)
+    i_SelectedCostumeId = models.BigIntegerField(default=1)
+    i_SelectedMusicId = models.BigIntegerField(default=1)
+    i_SelectedGuitarId = models.BigIntegerField(default=1)
+    s_TutorialList = models.CharField(max_length=128, blank=True)
+    s_Gp1 = models.TextField(blank=True)
+    s_Gp2 = models.TextField(blank=True)
 
 class UserAchievement(models.Model):
     player = models.ForeignKey(Player, on_delete=models.CASCADE, related_name='achievements')
@@ -226,8 +223,43 @@ class AttendanceLog(models.Model):
     day = models.DateField()
     rewarded_at = models.DateTimeField(auto_now_add=True)
 
+class Event(models.Model):
+    idx = models.BigIntegerField(unique=True)
+    event_name = models.CharField(max_length=128)
+    event_type = models.CharField(max_length=128)
+
 class EventReward(models.Model):
+    event = models.ForeignKey(Event, on_delete=models.CASCADE, related_name='rewards')
+    reward_idx = models.BigIntegerField()
+    reward_num = models.IntegerField()
+    reward_type = models.IntegerField()
+    reward_id = models.IntegerField()
+    reward_value = models.IntegerField()
+    s_CustomIconType = models.CharField(max_length=128)
+    s_CustomIconSprite = models.CharField(max_length=128)
+
+    class Meta:
+        constraints = [
+            models.UniqueConstraint(
+                fields=["event", "reward_idx"],
+                name="event_reward_unique",
+            ),
+        ]
+
+class UserEventReward(models.Model):
     player = models.ForeignKey(Player, on_delete=models.CASCADE, related_name='event_rewards')
-    event_type = models.CharField(max_length=64)
-    step = models.BigIntegerField()
-    received_at = models.DateTimeField(auto_now_add=True)
+    event_reward = models.ForeignKey(EventReward, on_delete=models.CASCADE, related_name='user_rewards')
+    reward_flg = models.CharField(max_length=5, default="N")
+    get_date = models.IntegerField()
+
+    class Meta:
+        constraints = [
+            models.UniqueConstraint(
+                fields=["player", "event_reward"],
+                name="user_event_reward_unique",
+            ),
+        ]
+
+class DefaultSetting(models.Model):
+    key = models.CharField(max_length=128, unique=True)
+    value = models.TextField()

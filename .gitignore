@@ -1,2 +1,7 @@
 __pycache__/
 .vscode/    
+sample/
+db.sqlite3
+plan.md
+thrift_found.md
+.venv/

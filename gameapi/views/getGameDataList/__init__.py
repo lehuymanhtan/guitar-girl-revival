@@ -1,6 +1,6 @@
 import os
 
-import getGameDataList.ttypes as getGameDataListTypes
+from .getGameDataList import ttypes as getGameDataListTypes
 import thrift_gen.tapsonic.common.ttypes as common_type
 
 from .. import _helper as helper
