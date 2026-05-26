@@ -132,6 +132,14 @@ class UserEventPoint(models.Model):
     i_Step = models.BigIntegerField(default=0)
     i_ADViewTime = models.BigIntegerField(default=0)
     i_Version = models.IntegerField(default=0)
+    
+    class Meta:
+        constraints = [
+            models.UniqueConstraint(
+                fields=["s_EventType", "i_DataID", "i_Version"],
+                name="start_pass_point_unique",
+            ),
+        ]
 
 class UserSubscribeList(models.Model):
     player = models.ForeignKey(Player, on_delete=models.CASCADE, related_name='subscribe_lists')
@@ -153,12 +161,11 @@ class UserTicketCollection(models.Model):
 
 class UserFollowerQuest(models.Model):
     player = models.ForeignKey(Player, on_delete=models.CASCADE, related_name='follower_quests')
-    i_id = models.BigIntegerField()
     i_CurrentID = models.BigIntegerField(default=0)
     i_CompleteID = models.BigIntegerField(default=0)
-    d_ConditionValue1 = models.FloatField(default=0)
-    d_ConditionValue2 = models.FloatField(default=0)
-    d_ConditionValue3 = models.FloatField(default=0)
+    d_ConditionValue1 = models.FloatField(default=0) # progress
+    d_ConditionValue2 = models.FloatField(default=0) # progress
+    d_ConditionValue3 = models.FloatField(default=0) # progress
     i_RewardReceived1 = models.SmallIntegerField(default=0)
     i_RewardReceived2 = models.SmallIntegerField(default=0)
     i_RewardReceived3 = models.SmallIntegerField(default=0)
