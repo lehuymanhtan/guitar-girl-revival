@@ -17,7 +17,6 @@ def userLogin(request: HttpRequest):
     req= user_userLogin_en.userLogin()
     req.read(helper.decodeToBinary(raw_data))
     
-    
     u_seq = req.data.u_seq
     
     if not u_seq:
@@ -112,7 +111,7 @@ def userLogin(request: HttpRequest):
                     i_SelectedGuitarId=ch1_data.i_SelectedGuitarId,
                     s_TutorialList=ch1_data.s_TutorialList,
                     s_Gp1=ch1_data.s_Gp1,
-                    s_Gp1=ch1_data.s_Gp1
+                    s_Gp2=ch2_data.s_Gp2
                 ),
                 2: user_userLogin_en.UserLoginResponseGeneralUserDataMap(
                     u_area_num=2,
@@ -124,8 +123,8 @@ def userLogin(request: HttpRequest):
                     i_SelectedMusicId=ch2_data.i_SelectedMusicId,
                     i_SelectedGuitarId=ch2_data.i_SelectedGuitarId,
                     s_TutorialList=ch2_data.s_TutorialList,
-                    s_Gp1=ch2_data.s_Gp1,
-                    s_Gp1=ch2_data.s_Gp1
+                    s_Gp1=ch1_data.s_Gp1,
+                    s_Gp2=ch2_data.s_Gp2
                 ),
             },
             user_contents=common_type.userContentsData(
@@ -271,7 +270,7 @@ def userLogin(request: HttpRequest):
                 ],
                 user_follower_quest=[
                     common_type.userFollowerQuest(
-                        i_id=task.i_id,
+                        i_id=1,
                         i_CurrentID=task.i_CurrentID,
                         i_CompleteID=task.i_CompleteID,
                         d_ConditionValue1=task.d_ConditionValue1,
@@ -280,8 +279,8 @@ def userLogin(request: HttpRequest):
                         i_RewardReceived1=task.i_RewardReceived1,
                         i_RewardReceived2=task.i_RewardReceived2,
                         i_RewardReceived3=task.i_RewardReceived3,
-                        fieldi_isInfinity10=task.i_isInfinity
-                    ) for task in user.follower_quests.all()
+                        i_isInfinity10=task.i_isInfinity
+                    ) for task in [user.follower_quests.first()] if user.follower_quests.exists() else []
                 ],
                 user_follower_profile_reward=[
                     common_type.UserFollowerProfileReward(

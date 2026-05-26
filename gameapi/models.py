@@ -136,7 +136,7 @@ class UserEventPoint(models.Model):
     class Meta:
         constraints = [
             models.UniqueConstraint(
-                fields=["s_EventType", "i_DataID", "i_Version"],
+                fields=["player", "s_EventType", "i_DataID", "i_Version"],
                 name="start_pass_point_unique",
             ),
         ]

@@ -1,5 +1,3 @@
-from datetime import datetime
-
 from django.http import HttpRequest, HttpResponse
 
 import thrift_gen.tapsonic.common.ttypes as common_type
@@ -10,7 +8,7 @@ from .. import _helper as helper
 
 
 @helper.wrapper_helper
-def userLogin(request: HttpRequest):
+def userSave(request: HttpRequest):
     raw_data = request.POST.get("tapsonic_data", None)
     if not raw_data:
         return HttpResponse("Bad Request", status=400)
@@ -48,7 +46,7 @@ def userLogin(request: HttpRequest):
                 },
             )
 
-    # save user achivement info
+    # save user achievement info
     if achievements := req.data.user_achievement:
         for achievement in achievements:
             models.UserAchievement.objects.update_or_create(
