@@ -270,3 +270,4 @@ class UserEventReward(models.Model):
 class DefaultSetting(models.Model):
     key = models.CharField(max_length=128, unique=True)
     value = models.TextField()
+

@@ -280,7 +280,7 @@ def userLogin(request: HttpRequest):
                         i_RewardReceived2=task.i_RewardReceived2,
                         i_RewardReceived3=task.i_RewardReceived3,
                         i_isInfinity10=task.i_isInfinity
-                    ) for task in [user.follower_quests.first()] if user.follower_quests.exists() else []
+                    ) for task in ([user.follower_quests.first()] if user.follower_quests.exists() else [])
                 ],
                 user_follower_profile_reward=[
                     common_type.UserFollowerProfileReward(
