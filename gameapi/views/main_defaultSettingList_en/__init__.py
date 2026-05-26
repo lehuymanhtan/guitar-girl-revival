@@ -13,10 +13,11 @@ def defaultSettingList(request):
         mode="main",
         call="defaultSettingList",
         data=main_defaultSettingList_en.defaultSettingListRetDataInfo(
-            defaultSettings=[
-                main_defaultSettingList_en.defaultSettingInfo(
-                    key=setting.key,
-                    value=setting.value
+            status='Y',
+            setting_list=[
+                main_defaultSettingList_en.defaultSettingDataList(
+                    setting_key=setting.key,
+                    setting_value=setting.value
                 ) for setting in models.DefaultSetting.objects.all()
             ]
         ),
