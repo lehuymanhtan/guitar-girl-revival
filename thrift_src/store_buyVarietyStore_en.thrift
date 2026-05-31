@@ -6,7 +6,6 @@ include "general.thrift"
 namespace py tapsonic.store_buyVarietyStore_en
 
 
-
 struct buyVarietyStoreDataInfo {
     1: optional i32 u_seq,
     2: optional string u_id,
@@ -23,10 +22,10 @@ struct buyVarietyStore {
 
 struct buyVarietyStoreRetDataInfo {
     1: optional i64 u_cp,
-    2: optional i64 u_candy,
+    2: optional double u_candy,
     3: optional i16 reward_type,
     4: optional i32 reward_id,
-    5: optional i32 reward_value,
+    5: optional i64 reward_value,
     6: optional string status,
 }
 

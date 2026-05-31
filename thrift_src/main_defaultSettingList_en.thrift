@@ -6,7 +6,6 @@ include "general.thrift"
 namespace py tapsonic.main_defaultSettingList_en
 
 
-
 struct defaultSettingListDataInfo {
     1: optional string device_uuid,
     2: optional i16 os,

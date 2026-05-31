@@ -6,7 +6,6 @@ include "general.thrift"
 namespace py tapsonic.user_getMusicReward_en
 
 
-
 struct getMusicRewardDataInfo {
     1: optional i32 u_seq,
     2: optional string u_id,

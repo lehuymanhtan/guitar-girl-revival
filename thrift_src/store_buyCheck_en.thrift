@@ -6,6 +6,32 @@ include "general.thrift"
 namespace py tapsonic.store_buyCheck_en
 
 
+struct buyCheckDataInfo {
+    1: optional i32 u_seq,
+    2: optional string u_id,
+    3: optional string uuid,
+    4: optional string device_uuid,
+    5: optional i32 idx,
+}
+
+struct buyCheck {
+    1: optional string call,
+    2: optional buyCheckDataInfo data,
+    3: optional general.paramData common_data,
+}
+
+struct buyCheckRetDataInfo {
+    1: optional string result,
+}
+
+struct buyCheckReturn {
+    1: optional general.errorRetCode error,
+    2: optional general.serverTimeRet server_time,
+    3: optional string mode,
+    4: optional string call,
+    5: optional buyCheckRetDataInfo data,
+    6: optional general.maintenanceData maintenance,
+}
 
 /*======================================================================
  BURP EXAMPLES FOR CALL: buyCheck

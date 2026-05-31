@@ -1,15 +1,15 @@
 from ..conftest import raw_thrift_bytes, roundtrip
 
-from tapsonic.general.ttypes import setGameReward, buyCheckReturn
+from tapsonic.store_buyCheck_en.ttypes import buyCheck, buyCheckReturn
 from tapsonic.store_buyShop_en.ttypes import buyShop, buyShopReturn
 from tapsonic.store_buyContents_en.ttypes import buyContents, buyContentsReturn
 from tapsonic.store_getVarietyStore_en.ttypes import getVarietyStore, getVarietyStoreReturn
-from tapsonic.store_buyVarietyStore_en.ttypes import buyVarietyStoreReturn
+from tapsonic.store_buyVarietyStore_en.ttypes import buyVarietyStore, buyVarietyStoreReturn
 
 
 def test_buycheck_request(captures):
     raw = raw_thrift_bytes(captures["/store/buyCheck/en/"]["req_b64"])
-    assert roundtrip(raw, setGameReward) == raw
+    assert roundtrip(raw, buyCheck) == raw
 
 
 def test_buycheck_response(captures):
@@ -49,7 +49,7 @@ def test_getvarietystore_response(captures):
 
 def test_buyvarietystore_request(captures):
     raw = raw_thrift_bytes(captures["/store/buyVarietyStore/en/"]["req_b64"])
-    assert roundtrip(raw, setGameReward) == raw
+    assert roundtrip(raw, buyVarietyStore) == raw
 
 
 def test_buyvarietystore_response(captures):

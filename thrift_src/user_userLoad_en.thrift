@@ -6,7 +6,6 @@ include "general.thrift"
 namespace py tapsonic.user_userLoad_en
 
 
-
 struct userLoadDataInfo {
     1: optional i32    u_seq,
     2: optional string u_id,

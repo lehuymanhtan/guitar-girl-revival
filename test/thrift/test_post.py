@@ -1,7 +1,7 @@
 from ..conftest import raw_thrift_bytes, roundtrip
 
 from tapsonic.post_getPost_en.ttypes import getPost, getPostReturn
-from tapsonic.general.ttypes import setGameReward, buyCheckReturn
+from tapsonic.post_getPostTime_en.ttypes import getPostTime, getPostTimeReturn
 
 
 def test_getpost_request(captures):
@@ -16,9 +16,9 @@ def test_getpost_response(captures):
 
 def test_getposttime_request(captures):
     raw = raw_thrift_bytes(captures["/post/getPostTime/en/"]["req_b64"])
-    assert roundtrip(raw, setGameReward) == raw
+    assert roundtrip(raw, getPostTime) == raw
 
 
 def test_getposttime_response(captures):
     raw = raw_thrift_bytes(captures["/post/getPostTime/en/"]["res_b64"])
-    assert roundtrip(raw, buyCheckReturn) == raw
+    assert roundtrip(raw, getPostTimeReturn) == raw

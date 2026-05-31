@@ -16,5 +16,399 @@ import tapsonic.general.ttypes
 
 from thrift.transport import TTransport
 all_structs = []
+
+
+class buyCheckDataInfo(object):
+    """
+    Attributes:
+     - u_seq
+     - u_id
+     - uuid
+     - device_uuid
+     - idx
+
+    """
+    thrift_spec = None
+
+
+    def __init__(self, u_seq = None, u_id = None, uuid = None, device_uuid = None, idx = None,):
+        self.u_seq = u_seq
+        self.u_id = u_id
+        self.uuid = uuid
+        self.device_uuid = device_uuid
+        self.idx = idx
+
+    def read(self, iprot):
+        if iprot._fast_decode is not None and isinstance(iprot.trans, TTransport.CReadableTransport) and self.thrift_spec is not None:
+            iprot._fast_decode(self, iprot, [self.__class__, self.thrift_spec])
+            return
+        iprot.readStructBegin()
+        while True:
+            (fname, ftype, fid) = iprot.readFieldBegin()
+            if ftype == TType.STOP:
+                break
+            if fid == 1:
+                if ftype == TType.I32:
+                    self.u_seq = iprot.readI32()
+                else:
+                    iprot.skip(ftype)
+            elif fid == 2:
+                if ftype == TType.STRING:
+                    self.u_id = iprot.readString().decode('utf-8', errors='replace') if sys.version_info[0] == 2 else iprot.readString()
+                else:
+                    iprot.skip(ftype)
+            elif fid == 3:
+                if ftype == TType.STRING:
+                    self.uuid = iprot.readString().decode('utf-8', errors='replace') if sys.version_info[0] == 2 else iprot.readString()
+                else:
+                    iprot.skip(ftype)
+            elif fid == 4:
+                if ftype == TType.STRING:
+                    self.device_uuid = iprot.readString().decode('utf-8', errors='replace') if sys.version_info[0] == 2 else iprot.readString()
+                else:
+                    iprot.skip(ftype)
+            elif fid == 5:
+                if ftype == TType.I32:
+                    self.idx = iprot.readI32()
+                else:
+                    iprot.skip(ftype)
+            else:
+                iprot.skip(ftype)
+            iprot.readFieldEnd()
+        iprot.readStructEnd()
+
+    def write(self, oprot):
+        self.validate()
+        if oprot._fast_encode is not None and self.thrift_spec is not None:
+            oprot.trans.write(oprot._fast_encode(self, [self.__class__, self.thrift_spec]))
+            return
+        oprot.writeStructBegin('buyCheckDataInfo')
+        if self.u_seq is not None:
+            oprot.writeFieldBegin('u_seq', TType.I32, 1)
+            oprot.writeI32(self.u_seq)
+            oprot.writeFieldEnd()
+        if self.u_id is not None:
+            oprot.writeFieldBegin('u_id', TType.STRING, 2)
+            oprot.writeString(self.u_id.encode('utf-8') if sys.version_info[0] == 2 else self.u_id)
+            oprot.writeFieldEnd()
+        if self.uuid is not None:
+            oprot.writeFieldBegin('uuid', TType.STRING, 3)
+            oprot.writeString(self.uuid.encode('utf-8') if sys.version_info[0] == 2 else self.uuid)
+            oprot.writeFieldEnd()
+        if self.device_uuid is not None:
+            oprot.writeFieldBegin('device_uuid', TType.STRING, 4)
+            oprot.writeString(self.device_uuid.encode('utf-8') if sys.version_info[0] == 2 else self.device_uuid)
+            oprot.writeFieldEnd()
+        if self.idx is not None:
+            oprot.writeFieldBegin('idx', TType.I32, 5)
+            oprot.writeI32(self.idx)
+            oprot.writeFieldEnd()
+        oprot.writeFieldStop()
+        oprot.writeStructEnd()
+
+    def validate(self):
+        return
+
+    def __repr__(self):
+        L = ['%s=%r' % (key, value)
+             for key, value in self.__dict__.items()]
+        return '%s(%s)' % (self.__class__.__name__, ', '.join(L))
+
+    def __eq__(self, other):
+        return isinstance(other, self.__class__) and self.__dict__ == other.__dict__
+
+    def __ne__(self, other):
+        return not (self == other)
+
+
+class buyCheck(object):
+    """
+    Attributes:
+     - call
+     - data
+     - common_data
+
+    """
+    thrift_spec = None
+
+
+    def __init__(self, call = None, data = None, common_data = None,):
+        self.call = call
+        self.data = data
+        self.common_data = common_data
+
+    def read(self, iprot):
+        if iprot._fast_decode is not None and isinstance(iprot.trans, TTransport.CReadableTransport) and self.thrift_spec is not None:
+            iprot._fast_decode(self, iprot, [self.__class__, self.thrift_spec])
+            return
+        iprot.readStructBegin()
+        while True:
+            (fname, ftype, fid) = iprot.readFieldBegin()
+            if ftype == TType.STOP:
+                break
+            if fid == 1:
+                if ftype == TType.STRING:
+                    self.call = iprot.readString().decode('utf-8', errors='replace') if sys.version_info[0] == 2 else iprot.readString()
+                else:
+                    iprot.skip(ftype)
+            elif fid == 2:
+                if ftype == TType.STRUCT:
+                    self.data = buyCheckDataInfo()
+                    self.data.read(iprot)
+                else:
+                    iprot.skip(ftype)
+            elif fid == 3:
+                if ftype == TType.STRUCT:
+                    self.common_data = tapsonic.general.ttypes.paramData()
+                    self.common_data.read(iprot)
+                else:
+                    iprot.skip(ftype)
+            else:
+                iprot.skip(ftype)
+            iprot.readFieldEnd()
+        iprot.readStructEnd()
+
+    def write(self, oprot):
+        self.validate()
+        if oprot._fast_encode is not None and self.thrift_spec is not None:
+            oprot.trans.write(oprot._fast_encode(self, [self.__class__, self.thrift_spec]))
+            return
+        oprot.writeStructBegin('buyCheck')
+        if self.call is not None:
+            oprot.writeFieldBegin('call', TType.STRING, 1)
+            oprot.writeString(self.call.encode('utf-8') if sys.version_info[0] == 2 else self.call)
+            oprot.writeFieldEnd()
+        if self.data is not None:
+            oprot.writeFieldBegin('data', TType.STRUCT, 2)
+            self.data.write(oprot)
+            oprot.writeFieldEnd()
+        if self.common_data is not None:
+            oprot.writeFieldBegin('common_data', TType.STRUCT, 3)
+            self.common_data.write(oprot)
+            oprot.writeFieldEnd()
+        oprot.writeFieldStop()
+        oprot.writeStructEnd()
+
+    def validate(self):
+        return
+
+    def __repr__(self):
+        L = ['%s=%r' % (key, value)
+             for key, value in self.__dict__.items()]
+        return '%s(%s)' % (self.__class__.__name__, ', '.join(L))
+
+    def __eq__(self, other):
+        return isinstance(other, self.__class__) and self.__dict__ == other.__dict__
+
+    def __ne__(self, other):
+        return not (self == other)
+
+
+class buyCheckRetDataInfo(object):
+    """
+    Attributes:
+     - result
+
+    """
+    thrift_spec = None
+
+
+    def __init__(self, result = None,):
+        self.result = result
+
+    def read(self, iprot):
+        if iprot._fast_decode is not None and isinstance(iprot.trans, TTransport.CReadableTransport) and self.thrift_spec is not None:
+            iprot._fast_decode(self, iprot, [self.__class__, self.thrift_spec])
+            return
+        iprot.readStructBegin()
+        while True:
+            (fname, ftype, fid) = iprot.readFieldBegin()
+            if ftype == TType.STOP:
+                break
+            if fid == 1:
+                if ftype == TType.STRING:
+                    self.result = iprot.readString().decode('utf-8', errors='replace') if sys.version_info[0] == 2 else iprot.readString()
+                else:
+                    iprot.skip(ftype)
+            else:
+                iprot.skip(ftype)
+            iprot.readFieldEnd()
+        iprot.readStructEnd()
+
+    def write(self, oprot):
+        self.validate()
+        if oprot._fast_encode is not None and self.thrift_spec is not None:
+            oprot.trans.write(oprot._fast_encode(self, [self.__class__, self.thrift_spec]))
+            return
+        oprot.writeStructBegin('buyCheckRetDataInfo')
+        if self.result is not None:
+            oprot.writeFieldBegin('result', TType.STRING, 1)
+            oprot.writeString(self.result.encode('utf-8') if sys.version_info[0] == 2 else self.result)
+            oprot.writeFieldEnd()
+        oprot.writeFieldStop()
+        oprot.writeStructEnd()
+
+    def validate(self):
+        return
+
+    def __repr__(self):
+        L = ['%s=%r' % (key, value)
+             for key, value in self.__dict__.items()]
+        return '%s(%s)' % (self.__class__.__name__, ', '.join(L))
+
+    def __eq__(self, other):
+        return isinstance(other, self.__class__) and self.__dict__ == other.__dict__
+
+    def __ne__(self, other):
+        return not (self == other)
+
+
+class buyCheckReturn(object):
+    """
+    Attributes:
+     - error
+     - server_time
+     - mode
+     - call
+     - data
+     - maintenance
+
+    """
+    thrift_spec = None
+
+
+    def __init__(self, error = None, server_time = None, mode = None, call = None, data = None, maintenance = None,):
+        self.error = error
+        self.server_time = server_time
+        self.mode = mode
+        self.call = call
+        self.data = data
+        self.maintenance = maintenance
+
+    def read(self, iprot):
+        if iprot._fast_decode is not None and isinstance(iprot.trans, TTransport.CReadableTransport) and self.thrift_spec is not None:
+            iprot._fast_decode(self, iprot, [self.__class__, self.thrift_spec])
+            return
+        iprot.readStructBegin()
+        while True:
+            (fname, ftype, fid) = iprot.readFieldBegin()
+            if ftype == TType.STOP:
+                break
+            if fid == 1:
+                if ftype == TType.STRUCT:
+                    self.error = tapsonic.general.ttypes.errorRetCode()
+                    self.error.read(iprot)
+                else:
+                    iprot.skip(ftype)
+            elif fid == 2:
+                if ftype == TType.STRUCT:
+                    self.server_time = tapsonic.general.ttypes.serverTimeRet()
+                    self.server_time.read(iprot)
+                else:
+                    iprot.skip(ftype)
+            elif fid == 3:
+                if ftype == TType.STRING:
+                    self.mode = iprot.readString().decode('utf-8', errors='replace') if sys.version_info[0] == 2 else iprot.readString()
+                else:
+                    iprot.skip(ftype)
+            elif fid == 4:
+                if ftype == TType.STRING:
+                    self.call = iprot.readString().decode('utf-8', errors='replace') if sys.version_info[0] == 2 else iprot.readString()
+                else:
+                    iprot.skip(ftype)
+            elif fid == 5:
+                if ftype == TType.STRUCT:
+                    self.data = buyCheckRetDataInfo()
+                    self.data.read(iprot)
+                else:
+                    iprot.skip(ftype)
+            elif fid == 6:
+                if ftype == TType.STRUCT:
+                    self.maintenance = tapsonic.general.ttypes.maintenanceData()
+                    self.maintenance.read(iprot)
+                else:
+                    iprot.skip(ftype)
+            else:
+                iprot.skip(ftype)
+            iprot.readFieldEnd()
+        iprot.readStructEnd()
+
+    def write(self, oprot):
+        self.validate()
+        if oprot._fast_encode is not None and self.thrift_spec is not None:
+            oprot.trans.write(oprot._fast_encode(self, [self.__class__, self.thrift_spec]))
+            return
+        oprot.writeStructBegin('buyCheckReturn')
+        if self.error is not None:
+            oprot.writeFieldBegin('error', TType.STRUCT, 1)
+            self.error.write(oprot)
+            oprot.writeFieldEnd()
+        if self.server_time is not None:
+            oprot.writeFieldBegin('server_time', TType.STRUCT, 2)
+            self.server_time.write(oprot)
+            oprot.writeFieldEnd()
+        if self.mode is not None:
+            oprot.writeFieldBegin('mode', TType.STRING, 3)
+            oprot.writeString(self.mode.encode('utf-8') if sys.version_info[0] == 2 else self.mode)
+            oprot.writeFieldEnd()
+        if self.call is not None:
+            oprot.writeFieldBegin('call', TType.STRING, 4)
+            oprot.writeString(self.call.encode('utf-8') if sys.version_info[0] == 2 else self.call)
+            oprot.writeFieldEnd()
+        if self.data is not None:
+            oprot.writeFieldBegin('data', TType.STRUCT, 5)
+            self.data.write(oprot)
+            oprot.writeFieldEnd()
+        if self.maintenance is not None:
+            oprot.writeFieldBegin('maintenance', TType.STRUCT, 6)
+            self.maintenance.write(oprot)
+            oprot.writeFieldEnd()
+        oprot.writeFieldStop()
+        oprot.writeStructEnd()
+
+    def validate(self):
+        return
+
+    def __repr__(self):
+        L = ['%s=%r' % (key, value)
+             for key, value in self.__dict__.items()]
+        return '%s(%s)' % (self.__class__.__name__, ', '.join(L))
+
+    def __eq__(self, other):
+        return isinstance(other, self.__class__) and self.__dict__ == other.__dict__
+
+    def __ne__(self, other):
+        return not (self == other)
+all_structs.append(buyCheckDataInfo)
+buyCheckDataInfo.thrift_spec = (
+    None,  # 0
+    (1, TType.I32, 'u_seq', None, None, ),  # 1
+    (2, TType.STRING, 'u_id', 'UTF8', None, ),  # 2
+    (3, TType.STRING, 'uuid', 'UTF8', None, ),  # 3
+    (4, TType.STRING, 'device_uuid', 'UTF8', None, ),  # 4
+    (5, TType.I32, 'idx', None, None, ),  # 5
+)
+all_structs.append(buyCheck)
+buyCheck.thrift_spec = (
+    None,  # 0
+    (1, TType.STRING, 'call', 'UTF8', None, ),  # 1
+    (2, TType.STRUCT, 'data', [buyCheckDataInfo, None], None, ),  # 2
+    (3, TType.STRUCT, 'common_data', [tapsonic.general.ttypes.paramData, None], None, ),  # 3
+)
+all_structs.append(buyCheckRetDataInfo)
+buyCheckRetDataInfo.thrift_spec = (
+    None,  # 0
+    (1, TType.STRING, 'result', 'UTF8', None, ),  # 1
+)
+all_structs.append(buyCheckReturn)
+buyCheckReturn.thrift_spec = (
+    None,  # 0
+    (1, TType.STRUCT, 'error', [tapsonic.general.ttypes.errorRetCode, None], None, ),  # 1
+    (2, TType.STRUCT, 'server_time', [tapsonic.general.ttypes.serverTimeRet, None], None, ),  # 2
+    (3, TType.STRING, 'mode', 'UTF8', None, ),  # 3
+    (4, TType.STRING, 'call', 'UTF8', None, ),  # 4
+    (5, TType.STRUCT, 'data', [buyCheckRetDataInfo, None], None, ),  # 5
+    (6, TType.STRUCT, 'maintenance', [tapsonic.general.ttypes.maintenanceData, None], None, ),  # 6
+)
 fix_spec(all_structs)
 del all_structs

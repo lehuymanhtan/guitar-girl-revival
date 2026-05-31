@@ -6,7 +6,6 @@ include "general.thrift"
 namespace py tapsonic.main_getUpdateTime_en
 
 
-
 struct getUpdateTimeDataInfo {
     1: optional string device_uuid,
 }

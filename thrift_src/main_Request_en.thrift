@@ -6,7 +6,6 @@ include "general.thrift"
 namespace py tapsonic.main_Request_en
 
 
-
 // ── Request ──────────────────────────────────────────────────────────────────
 
 struct initDataInfo {

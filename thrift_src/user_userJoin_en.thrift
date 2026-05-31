@@ -6,7 +6,6 @@ include "general.thrift"
 namespace py tapsonic.user_userJoin_en
 
 
-
 struct userJoinDataInfo {
     1: optional i16 os,
     2: optional i16 join_type,

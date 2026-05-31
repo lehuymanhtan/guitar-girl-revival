@@ -6,7 +6,6 @@ include "general.thrift"
 namespace py tapsonic.store_getVarietyStore_en
 
 
-
 struct getVarietyStoreDataInfo {
     1: optional string device_uuid,
 }

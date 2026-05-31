@@ -1,6 +1,6 @@
 from ..conftest import raw_thrift_bytes, roundtrip
 
-from tapsonic.general.ttypes import setGameReward, buyCheckReturn
+from tapsonic.main_Request_en.ttypes import Request, initReturn
 from tapsonic.main_defaultSettingList_en.ttypes import defaultSettingList, defaultSettingListReturn
 from tapsonic.main_getServerTime_en.ttypes import getServerTime, getServerTimeReturn
 from tapsonic.main_getUpdateTime_en.ttypes import getUpdateTime, getUpdateTimeReturn
@@ -8,14 +8,14 @@ from tapsonic.main_getEventRewardList_en.ttypes import getEventRewardList, getEv
 from tapsonic.main_getGameDataList_en.ttypes import getGameDataList, getGameDataListReturn
 
 
-def test_setgamereward_request(captures):
+def test_request_request(captures):
     raw = raw_thrift_bytes(captures["/main/Request/en/"]["req_b64"])
-    assert roundtrip(raw, setGameReward) == raw
+    assert roundtrip(raw, Request) == raw
 
 
-def test_buycheckreturn_response(captures):
+def test_request_response(captures):
     raw = raw_thrift_bytes(captures["/main/Request/en/"]["res_b64"])
-    assert roundtrip(raw, buyCheckReturn) == raw
+    assert roundtrip(raw, initReturn) == raw
 
 
 def test_defaultsettinglist_request(captures):

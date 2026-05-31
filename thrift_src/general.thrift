@@ -40,53 +40,6 @@ struct paramData {
 
 
 // ────────────────────────────────────────────────────────────────────
-// Shared reward types
-// ────────────────────────────────────────────────────────────────────
-
-struct retReward {
-    1: optional i16 reward_type,
-    2: optional i32 reward_id,
-    3: optional i64 reward_value,
-}
-
-struct buyCheckRetDataInfo {
-    1: optional i64 result,
-}
-
-struct buyCheckReturn {
-    1: optional errorRetCode error,
-    2: optional serverTimeRet server_time,
-    3: optional string mode,
-    4: optional string call,
-    5: optional buyCheckRetDataInfo data,
-    6: optional maintenanceData maintenance,
-}
-
-
-// ────────────────────────────────────────────────────────────────────
-// setGameReward request types (reused by buyCheck / getPostTime)
-// ────────────────────────────────────────────────────────────────────
-
-struct setGameRewardDataInfo {
-    1: optional i32 u_seq,
-    2: optional string u_id,
-    3: optional string uuid,
-    4: optional string device_uuid,
-    5: optional string type,
-    6: optional i32 id,
-    7: optional i16 level,
-    8: optional double quantity,
-    9: optional string s_quantity,
-}
-
-struct setGameReward {
-    1: optional string call,
-    2: optional setGameRewardDataInfo data,
-    3: optional paramData common_data,
-}
-
-
-// ────────────────────────────────────────────────────────────────────
 // User data structs (userLoad / userLogin and others)
 // ────────────────────────────────────────────────────────────────────
 
@@ -347,5 +300,16 @@ struct UserApData {
     1: optional i32 i_Ap,
     2: optional i32 i_FullApTime,
     3: optional i32 i_MaxAp,
+}
+
+
+// ────────────────────────────────────────────────────────────────────
+// Other shared structs
+// ────────────────────────────────────────────────────────────────────
+
+struct retReward {
+    1: optional i16 reward_type,
+    2: optional i32 reward_id,
+    3: optional i64 reward_value,
 }
 

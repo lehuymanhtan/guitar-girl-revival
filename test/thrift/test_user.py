@@ -4,7 +4,7 @@ from tapsonic.user_userLogin_en.ttypes import userLogin, userLoginReturn
 from tapsonic.user_userLoad_en.ttypes import userLoad, userLoadReturn
 from tapsonic.user_userSave_en.ttypes import userSave, userSaveReturn
 from tapsonic.user_lastSaveTime_en.ttypes import lastSaveTime, lastSaveTimeReturn
-from tapsonic.user_setGameReward_en.ttypes import setGameRewardReturn
+from tapsonic.user_setGameReward_en.ttypes import setGameReward, setGameRewardReturn
 from tapsonic.user_setAttendance_en.ttypes import setAttendance, setAttendanceReturn
 from tapsonic.user_setPassReward_en.ttypes import setPassReward, setPassRewardReturn
 from tapsonic.user_getMusicReward_en.ttypes import getMusicReward, getMusicRewardReturn
@@ -13,7 +13,6 @@ from tapsonic.user_chThirdStage_en.ttypes import chThirdStage, chThirdStageRetur
 from tapsonic.user_paidEventPoint_en.ttypes import paidEventPoint, paidEventPointReturn
 from tapsonic.user_setFollowerProfileGift_en.ttypes import setFollowerProfileGift, setFollowerProfileGiftReturn
 from tapsonic.user_completeLog_en.ttypes import completeLog, completeLogReturn
-from tapsonic.general.ttypes import setGameReward
 from tapsonic.user_userJoin_en.ttypes import userJoin, userJoinReturn
 from tapsonic.user_setTutorialNew_en.ttypes import setTutorialNew, setTutorialNewReturn
 from tapsonic.user_setEventReward_en.ttypes import setEventReward, setEventRewardReturn

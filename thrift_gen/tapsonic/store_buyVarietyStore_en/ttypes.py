@@ -241,8 +241,8 @@ class buyVarietyStoreRetDataInfo(object):
                 else:
                     iprot.skip(ftype)
             elif fid == 2:
-                if ftype == TType.I64:
-                    self.u_candy = iprot.readI64()
+                if ftype == TType.DOUBLE:
+                    self.u_candy = iprot.readDouble()
                 else:
                     iprot.skip(ftype)
             elif fid == 3:
@@ -256,8 +256,8 @@ class buyVarietyStoreRetDataInfo(object):
                 else:
                     iprot.skip(ftype)
             elif fid == 5:
-                if ftype == TType.I32:
-                    self.reward_value = iprot.readI32()
+                if ftype == TType.I64:
+                    self.reward_value = iprot.readI64()
                 else:
                     iprot.skip(ftype)
             elif fid == 6:
@@ -281,8 +281,8 @@ class buyVarietyStoreRetDataInfo(object):
             oprot.writeI64(self.u_cp)
             oprot.writeFieldEnd()
         if self.u_candy is not None:
-            oprot.writeFieldBegin('u_candy', TType.I64, 2)
-            oprot.writeI64(self.u_candy)
+            oprot.writeFieldBegin('u_candy', TType.DOUBLE, 2)
+            oprot.writeDouble(self.u_candy)
             oprot.writeFieldEnd()
         if self.reward_type is not None:
             oprot.writeFieldBegin('reward_type', TType.I16, 3)
@@ -293,8 +293,8 @@ class buyVarietyStoreRetDataInfo(object):
             oprot.writeI32(self.reward_id)
             oprot.writeFieldEnd()
         if self.reward_value is not None:
-            oprot.writeFieldBegin('reward_value', TType.I32, 5)
-            oprot.writeI32(self.reward_value)
+            oprot.writeFieldBegin('reward_value', TType.I64, 5)
+            oprot.writeI64(self.reward_value)
             oprot.writeFieldEnd()
         if self.status is not None:
             oprot.writeFieldBegin('status', TType.STRING, 6)
@@ -454,10 +454,10 @@ all_structs.append(buyVarietyStoreRetDataInfo)
 buyVarietyStoreRetDataInfo.thrift_spec = (
     None,  # 0
     (1, TType.I64, 'u_cp', None, None, ),  # 1
-    (2, TType.I64, 'u_candy', None, None, ),  # 2
+    (2, TType.DOUBLE, 'u_candy', None, None, ),  # 2
     (3, TType.I16, 'reward_type', None, None, ),  # 3
     (4, TType.I32, 'reward_id', None, None, ),  # 4
-    (5, TType.I32, 'reward_value', None, None, ),  # 5
+    (5, TType.I64, 'reward_value', None, None, ),  # 5
     (6, TType.STRING, 'status', 'UTF8', None, ),  # 6
 )
 all_structs.append(buyVarietyStoreReturn)

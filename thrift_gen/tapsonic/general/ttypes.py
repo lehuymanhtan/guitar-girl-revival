@@ -363,494 +363,6 @@ class paramData(object):
         return not (self == other)
 
 
-class retReward(object):
-    """
-    Attributes:
-     - reward_type
-     - reward_id
-     - reward_value
-
-    """
-    thrift_spec = None
-
-
-    def __init__(self, reward_type = None, reward_id = None, reward_value = None,):
-        self.reward_type = reward_type
-        self.reward_id = reward_id
-        self.reward_value = reward_value
-
-    def read(self, iprot):
-        if iprot._fast_decode is not None and isinstance(iprot.trans, TTransport.CReadableTransport) and self.thrift_spec is not None:
-            iprot._fast_decode(self, iprot, [self.__class__, self.thrift_spec])
-            return
-        iprot.readStructBegin()
-        while True:
-            (fname, ftype, fid) = iprot.readFieldBegin()
-            if ftype == TType.STOP:
-                break
-            if fid == 1:
-                if ftype == TType.I16:
-                    self.reward_type = iprot.readI16()
-                else:
-                    iprot.skip(ftype)
-            elif fid == 2:
-                if ftype == TType.I32:
-                    self.reward_id = iprot.readI32()
-                else:
-                    iprot.skip(ftype)
-            elif fid == 3:
-                if ftype == TType.I64:
-                    self.reward_value = iprot.readI64()
-                else:
-                    iprot.skip(ftype)
-            else:
-                iprot.skip(ftype)
-            iprot.readFieldEnd()
-        iprot.readStructEnd()
-
-    def write(self, oprot):
-        self.validate()
-        if oprot._fast_encode is not None and self.thrift_spec is not None:
-            oprot.trans.write(oprot._fast_encode(self, [self.__class__, self.thrift_spec]))
-            return
-        oprot.writeStructBegin('retReward')
-        if self.reward_type is not None:
-            oprot.writeFieldBegin('reward_type', TType.I16, 1)
-            oprot.writeI16(self.reward_type)
-            oprot.writeFieldEnd()
-        if self.reward_id is not None:
-            oprot.writeFieldBegin('reward_id', TType.I32, 2)
-            oprot.writeI32(self.reward_id)
-            oprot.writeFieldEnd()
-        if self.reward_value is not None:
-            oprot.writeFieldBegin('reward_value', TType.I64, 3)
-            oprot.writeI64(self.reward_value)
-            oprot.writeFieldEnd()
-        oprot.writeFieldStop()
-        oprot.writeStructEnd()
-
-    def validate(self):
-        return
-
-    def __repr__(self):
-        L = ['%s=%r' % (key, value)
-             for key, value in self.__dict__.items()]
-        return '%s(%s)' % (self.__class__.__name__, ', '.join(L))
-
-    def __eq__(self, other):
-        return isinstance(other, self.__class__) and self.__dict__ == other.__dict__
-
-    def __ne__(self, other):
-        return not (self == other)
-
-
-class buyCheckRetDataInfo(object):
-    """
-    Attributes:
-     - result
-
-    """
-    thrift_spec = None
-
-
-    def __init__(self, result = None,):
-        self.result = result
-
-    def read(self, iprot):
-        if iprot._fast_decode is not None and isinstance(iprot.trans, TTransport.CReadableTransport) and self.thrift_spec is not None:
-            iprot._fast_decode(self, iprot, [self.__class__, self.thrift_spec])
-            return
-        iprot.readStructBegin()
-        while True:
-            (fname, ftype, fid) = iprot.readFieldBegin()
-            if ftype == TType.STOP:
-                break
-            if fid == 1:
-                if ftype == TType.I64:
-                    self.result = iprot.readI64()
-                else:
-                    iprot.skip(ftype)
-            else:
-                iprot.skip(ftype)
-            iprot.readFieldEnd()
-        iprot.readStructEnd()
-
-    def write(self, oprot):
-        self.validate()
-        if oprot._fast_encode is not None and self.thrift_spec is not None:
-            oprot.trans.write(oprot._fast_encode(self, [self.__class__, self.thrift_spec]))
-            return
-        oprot.writeStructBegin('buyCheckRetDataInfo')
-        if self.result is not None:
-            oprot.writeFieldBegin('result', TType.I64, 1)
-            oprot.writeI64(self.result)
-            oprot.writeFieldEnd()
-        oprot.writeFieldStop()
-        oprot.writeStructEnd()
-
-    def validate(self):
-        return
-
-    def __repr__(self):
-        L = ['%s=%r' % (key, value)
-             for key, value in self.__dict__.items()]
-        return '%s(%s)' % (self.__class__.__name__, ', '.join(L))
-
-    def __eq__(self, other):
-        return isinstance(other, self.__class__) and self.__dict__ == other.__dict__
-
-    def __ne__(self, other):
-        return not (self == other)
-
-
-class buyCheckReturn(object):
-    """
-    Attributes:
-     - error
-     - server_time
-     - mode
-     - call
-     - data
-     - maintenance
-
-    """
-    thrift_spec = None
-
-
-    def __init__(self, error = None, server_time = None, mode = None, call = None, data = None, maintenance = None,):
-        self.error = error
-        self.server_time = server_time
-        self.mode = mode
-        self.call = call
-        self.data = data
-        self.maintenance = maintenance
-
-    def read(self, iprot):
-        if iprot._fast_decode is not None and isinstance(iprot.trans, TTransport.CReadableTransport) and self.thrift_spec is not None:
-            iprot._fast_decode(self, iprot, [self.__class__, self.thrift_spec])
-            return
-        iprot.readStructBegin()
-        while True:
-            (fname, ftype, fid) = iprot.readFieldBegin()
-            if ftype == TType.STOP:
-                break
-            if fid == 1:
-                if ftype == TType.STRUCT:
-                    self.error = errorRetCode()
-                    self.error.read(iprot)
-                else:
-                    iprot.skip(ftype)
-            elif fid == 2:
-                if ftype == TType.STRUCT:
-                    self.server_time = serverTimeRet()
-                    self.server_time.read(iprot)
-                else:
-                    iprot.skip(ftype)
-            elif fid == 3:
-                if ftype == TType.STRING:
-                    self.mode = iprot.readString().decode('utf-8', errors='replace') if sys.version_info[0] == 2 else iprot.readString()
-                else:
-                    iprot.skip(ftype)
-            elif fid == 4:
-                if ftype == TType.STRING:
-                    self.call = iprot.readString().decode('utf-8', errors='replace') if sys.version_info[0] == 2 else iprot.readString()
-                else:
-                    iprot.skip(ftype)
-            elif fid == 5:
-                if ftype == TType.STRUCT:
-                    self.data = buyCheckRetDataInfo()
-                    self.data.read(iprot)
-                else:
-                    iprot.skip(ftype)
-            elif fid == 6:
-                if ftype == TType.STRUCT:
-                    self.maintenance = maintenanceData()
-                    self.maintenance.read(iprot)
-                else:
-                    iprot.skip(ftype)
-            else:
-                iprot.skip(ftype)
-            iprot.readFieldEnd()
-        iprot.readStructEnd()
-
-    def write(self, oprot):
-        self.validate()
-        if oprot._fast_encode is not None and self.thrift_spec is not None:
-            oprot.trans.write(oprot._fast_encode(self, [self.__class__, self.thrift_spec]))
-            return
-        oprot.writeStructBegin('buyCheckReturn')
-        if self.error is not None:
-            oprot.writeFieldBegin('error', TType.STRUCT, 1)
-            self.error.write(oprot)
-            oprot.writeFieldEnd()
-        if self.server_time is not None:
-            oprot.writeFieldBegin('server_time', TType.STRUCT, 2)
-            self.server_time.write(oprot)
-            oprot.writeFieldEnd()
-        if self.mode is not None:
-            oprot.writeFieldBegin('mode', TType.STRING, 3)
-            oprot.writeString(self.mode.encode('utf-8') if sys.version_info[0] == 2 else self.mode)
-            oprot.writeFieldEnd()
-        if self.call is not None:
-            oprot.writeFieldBegin('call', TType.STRING, 4)
-            oprot.writeString(self.call.encode('utf-8') if sys.version_info[0] == 2 else self.call)
-            oprot.writeFieldEnd()
-        if self.data is not None:
-            oprot.writeFieldBegin('data', TType.STRUCT, 5)
-            self.data.write(oprot)
-            oprot.writeFieldEnd()
-        if self.maintenance is not None:
-            oprot.writeFieldBegin('maintenance', TType.STRUCT, 6)
-            self.maintenance.write(oprot)
-            oprot.writeFieldEnd()
-        oprot.writeFieldStop()
-        oprot.writeStructEnd()
-
-    def validate(self):
-        return
-
-    def __repr__(self):
-        L = ['%s=%r' % (key, value)
-             for key, value in self.__dict__.items()]
-        return '%s(%s)' % (self.__class__.__name__, ', '.join(L))
-
-    def __eq__(self, other):
-        return isinstance(other, self.__class__) and self.__dict__ == other.__dict__
-
-    def __ne__(self, other):
-        return not (self == other)
-
-
-class setGameRewardDataInfo(object):
-    """
-    Attributes:
-     - u_seq
-     - u_id
-     - uuid
-     - device_uuid
-     - type
-     - id
-     - level
-     - quantity
-     - s_quantity
-
-    """
-    thrift_spec = None
-
-
-    def __init__(self, u_seq = None, u_id = None, uuid = None, device_uuid = None, type = None, id = None, level = None, quantity = None, s_quantity = None,):
-        self.u_seq = u_seq
-        self.u_id = u_id
-        self.uuid = uuid
-        self.device_uuid = device_uuid
-        self.type = type
-        self.id = id
-        self.level = level
-        self.quantity = quantity
-        self.s_quantity = s_quantity
-
-    def read(self, iprot):
-        if iprot._fast_decode is not None and isinstance(iprot.trans, TTransport.CReadableTransport) and self.thrift_spec is not None:
-            iprot._fast_decode(self, iprot, [self.__class__, self.thrift_spec])
-            return
-        iprot.readStructBegin()
-        while True:
-            (fname, ftype, fid) = iprot.readFieldBegin()
-            if ftype == TType.STOP:
-                break
-            if fid == 1:
-                if ftype == TType.I32:
-                    self.u_seq = iprot.readI32()
-                else:
-                    iprot.skip(ftype)
-            elif fid == 2:
-                if ftype == TType.STRING:
-                    self.u_id = iprot.readString().decode('utf-8', errors='replace') if sys.version_info[0] == 2 else iprot.readString()
-                else:
-                    iprot.skip(ftype)
-            elif fid == 3:
-                if ftype == TType.STRING:
-                    self.uuid = iprot.readString().decode('utf-8', errors='replace') if sys.version_info[0] == 2 else iprot.readString()
-                else:
-                    iprot.skip(ftype)
-            elif fid == 4:
-                if ftype == TType.STRING:
-                    self.device_uuid = iprot.readString().decode('utf-8', errors='replace') if sys.version_info[0] == 2 else iprot.readString()
-                else:
-                    iprot.skip(ftype)
-            elif fid == 5:
-                if ftype == TType.STRING:
-                    self.type = iprot.readString().decode('utf-8', errors='replace') if sys.version_info[0] == 2 else iprot.readString()
-                else:
-                    iprot.skip(ftype)
-            elif fid == 6:
-                if ftype == TType.I32:
-                    self.id = iprot.readI32()
-                else:
-                    iprot.skip(ftype)
-            elif fid == 7:
-                if ftype == TType.I16:
-                    self.level = iprot.readI16()
-                else:
-                    iprot.skip(ftype)
-            elif fid == 8:
-                if ftype == TType.DOUBLE:
-                    self.quantity = iprot.readDouble()
-                else:
-                    iprot.skip(ftype)
-            elif fid == 9:
-                if ftype == TType.STRING:
-                    self.s_quantity = iprot.readString().decode('utf-8', errors='replace') if sys.version_info[0] == 2 else iprot.readString()
-                else:
-                    iprot.skip(ftype)
-            else:
-                iprot.skip(ftype)
-            iprot.readFieldEnd()
-        iprot.readStructEnd()
-
-    def write(self, oprot):
-        self.validate()
-        if oprot._fast_encode is not None and self.thrift_spec is not None:
-            oprot.trans.write(oprot._fast_encode(self, [self.__class__, self.thrift_spec]))
-            return
-        oprot.writeStructBegin('setGameRewardDataInfo')
-        if self.u_seq is not None:
-            oprot.writeFieldBegin('u_seq', TType.I32, 1)
-            oprot.writeI32(self.u_seq)
-            oprot.writeFieldEnd()
-        if self.u_id is not None:
-            oprot.writeFieldBegin('u_id', TType.STRING, 2)
-            oprot.writeString(self.u_id.encode('utf-8') if sys.version_info[0] == 2 else self.u_id)
-            oprot.writeFieldEnd()
-        if self.uuid is not None:
-            oprot.writeFieldBegin('uuid', TType.STRING, 3)
-            oprot.writeString(self.uuid.encode('utf-8') if sys.version_info[0] == 2 else self.uuid)
-            oprot.writeFieldEnd()
-        if self.device_uuid is not None:
-            oprot.writeFieldBegin('device_uuid', TType.STRING, 4)
-            oprot.writeString(self.device_uuid.encode('utf-8') if sys.version_info[0] == 2 else self.device_uuid)
-            oprot.writeFieldEnd()
-        if self.type is not None:
-            oprot.writeFieldBegin('type', TType.STRING, 5)
-            oprot.writeString(self.type.encode('utf-8') if sys.version_info[0] == 2 else self.type)
-            oprot.writeFieldEnd()
-        if self.id is not None:
-            oprot.writeFieldBegin('id', TType.I32, 6)
-            oprot.writeI32(self.id)
-            oprot.writeFieldEnd()
-        if self.level is not None:
-            oprot.writeFieldBegin('level', TType.I16, 7)
-            oprot.writeI16(self.level)
-            oprot.writeFieldEnd()
-        if self.quantity is not None:
-            oprot.writeFieldBegin('quantity', TType.DOUBLE, 8)
-            oprot.writeDouble(self.quantity)
-            oprot.writeFieldEnd()
-        if self.s_quantity is not None:
-            oprot.writeFieldBegin('s_quantity', TType.STRING, 9)
-            oprot.writeString(self.s_quantity.encode('utf-8') if sys.version_info[0] == 2 else self.s_quantity)
-            oprot.writeFieldEnd()
-        oprot.writeFieldStop()
-        oprot.writeStructEnd()
-
-    def validate(self):
-        return
-
-    def __repr__(self):
-        L = ['%s=%r' % (key, value)
-             for key, value in self.__dict__.items()]
-        return '%s(%s)' % (self.__class__.__name__, ', '.join(L))
-
-    def __eq__(self, other):
-        return isinstance(other, self.__class__) and self.__dict__ == other.__dict__
-
-    def __ne__(self, other):
-        return not (self == other)
-
-
-class setGameReward(object):
-    """
-    Attributes:
-     - call
-     - data
-     - common_data
-
-    """
-    thrift_spec = None
-
-
-    def __init__(self, call = None, data = None, common_data = None,):
-        self.call = call
-        self.data = data
-        self.common_data = common_data
-
-    def read(self, iprot):
-        if iprot._fast_decode is not None and isinstance(iprot.trans, TTransport.CReadableTransport) and self.thrift_spec is not None:
-            iprot._fast_decode(self, iprot, [self.__class__, self.thrift_spec])
-            return
-        iprot.readStructBegin()
-        while True:
-            (fname, ftype, fid) = iprot.readFieldBegin()
-            if ftype == TType.STOP:
-                break
-            if fid == 1:
-                if ftype == TType.STRING:
-                    self.call = iprot.readString().decode('utf-8', errors='replace') if sys.version_info[0] == 2 else iprot.readString()
-                else:
-                    iprot.skip(ftype)
-            elif fid == 2:
-                if ftype == TType.STRUCT:
-                    self.data = setGameRewardDataInfo()
-                    self.data.read(iprot)
-                else:
-                    iprot.skip(ftype)
-            elif fid == 3:
-                if ftype == TType.STRUCT:
-                    self.common_data = paramData()
-                    self.common_data.read(iprot)
-                else:
-                    iprot.skip(ftype)
-            else:
-                iprot.skip(ftype)
-            iprot.readFieldEnd()
-        iprot.readStructEnd()
-
-    def write(self, oprot):
-        self.validate()
-        if oprot._fast_encode is not None and self.thrift_spec is not None:
-            oprot.trans.write(oprot._fast_encode(self, [self.__class__, self.thrift_spec]))
-            return
-        oprot.writeStructBegin('setGameReward')
-        if self.call is not None:
-            oprot.writeFieldBegin('call', TType.STRING, 1)
-            oprot.writeString(self.call.encode('utf-8') if sys.version_info[0] == 2 else self.call)
-            oprot.writeFieldEnd()
-        if self.data is not None:
-            oprot.writeFieldBegin('data', TType.STRUCT, 2)
-            self.data.write(oprot)
-            oprot.writeFieldEnd()
-        if self.common_data is not None:
-            oprot.writeFieldBegin('common_data', TType.STRUCT, 3)
-            self.common_data.write(oprot)
-            oprot.writeFieldEnd()
-        oprot.writeFieldStop()
-        oprot.writeStructEnd()
-
-    def validate(self):
-        return
-
-    def __repr__(self):
-        L = ['%s=%r' % (key, value)
-             for key, value in self.__dict__.items()]
-        return '%s(%s)' % (self.__class__.__name__, ', '.join(L))
-
-    def __eq__(self, other):
-        return isinstance(other, self.__class__) and self.__dict__ == other.__dict__
-
-    def __ne__(self, other):
-        return not (self == other)
-
-
 class userData(object):
     """
     Attributes:
@@ -4406,6 +3918,87 @@ class UserApData(object):
 
     def __ne__(self, other):
         return not (self == other)
+
+
+class retReward(object):
+    """
+    Attributes:
+     - reward_type
+     - reward_id
+     - reward_value
+
+    """
+    thrift_spec = None
+
+
+    def __init__(self, reward_type = None, reward_id = None, reward_value = None,):
+        self.reward_type = reward_type
+        self.reward_id = reward_id
+        self.reward_value = reward_value
+
+    def read(self, iprot):
+        if iprot._fast_decode is not None and isinstance(iprot.trans, TTransport.CReadableTransport) and self.thrift_spec is not None:
+            iprot._fast_decode(self, iprot, [self.__class__, self.thrift_spec])
+            return
+        iprot.readStructBegin()
+        while True:
+            (fname, ftype, fid) = iprot.readFieldBegin()
+            if ftype == TType.STOP:
+                break
+            if fid == 1:
+                if ftype == TType.I16:
+                    self.reward_type = iprot.readI16()
+                else:
+                    iprot.skip(ftype)
+            elif fid == 2:
+                if ftype == TType.I32:
+                    self.reward_id = iprot.readI32()
+                else:
+                    iprot.skip(ftype)
+            elif fid == 3:
+                if ftype == TType.I64:
+                    self.reward_value = iprot.readI64()
+                else:
+                    iprot.skip(ftype)
+            else:
+                iprot.skip(ftype)
+            iprot.readFieldEnd()
+        iprot.readStructEnd()
+
+    def write(self, oprot):
+        self.validate()
+        if oprot._fast_encode is not None and self.thrift_spec is not None:
+            oprot.trans.write(oprot._fast_encode(self, [self.__class__, self.thrift_spec]))
+            return
+        oprot.writeStructBegin('retReward')
+        if self.reward_type is not None:
+            oprot.writeFieldBegin('reward_type', TType.I16, 1)
+            oprot.writeI16(self.reward_type)
+            oprot.writeFieldEnd()
+        if self.reward_id is not None:
+            oprot.writeFieldBegin('reward_id', TType.I32, 2)
+            oprot.writeI32(self.reward_id)
+            oprot.writeFieldEnd()
+        if self.reward_value is not None:
+            oprot.writeFieldBegin('reward_value', TType.I64, 3)
+            oprot.writeI64(self.reward_value)
+            oprot.writeFieldEnd()
+        oprot.writeFieldStop()
+        oprot.writeStructEnd()
+
+    def validate(self):
+        return
+
+    def __repr__(self):
+        L = ['%s=%r' % (key, value)
+             for key, value in self.__dict__.items()]
+        return '%s(%s)' % (self.__class__.__name__, ', '.join(L))
+
+    def __eq__(self, other):
+        return isinstance(other, self.__class__) and self.__dict__ == other.__dict__
+
+    def __ne__(self, other):
+        return not (self == other)
 all_structs.append(errorRetCode)
 errorRetCode.thrift_spec = (
     None,  # 0
@@ -4435,48 +4028,6 @@ paramData.thrift_spec = (
     (1, TType.I32, 'client_ver', None, None, ),  # 1
     (2, TType.STRING, 'type', 'UTF8', None, ),  # 2
     (3, TType.I16, 'os', None, None, ),  # 3
-)
-all_structs.append(retReward)
-retReward.thrift_spec = (
-    None,  # 0
-    (1, TType.I16, 'reward_type', None, None, ),  # 1
-    (2, TType.I32, 'reward_id', None, None, ),  # 2
-    (3, TType.I64, 'reward_value', None, None, ),  # 3
-)
-all_structs.append(buyCheckRetDataInfo)
-buyCheckRetDataInfo.thrift_spec = (
-    None,  # 0
-    (1, TType.I64, 'result', None, None, ),  # 1
-)
-all_structs.append(buyCheckReturn)
-buyCheckReturn.thrift_spec = (
-    None,  # 0
-    (1, TType.STRUCT, 'error', [errorRetCode, None], None, ),  # 1
-    (2, TType.STRUCT, 'server_time', [serverTimeRet, None], None, ),  # 2
-    (3, TType.STRING, 'mode', 'UTF8', None, ),  # 3
-    (4, TType.STRING, 'call', 'UTF8', None, ),  # 4
-    (5, TType.STRUCT, 'data', [buyCheckRetDataInfo, None], None, ),  # 5
-    (6, TType.STRUCT, 'maintenance', [maintenanceData, None], None, ),  # 6
-)
-all_structs.append(setGameRewardDataInfo)
-setGameRewardDataInfo.thrift_spec = (
-    None,  # 0
-    (1, TType.I32, 'u_seq', None, None, ),  # 1
-    (2, TType.STRING, 'u_id', 'UTF8', None, ),  # 2
-    (3, TType.STRING, 'uuid', 'UTF8', None, ),  # 3
-    (4, TType.STRING, 'device_uuid', 'UTF8', None, ),  # 4
-    (5, TType.STRING, 'type', 'UTF8', None, ),  # 5
-    (6, TType.I32, 'id', None, None, ),  # 6
-    (7, TType.I16, 'level', None, None, ),  # 7
-    (8, TType.DOUBLE, 'quantity', None, None, ),  # 8
-    (9, TType.STRING, 's_quantity', 'UTF8', None, ),  # 9
-)
-all_structs.append(setGameReward)
-setGameReward.thrift_spec = (
-    None,  # 0
-    (1, TType.STRING, 'call', 'UTF8', None, ),  # 1
-    (2, TType.STRUCT, 'data', [setGameRewardDataInfo, None], None, ),  # 2
-    (3, TType.STRUCT, 'common_data', [paramData, None], None, ),  # 3
 )
 all_structs.append(userData)
 userData.thrift_spec = (
@@ -4767,6 +4318,13 @@ UserApData.thrift_spec = (
     (1, TType.I32, 'i_Ap', None, None, ),  # 1
     (2, TType.I32, 'i_FullApTime', None, None, ),  # 2
     (3, TType.I32, 'i_MaxAp', None, None, ),  # 3
+)
+all_structs.append(retReward)
+retReward.thrift_spec = (
+    None,  # 0
+    (1, TType.I16, 'reward_type', None, None, ),  # 1
+    (2, TType.I32, 'reward_id', None, None, ),  # 2
+    (3, TType.I64, 'reward_value', None, None, ),  # 3
 )
 fix_spec(all_structs)
 del all_structs

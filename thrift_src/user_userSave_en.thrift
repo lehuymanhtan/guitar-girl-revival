@@ -6,7 +6,6 @@ include "general.thrift"
 namespace py tapsonic.user_userSave_en
 
 
-
 struct saveUserInfo {
     1: optional double u_like,
     2: optional i64 u_fans,

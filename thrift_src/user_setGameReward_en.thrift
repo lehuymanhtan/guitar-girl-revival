@@ -1,11 +1,28 @@
 // Auto-generated from IL2CPP dump + Burp capture
-// Endpoint: /user/general.setGameReward/en/
+// Endpoint: /user/setGameReward/en/
 
 include "general.thrift"
 
 namespace py tapsonic.user_setGameReward_en
 
 
+struct setGameRewardDataInfo {
+    1: optional i32 u_seq,
+    2: optional string u_id,
+    3: optional string uuid,
+    4: optional string device_uuid,
+    5: optional string type,
+    6: optional i32 id,
+    7: optional i16 level,
+    8: optional double quantity,
+    9: optional string s_quantity,
+}
+
+struct setGameReward {
+    1: optional string call,
+    2: optional setGameRewardDataInfo data,
+    3: optional general.paramData common_data,
+}
 
 struct setGameRewardRetDataInfo {
     1: optional string type,
