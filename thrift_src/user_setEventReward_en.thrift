@@ -1,9 +1,11 @@
 // Auto-generated from IL2CPP dump + Burp capture
 // Endpoint: /user/setEventReward/en/
 
+include "general.thrift"
+
 namespace py tapsonic.user_setEventReward_en
 
-include "common.thrift"
+
 
 struct setEventRewardDataInfo {
     1: optional i32 u_seq,
@@ -16,13 +18,7 @@ struct setEventRewardDataInfo {
 struct setEventReward {
     1: optional string call,
     2: optional setEventRewardDataInfo data,
-    3: optional common.paramData common_data,
-}
-
-struct retReward {
-    1: optional i16 reward_type,
-    2: optional i32 reward_id,
-    3: optional i64 reward_value,
+    3: optional general.paramData common_data,
 }
 
 struct setEventRewardRetDataInfo {
@@ -34,14 +30,53 @@ struct setEventRewardRetDataInfo {
     6: optional i32 reward_id,
     7: optional i32 reward_value,
     8: optional string status,
-    9: optional list<retReward> reward_data,
+    9: optional list<general.retReward> reward_data,
 }
 
 struct setEventRewardReturn {
-    1: optional common.errorRetCode error,
-    2: optional common.serverTimeRet server_time,
+    1: optional general.errorRetCode error,
+    2: optional general.serverTimeRet server_time,
     3: optional string mode,
     4: optional string call,
     5: optional setEventRewardRetDataInfo data,
-    6: optional common.maintenanceData maintenance,
+    6: optional general.maintenanceData maintenance,
 }
+
+/*======================================================================
+ BURP EXAMPLES FOR CALL: setEventReward
+======================================================================
+ Example 1:
+   Request:
+     {   1: {'type': 'STRING', 'value': 'setEventReward'},
+         2: {   'type': 'STRUCT',
+                'value': {   1: {'type': 'I32', 'value': 7276629},
+                             2: {'type': 'STRING', 'value': '1614162043022'},
+                             3: {'type': 'STRING', 'value': '315504848'},
+                             4: {   'type': 'STRING',
+                                    'value': '6057191819962c308248100d62e86ead'},
+                             5: {'type': 'I32', 'value': 3}}},
+         3: {   'type': 'STRUCT',
+                'value': {   1: {'type': 'I32', 'value': 800},
+                             2: {'type': 'STRING', 'value': 'real'},
+                             3: {'type': 'I16', 'value': 1}}}}
+   Response:
+     {   1: {   'type': 'STRUCT',
+                'value': {   1: {'type': 'I32', 'value': 0},
+                             2: {'type': 'STRING', 'value': ''}}},
+         2: {   'type': 'STRUCT',
+                'value': {   1: {'type': 'I32', 'value': 1768378455},
+                             2: {'type': 'I64', 'value': 20260114171415}}},
+         3: {'type': 'STRING', 'value': 'user'},
+         4: {'type': 'STRING', 'value': 'setEventReward'},
+         5: {   'type': 'STRUCT',
+                'value': {   1: {'type': 'I64', 'value': 664},
+                             2: {'type': 'DOUBLE', 'value': 685.0},
+                             3: {'type': 'DOUBLE', 'value': 0.0},
+                             4: {'type': 'I64', 'value': 4553213},
+                             5: {'type': 'I16', 'value': 1},
+                             6: {'type': 'I32', 'value': 11},
+                             7: {'type': 'I32', 'value': 50},
+                             8: {'type': 'STRING', 'value': 'Y'}}},
+         6: {'type': 'STRUCT', 'value': {}}}
+
+======================================================================*/

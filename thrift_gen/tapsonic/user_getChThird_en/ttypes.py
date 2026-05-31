@@ -12,7 +12,7 @@ from thrift.TRecursive import fix_spec
 from uuid import UUID
 
 import sys
-import tapsonic.common.ttypes
+import tapsonic.general.ttypes
 
 from thrift.transport import TTransport
 all_structs = []
@@ -148,7 +148,7 @@ class getChThird(object):
                     iprot.skip(ftype)
             elif fid == 3:
                 if ftype == TType.STRUCT:
-                    self.common_data = tapsonic.common.ttypes.paramData()
+                    self.common_data = tapsonic.general.ttypes.paramData()
                     self.common_data.read(iprot)
                 else:
                     iprot.skip(ftype)
@@ -174,87 +174,6 @@ class getChThird(object):
         if self.common_data is not None:
             oprot.writeFieldBegin('common_data', TType.STRUCT, 3)
             self.common_data.write(oprot)
-            oprot.writeFieldEnd()
-        oprot.writeFieldStop()
-        oprot.writeStructEnd()
-
-    def validate(self):
-        return
-
-    def __repr__(self):
-        L = ['%s=%r' % (key, value)
-             for key, value in self.__dict__.items()]
-        return '%s(%s)' % (self.__class__.__name__, ', '.join(L))
-
-    def __eq__(self, other):
-        return isinstance(other, self.__class__) and self.__dict__ == other.__dict__
-
-    def __ne__(self, other):
-        return not (self == other)
-
-
-class UserApData(object):
-    """
-    Attributes:
-     - i_Ap
-     - i_FullApTime
-     - i_MaxAp
-
-    """
-    thrift_spec = None
-
-
-    def __init__(self, i_Ap = None, i_FullApTime = None, i_MaxAp = None,):
-        self.i_Ap = i_Ap
-        self.i_FullApTime = i_FullApTime
-        self.i_MaxAp = i_MaxAp
-
-    def read(self, iprot):
-        if iprot._fast_decode is not None and isinstance(iprot.trans, TTransport.CReadableTransport) and self.thrift_spec is not None:
-            iprot._fast_decode(self, iprot, [self.__class__, self.thrift_spec])
-            return
-        iprot.readStructBegin()
-        while True:
-            (fname, ftype, fid) = iprot.readFieldBegin()
-            if ftype == TType.STOP:
-                break
-            if fid == 1:
-                if ftype == TType.I32:
-                    self.i_Ap = iprot.readI32()
-                else:
-                    iprot.skip(ftype)
-            elif fid == 2:
-                if ftype == TType.I32:
-                    self.i_FullApTime = iprot.readI32()
-                else:
-                    iprot.skip(ftype)
-            elif fid == 3:
-                if ftype == TType.I32:
-                    self.i_MaxAp = iprot.readI32()
-                else:
-                    iprot.skip(ftype)
-            else:
-                iprot.skip(ftype)
-            iprot.readFieldEnd()
-        iprot.readStructEnd()
-
-    def write(self, oprot):
-        self.validate()
-        if oprot._fast_encode is not None and self.thrift_spec is not None:
-            oprot.trans.write(oprot._fast_encode(self, [self.__class__, self.thrift_spec]))
-            return
-        oprot.writeStructBegin('UserApData')
-        if self.i_Ap is not None:
-            oprot.writeFieldBegin('i_Ap', TType.I32, 1)
-            oprot.writeI32(self.i_Ap)
-            oprot.writeFieldEnd()
-        if self.i_FullApTime is not None:
-            oprot.writeFieldBegin('i_FullApTime', TType.I32, 2)
-            oprot.writeI32(self.i_FullApTime)
-            oprot.writeFieldEnd()
-        if self.i_MaxAp is not None:
-            oprot.writeFieldBegin('i_MaxAp', TType.I32, 3)
-            oprot.writeI32(self.i_MaxAp)
             oprot.writeFieldEnd()
         oprot.writeFieldStop()
         oprot.writeStructEnd()
@@ -400,7 +319,7 @@ class getChThirdRetDataInfo(object):
                     iprot.skip(ftype)
             elif fid == 2:
                 if ftype == TType.STRUCT:
-                    self.user_ap = UserApData()
+                    self.user_ap = tapsonic.general.ttypes.UserApData()
                     self.user_ap.read(iprot)
                 else:
                     iprot.skip(ftype)
@@ -409,7 +328,7 @@ class getChThirdRetDataInfo(object):
                     self.user_ch_third_stage = []
                     (_etype3, _size0) = iprot.readListBegin()
                     for _i4 in range(_size0):
-                        _elem5 = tapsonic.common.ttypes.UserChThirdStage()
+                        _elem5 = tapsonic.general.ttypes.UserChThirdStage()
                         _elem5.read(iprot)
                         self.user_ch_third_stage.append(_elem5)
                     iprot.readListEnd()
@@ -510,13 +429,13 @@ class getChThirdReturn(object):
                 break
             if fid == 1:
                 if ftype == TType.STRUCT:
-                    self.error = tapsonic.common.ttypes.errorRetCode()
+                    self.error = tapsonic.general.ttypes.errorRetCode()
                     self.error.read(iprot)
                 else:
                     iprot.skip(ftype)
             elif fid == 2:
                 if ftype == TType.STRUCT:
-                    self.server_time = tapsonic.common.ttypes.serverTimeRet()
+                    self.server_time = tapsonic.general.ttypes.serverTimeRet()
                     self.server_time.read(iprot)
                 else:
                     iprot.skip(ftype)
@@ -538,7 +457,7 @@ class getChThirdReturn(object):
                     iprot.skip(ftype)
             elif fid == 6:
                 if ftype == TType.STRUCT:
-                    self.maintenance = tapsonic.common.ttypes.maintenanceData()
+                    self.maintenance = tapsonic.general.ttypes.maintenanceData()
                     self.maintenance.read(iprot)
                 else:
                     iprot.skip(ftype)
@@ -606,14 +525,7 @@ getChThird.thrift_spec = (
     None,  # 0
     (1, TType.STRING, 'call', 'UTF8', None, ),  # 1
     (2, TType.STRUCT, 'data', [getChThirdDataInfo, None], None, ),  # 2
-    (3, TType.STRUCT, 'common_data', [tapsonic.common.ttypes.paramData, None], None, ),  # 3
-)
-all_structs.append(UserApData)
-UserApData.thrift_spec = (
-    None,  # 0
-    (1, TType.I32, 'i_Ap', None, None, ),  # 1
-    (2, TType.I32, 'i_FullApTime', None, None, ),  # 2
-    (3, TType.I32, 'i_MaxAp', None, None, ),  # 3
+    (3, TType.STRUCT, 'common_data', [tapsonic.general.ttypes.paramData, None], None, ),  # 3
 )
 all_structs.append(UserChThirdChapterReward)
 UserChThirdChapterReward.thrift_spec = (
@@ -627,19 +539,19 @@ all_structs.append(getChThirdRetDataInfo)
 getChThirdRetDataInfo.thrift_spec = (
     None,  # 0
     (1, TType.I32, 'u_seq', None, None, ),  # 1
-    (2, TType.STRUCT, 'user_ap', [UserApData, None], None, ),  # 2
-    (3, TType.LIST, 'user_ch_third_stage', (TType.STRUCT, [tapsonic.common.ttypes.UserChThirdStage, None], False), None, ),  # 3
+    (2, TType.STRUCT, 'user_ap', [tapsonic.general.ttypes.UserApData, None], None, ),  # 2
+    (3, TType.LIST, 'user_ch_third_stage', (TType.STRUCT, [tapsonic.general.ttypes.UserChThirdStage, None], False), None, ),  # 3
     (4, TType.LIST, 'user_ch_third_chapter_reward', (TType.STRUCT, [UserChThirdChapterReward, None], False), None, ),  # 4
 )
 all_structs.append(getChThirdReturn)
 getChThirdReturn.thrift_spec = (
     None,  # 0
-    (1, TType.STRUCT, 'error', [tapsonic.common.ttypes.errorRetCode, None], None, ),  # 1
-    (2, TType.STRUCT, 'server_time', [tapsonic.common.ttypes.serverTimeRet, None], None, ),  # 2
+    (1, TType.STRUCT, 'error', [tapsonic.general.ttypes.errorRetCode, None], None, ),  # 1
+    (2, TType.STRUCT, 'server_time', [tapsonic.general.ttypes.serverTimeRet, None], None, ),  # 2
     (3, TType.STRING, 'mode', 'UTF8', None, ),  # 3
     (4, TType.STRING, 'call', 'UTF8', None, ),  # 4
     (5, TType.STRUCT, 'data', [getChThirdRetDataInfo, None], None, ),  # 5
-    (6, TType.STRUCT, 'maintenance', [tapsonic.common.ttypes.maintenanceData, None], None, ),  # 6
+    (6, TType.STRUCT, 'maintenance', [tapsonic.general.ttypes.maintenanceData, None], None, ),  # 6
 )
 fix_spec(all_structs)
 del all_structs

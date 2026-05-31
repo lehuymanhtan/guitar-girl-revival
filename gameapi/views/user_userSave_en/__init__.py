@@ -1,6 +1,6 @@
 from django.http import HttpRequest, HttpResponse
 
-import thrift_gen.tapsonic.common.ttypes as common_type
+import thrift_gen.tapsonic.general.ttypes as common_type
 import thrift_gen.tapsonic.user_userSave_en.ttypes as user_userSave_en
 
 from gameapi import models

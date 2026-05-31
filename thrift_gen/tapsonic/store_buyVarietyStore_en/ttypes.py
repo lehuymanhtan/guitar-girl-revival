@@ -12,39 +12,31 @@ from thrift.TRecursive import fix_spec
 from uuid import UUID
 
 import sys
-import tapsonic.common.ttypes
+import tapsonic.general.ttypes
 
 from thrift.transport import TTransport
 all_structs = []
 
 
-class setGameRewardDataInfo(object):
+class buyVarietyStoreDataInfo(object):
     """
     Attributes:
      - u_seq
      - u_id
      - uuid
      - device_uuid
-     - type
-     - id
-     - level
-     - quantity
-     - s_quantity
+     - idx
 
     """
     thrift_spec = None
 
 
-    def __init__(self, u_seq = None, u_id = None, uuid = None, device_uuid = None, type = None, id = None, level = None, quantity = None, s_quantity = None,):
+    def __init__(self, u_seq = None, u_id = None, uuid = None, device_uuid = None, idx = None,):
         self.u_seq = u_seq
         self.u_id = u_id
         self.uuid = uuid
         self.device_uuid = device_uuid
-        self.type = type
-        self.id = id
-        self.level = level
-        self.quantity = quantity
-        self.s_quantity = s_quantity
+        self.idx = idx
 
     def read(self, iprot):
         if iprot._fast_decode is not None and isinstance(iprot.trans, TTransport.CReadableTransport) and self.thrift_spec is not None:
@@ -76,28 +68,8 @@ class setGameRewardDataInfo(object):
                 else:
                     iprot.skip(ftype)
             elif fid == 5:
-                if ftype == TType.STRING:
-                    self.type = iprot.readString().decode('utf-8', errors='replace') if sys.version_info[0] == 2 else iprot.readString()
-                else:
-                    iprot.skip(ftype)
-            elif fid == 6:
                 if ftype == TType.I32:
-                    self.id = iprot.readI32()
-                else:
-                    iprot.skip(ftype)
-            elif fid == 7:
-                if ftype == TType.I16:
-                    self.level = iprot.readI16()
-                else:
-                    iprot.skip(ftype)
-            elif fid == 8:
-                if ftype == TType.DOUBLE:
-                    self.quantity = iprot.readDouble()
-                else:
-                    iprot.skip(ftype)
-            elif fid == 9:
-                if ftype == TType.STRING:
-                    self.s_quantity = iprot.readString().decode('utf-8', errors='replace') if sys.version_info[0] == 2 else iprot.readString()
+                    self.idx = iprot.readI32()
                 else:
                     iprot.skip(ftype)
             else:
@@ -110,7 +82,7 @@ class setGameRewardDataInfo(object):
         if oprot._fast_encode is not None and self.thrift_spec is not None:
             oprot.trans.write(oprot._fast_encode(self, [self.__class__, self.thrift_spec]))
             return
-        oprot.writeStructBegin('setGameRewardDataInfo')
+        oprot.writeStructBegin('buyVarietyStoreDataInfo')
         if self.u_seq is not None:
             oprot.writeFieldBegin('u_seq', TType.I32, 1)
             oprot.writeI32(self.u_seq)
@@ -127,25 +99,9 @@ class setGameRewardDataInfo(object):
             oprot.writeFieldBegin('device_uuid', TType.STRING, 4)
             oprot.writeString(self.device_uuid.encode('utf-8') if sys.version_info[0] == 2 else self.device_uuid)
             oprot.writeFieldEnd()
-        if self.type is not None:
-            oprot.writeFieldBegin('type', TType.STRING, 5)
-            oprot.writeString(self.type.encode('utf-8') if sys.version_info[0] == 2 else self.type)
-            oprot.writeFieldEnd()
-        if self.id is not None:
-            oprot.writeFieldBegin('id', TType.I32, 6)
-            oprot.writeI32(self.id)
-            oprot.writeFieldEnd()
-        if self.level is not None:
-            oprot.writeFieldBegin('level', TType.I16, 7)
-            oprot.writeI16(self.level)
-            oprot.writeFieldEnd()
-        if self.quantity is not None:
-            oprot.writeFieldBegin('quantity', TType.DOUBLE, 8)
-            oprot.writeDouble(self.quantity)
-            oprot.writeFieldEnd()
-        if self.s_quantity is not None:
-            oprot.writeFieldBegin('s_quantity', TType.STRING, 9)
-            oprot.writeString(self.s_quantity.encode('utf-8') if sys.version_info[0] == 2 else self.s_quantity)
+        if self.idx is not None:
+            oprot.writeFieldBegin('idx', TType.I32, 5)
+            oprot.writeI32(self.idx)
             oprot.writeFieldEnd()
         oprot.writeFieldStop()
         oprot.writeStructEnd()
@@ -165,7 +121,7 @@ class setGameRewardDataInfo(object):
         return not (self == other)
 
 
-class setGameReward(object):
+class buyVarietyStore(object):
     """
     Attributes:
      - call
@@ -197,13 +153,13 @@ class setGameReward(object):
                     iprot.skip(ftype)
             elif fid == 2:
                 if ftype == TType.STRUCT:
-                    self.data = setGameRewardDataInfo()
+                    self.data = buyVarietyStoreDataInfo()
                     self.data.read(iprot)
                 else:
                     iprot.skip(ftype)
             elif fid == 3:
                 if ftype == TType.STRUCT:
-                    self.common_data = tapsonic.common.ttypes.paramData()
+                    self.common_data = tapsonic.general.ttypes.paramData()
                     self.common_data.read(iprot)
                 else:
                     iprot.skip(ftype)
@@ -217,7 +173,7 @@ class setGameReward(object):
         if oprot._fast_encode is not None and self.thrift_spec is not None:
             oprot.trans.write(oprot._fast_encode(self, [self.__class__, self.thrift_spec]))
             return
-        oprot.writeStructBegin('setGameReward')
+        oprot.writeStructBegin('buyVarietyStore')
         if self.call is not None:
             oprot.writeFieldBegin('call', TType.STRING, 1)
             oprot.writeString(self.call.encode('utf-8') if sys.version_info[0] == 2 else self.call)
@@ -285,8 +241,8 @@ class buyVarietyStoreRetDataInfo(object):
                 else:
                     iprot.skip(ftype)
             elif fid == 2:
-                if ftype == TType.DOUBLE:
-                    self.u_candy = iprot.readDouble()
+                if ftype == TType.I64:
+                    self.u_candy = iprot.readI64()
                 else:
                     iprot.skip(ftype)
             elif fid == 3:
@@ -300,8 +256,8 @@ class buyVarietyStoreRetDataInfo(object):
                 else:
                     iprot.skip(ftype)
             elif fid == 5:
-                if ftype == TType.I64:
-                    self.reward_value = iprot.readI64()
+                if ftype == TType.I32:
+                    self.reward_value = iprot.readI32()
                 else:
                     iprot.skip(ftype)
             elif fid == 6:
@@ -325,8 +281,8 @@ class buyVarietyStoreRetDataInfo(object):
             oprot.writeI64(self.u_cp)
             oprot.writeFieldEnd()
         if self.u_candy is not None:
-            oprot.writeFieldBegin('u_candy', TType.DOUBLE, 2)
-            oprot.writeDouble(self.u_candy)
+            oprot.writeFieldBegin('u_candy', TType.I64, 2)
+            oprot.writeI64(self.u_candy)
             oprot.writeFieldEnd()
         if self.reward_type is not None:
             oprot.writeFieldBegin('reward_type', TType.I16, 3)
@@ -337,8 +293,8 @@ class buyVarietyStoreRetDataInfo(object):
             oprot.writeI32(self.reward_id)
             oprot.writeFieldEnd()
         if self.reward_value is not None:
-            oprot.writeFieldBegin('reward_value', TType.I64, 5)
-            oprot.writeI64(self.reward_value)
+            oprot.writeFieldBegin('reward_value', TType.I32, 5)
+            oprot.writeI32(self.reward_value)
             oprot.writeFieldEnd()
         if self.status is not None:
             oprot.writeFieldBegin('status', TType.STRING, 6)
@@ -395,13 +351,13 @@ class buyVarietyStoreReturn(object):
                 break
             if fid == 1:
                 if ftype == TType.STRUCT:
-                    self.error = tapsonic.common.ttypes.errorRetCode()
+                    self.error = tapsonic.general.ttypes.errorRetCode()
                     self.error.read(iprot)
                 else:
                     iprot.skip(ftype)
             elif fid == 2:
                 if ftype == TType.STRUCT:
-                    self.server_time = tapsonic.common.ttypes.serverTimeRet()
+                    self.server_time = tapsonic.general.ttypes.serverTimeRet()
                     self.server_time.read(iprot)
                 else:
                     iprot.skip(ftype)
@@ -423,7 +379,7 @@ class buyVarietyStoreReturn(object):
                     iprot.skip(ftype)
             elif fid == 6:
                 if ftype == TType.STRUCT:
-                    self.maintenance = tapsonic.common.ttypes.maintenanceData()
+                    self.maintenance = tapsonic.general.ttypes.maintenanceData()
                     self.maintenance.read(iprot)
                 else:
                     iprot.skip(ftype)
@@ -478,45 +434,41 @@ class buyVarietyStoreReturn(object):
 
     def __ne__(self, other):
         return not (self == other)
-all_structs.append(setGameRewardDataInfo)
-setGameRewardDataInfo.thrift_spec = (
+all_structs.append(buyVarietyStoreDataInfo)
+buyVarietyStoreDataInfo.thrift_spec = (
     None,  # 0
     (1, TType.I32, 'u_seq', None, None, ),  # 1
     (2, TType.STRING, 'u_id', 'UTF8', None, ),  # 2
     (3, TType.STRING, 'uuid', 'UTF8', None, ),  # 3
     (4, TType.STRING, 'device_uuid', 'UTF8', None, ),  # 4
-    (5, TType.STRING, 'type', 'UTF8', None, ),  # 5
-    (6, TType.I32, 'id', None, None, ),  # 6
-    (7, TType.I16, 'level', None, None, ),  # 7
-    (8, TType.DOUBLE, 'quantity', None, None, ),  # 8
-    (9, TType.STRING, 's_quantity', 'UTF8', None, ),  # 9
+    (5, TType.I32, 'idx', None, None, ),  # 5
 )
-all_structs.append(setGameReward)
-setGameReward.thrift_spec = (
+all_structs.append(buyVarietyStore)
+buyVarietyStore.thrift_spec = (
     None,  # 0
     (1, TType.STRING, 'call', 'UTF8', None, ),  # 1
-    (2, TType.STRUCT, 'data', [setGameRewardDataInfo, None], None, ),  # 2
-    (3, TType.STRUCT, 'common_data', [tapsonic.common.ttypes.paramData, None], None, ),  # 3
+    (2, TType.STRUCT, 'data', [buyVarietyStoreDataInfo, None], None, ),  # 2
+    (3, TType.STRUCT, 'common_data', [tapsonic.general.ttypes.paramData, None], None, ),  # 3
 )
 all_structs.append(buyVarietyStoreRetDataInfo)
 buyVarietyStoreRetDataInfo.thrift_spec = (
     None,  # 0
     (1, TType.I64, 'u_cp', None, None, ),  # 1
-    (2, TType.DOUBLE, 'u_candy', None, None, ),  # 2
+    (2, TType.I64, 'u_candy', None, None, ),  # 2
     (3, TType.I16, 'reward_type', None, None, ),  # 3
     (4, TType.I32, 'reward_id', None, None, ),  # 4
-    (5, TType.I64, 'reward_value', None, None, ),  # 5
+    (5, TType.I32, 'reward_value', None, None, ),  # 5
     (6, TType.STRING, 'status', 'UTF8', None, ),  # 6
 )
 all_structs.append(buyVarietyStoreReturn)
 buyVarietyStoreReturn.thrift_spec = (
     None,  # 0
-    (1, TType.STRUCT, 'error', [tapsonic.common.ttypes.errorRetCode, None], None, ),  # 1
-    (2, TType.STRUCT, 'server_time', [tapsonic.common.ttypes.serverTimeRet, None], None, ),  # 2
+    (1, TType.STRUCT, 'error', [tapsonic.general.ttypes.errorRetCode, None], None, ),  # 1
+    (2, TType.STRUCT, 'server_time', [tapsonic.general.ttypes.serverTimeRet, None], None, ),  # 2
     (3, TType.STRING, 'mode', 'UTF8', None, ),  # 3
     (4, TType.STRING, 'call', 'UTF8', None, ),  # 4
     (5, TType.STRUCT, 'data', [buyVarietyStoreRetDataInfo, None], None, ),  # 5
-    (6, TType.STRUCT, 'maintenance', [tapsonic.common.ttypes.maintenanceData, None], None, ),  # 6
+    (6, TType.STRUCT, 'maintenance', [tapsonic.general.ttypes.maintenanceData, None], None, ),  # 6
 )
 fix_spec(all_structs)
 del all_structs

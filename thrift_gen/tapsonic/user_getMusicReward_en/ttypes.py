@@ -12,7 +12,7 @@ from thrift.TRecursive import fix_spec
 from uuid import UUID
 
 import sys
-import tapsonic.common.ttypes
+import tapsonic.general.ttypes
 
 from thrift.transport import TTransport
 all_structs = []
@@ -186,7 +186,7 @@ class getMusicReward(object):
                     iprot.skip(ftype)
             elif fid == 3:
                 if ftype == TType.STRUCT:
-                    self.common_data = tapsonic.common.ttypes.paramData()
+                    self.common_data = tapsonic.general.ttypes.paramData()
                     self.common_data.read(iprot)
                 else:
                     iprot.skip(ftype)
@@ -290,7 +290,7 @@ class getMusicRewardRetDataInfo(object):
                     self.user_follower_profile = []
                     (_etype29, _size26) = iprot.readListBegin()
                     for _i30 in range(_size26):
-                        _elem31 = tapsonic.common.ttypes.UserFollowerProfile()
+                        _elem31 = tapsonic.general.ttypes.UserFollowerProfile()
                         _elem31.read(iprot)
                         self.user_follower_profile.append(_elem31)
                     iprot.readListEnd()
@@ -302,7 +302,7 @@ class getMusicRewardRetDataInfo(object):
                     (_ktype33, _vtype34, _size32) = iprot.readMapBegin()
                     for _i36 in range(_size32):
                         _key37 = iprot.readI32()
-                        _val38 = tapsonic.common.ttypes.errorRetCode()
+                        _val38 = tapsonic.general.ttypes.errorRetCode()
                         _val38.read(iprot)
                         self.error_data[_key37] = _val38
                     iprot.readMapEnd()
@@ -403,13 +403,13 @@ class getMusicRewardReturn(object):
                 break
             if fid == 1:
                 if ftype == TType.STRUCT:
-                    self.error = tapsonic.common.ttypes.errorRetCode()
+                    self.error = tapsonic.general.ttypes.errorRetCode()
                     self.error.read(iprot)
                 else:
                     iprot.skip(ftype)
             elif fid == 2:
                 if ftype == TType.STRUCT:
-                    self.server_time = tapsonic.common.ttypes.serverTimeRet()
+                    self.server_time = tapsonic.general.ttypes.serverTimeRet()
                     self.server_time.read(iprot)
                 else:
                     iprot.skip(ftype)
@@ -431,7 +431,7 @@ class getMusicRewardReturn(object):
                     iprot.skip(ftype)
             elif fid == 6:
                 if ftype == TType.STRUCT:
-                    self.maintenance = tapsonic.common.ttypes.maintenanceData()
+                    self.maintenance = tapsonic.general.ttypes.maintenanceData()
                     self.maintenance.read(iprot)
                 else:
                     iprot.skip(ftype)
@@ -501,7 +501,7 @@ getMusicReward.thrift_spec = (
     None,  # 0
     (1, TType.STRING, 'call', 'UTF8', None, ),  # 1
     (2, TType.STRUCT, 'data', [getMusicRewardDataInfo, None], None, ),  # 2
-    (3, TType.STRUCT, 'common_data', [tapsonic.common.ttypes.paramData, None], None, ),  # 3
+    (3, TType.STRUCT, 'common_data', [tapsonic.general.ttypes.paramData, None], None, ),  # 3
 )
 all_structs.append(getMusicRewardRetDataInfo)
 getMusicRewardRetDataInfo.thrift_spec = (
@@ -509,18 +509,18 @@ getMusicRewardRetDataInfo.thrift_spec = (
     (1, TType.I32, 'total_reward_value', None, None, ),  # 1
     (2, TType.LIST, 'reward_music_id', (TType.I32, None, False), None, ),  # 2
     (3, TType.LIST, 'reward_value', (TType.I32, None, False), None, ),  # 3
-    (4, TType.LIST, 'user_follower_profile', (TType.STRUCT, [tapsonic.common.ttypes.UserFollowerProfile, None], False), None, ),  # 4
-    (5, TType.MAP, 'error_data', (TType.I32, None, TType.STRUCT, [tapsonic.common.ttypes.errorRetCode, None], False), None, ),  # 5
+    (4, TType.LIST, 'user_follower_profile', (TType.STRUCT, [tapsonic.general.ttypes.UserFollowerProfile, None], False), None, ),  # 4
+    (5, TType.MAP, 'error_data', (TType.I32, None, TType.STRUCT, [tapsonic.general.ttypes.errorRetCode, None], False), None, ),  # 5
 )
 all_structs.append(getMusicRewardReturn)
 getMusicRewardReturn.thrift_spec = (
     None,  # 0
-    (1, TType.STRUCT, 'error', [tapsonic.common.ttypes.errorRetCode, None], None, ),  # 1
-    (2, TType.STRUCT, 'server_time', [tapsonic.common.ttypes.serverTimeRet, None], None, ),  # 2
+    (1, TType.STRUCT, 'error', [tapsonic.general.ttypes.errorRetCode, None], None, ),  # 1
+    (2, TType.STRUCT, 'server_time', [tapsonic.general.ttypes.serverTimeRet, None], None, ),  # 2
     (3, TType.STRING, 'mode', 'UTF8', None, ),  # 3
     (4, TType.STRING, 'call', 'UTF8', None, ),  # 4
     (5, TType.STRUCT, 'data', [getMusicRewardRetDataInfo, None], None, ),  # 5
-    (6, TType.STRUCT, 'maintenance', [tapsonic.common.ttypes.maintenanceData, None], None, ),  # 6
+    (6, TType.STRUCT, 'maintenance', [tapsonic.general.ttypes.maintenanceData, None], None, ),  # 6
 )
 fix_spec(all_structs)
 del all_structs

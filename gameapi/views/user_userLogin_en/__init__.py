@@ -2,7 +2,7 @@ from datetime import datetime
 
 from django.http import HttpRequest, HttpResponse
 
-import thrift_gen.tapsonic.common.ttypes as common_type
+import thrift_gen.tapsonic.general.ttypes as common_type
 import thrift_gen.tapsonic.user_userLogin_en.ttypes as user_userLogin_en
 
 from gameapi import models

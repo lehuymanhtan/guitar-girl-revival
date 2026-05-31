@@ -12,7 +12,7 @@ from thrift.TRecursive import fix_spec
 from uuid import UUID
 
 import sys
-import tapsonic.common.ttypes
+import tapsonic.general.ttypes
 
 from thrift.transport import TTransport
 all_structs = []
@@ -192,7 +192,7 @@ class setPassReward(object):
                     iprot.skip(ftype)
             elif fid == 3:
                 if ftype == TType.STRUCT:
-                    self.common_data = tapsonic.common.ttypes.paramData()
+                    self.common_data = tapsonic.general.ttypes.paramData()
                     self.common_data.read(iprot)
                 else:
                     iprot.skip(ftype)
@@ -237,87 +237,6 @@ class setPassReward(object):
         return not (self == other)
 
 
-class retReward(object):
-    """
-    Attributes:
-     - reward_type
-     - reward_id
-     - reward_value
-
-    """
-    thrift_spec = None
-
-
-    def __init__(self, reward_type = None, reward_id = None, reward_value = None,):
-        self.reward_type = reward_type
-        self.reward_id = reward_id
-        self.reward_value = reward_value
-
-    def read(self, iprot):
-        if iprot._fast_decode is not None and isinstance(iprot.trans, TTransport.CReadableTransport) and self.thrift_spec is not None:
-            iprot._fast_decode(self, iprot, [self.__class__, self.thrift_spec])
-            return
-        iprot.readStructBegin()
-        while True:
-            (fname, ftype, fid) = iprot.readFieldBegin()
-            if ftype == TType.STOP:
-                break
-            if fid == 1:
-                if ftype == TType.I16:
-                    self.reward_type = iprot.readI16()
-                else:
-                    iprot.skip(ftype)
-            elif fid == 2:
-                if ftype == TType.I32:
-                    self.reward_id = iprot.readI32()
-                else:
-                    iprot.skip(ftype)
-            elif fid == 3:
-                if ftype == TType.I64:
-                    self.reward_value = iprot.readI64()
-                else:
-                    iprot.skip(ftype)
-            else:
-                iprot.skip(ftype)
-            iprot.readFieldEnd()
-        iprot.readStructEnd()
-
-    def write(self, oprot):
-        self.validate()
-        if oprot._fast_encode is not None and self.thrift_spec is not None:
-            oprot.trans.write(oprot._fast_encode(self, [self.__class__, self.thrift_spec]))
-            return
-        oprot.writeStructBegin('retReward')
-        if self.reward_type is not None:
-            oprot.writeFieldBegin('reward_type', TType.I16, 1)
-            oprot.writeI16(self.reward_type)
-            oprot.writeFieldEnd()
-        if self.reward_id is not None:
-            oprot.writeFieldBegin('reward_id', TType.I32, 2)
-            oprot.writeI32(self.reward_id)
-            oprot.writeFieldEnd()
-        if self.reward_value is not None:
-            oprot.writeFieldBegin('reward_value', TType.I64, 3)
-            oprot.writeI64(self.reward_value)
-            oprot.writeFieldEnd()
-        oprot.writeFieldStop()
-        oprot.writeStructEnd()
-
-    def validate(self):
-        return
-
-    def __repr__(self):
-        L = ['%s=%r' % (key, value)
-             for key, value in self.__dict__.items()]
-        return '%s(%s)' % (self.__class__.__name__, ', '.join(L))
-
-    def __eq__(self, other):
-        return isinstance(other, self.__class__) and self.__dict__ == other.__dict__
-
-    def __ne__(self, other):
-        return not (self == other)
-
-
 class setPassRewardRetDataInfo(object):
     """
     Attributes:
@@ -343,7 +262,7 @@ class setPassRewardRetDataInfo(object):
                 break
             if fid == 1:
                 if ftype == TType.STRUCT:
-                    self.subscribe_pass_reward = tapsonic.common.ttypes.userSubscribePassReward()
+                    self.subscribe_pass_reward = tapsonic.general.ttypes.userSubscribePassReward()
                     self.subscribe_pass_reward.read(iprot)
                 else:
                     iprot.skip(ftype)
@@ -352,7 +271,7 @@ class setPassRewardRetDataInfo(object):
                     self.reward_data = []
                     (_etype3, _size0) = iprot.readListBegin()
                     for _i4 in range(_size0):
-                        _elem5 = retReward()
+                        _elem5 = tapsonic.general.ttypes.retReward()
                         _elem5.read(iprot)
                         self.reward_data.append(_elem5)
                     iprot.readListEnd()
@@ -431,13 +350,13 @@ class setPassRewardReturn(object):
                 break
             if fid == 1:
                 if ftype == TType.STRUCT:
-                    self.error = tapsonic.common.ttypes.errorRetCode()
+                    self.error = tapsonic.general.ttypes.errorRetCode()
                     self.error.read(iprot)
                 else:
                     iprot.skip(ftype)
             elif fid == 2:
                 if ftype == TType.STRUCT:
-                    self.server_time = tapsonic.common.ttypes.serverTimeRet()
+                    self.server_time = tapsonic.general.ttypes.serverTimeRet()
                     self.server_time.read(iprot)
                 else:
                     iprot.skip(ftype)
@@ -459,7 +378,7 @@ class setPassRewardReturn(object):
                     iprot.skip(ftype)
             elif fid == 6:
                 if ftype == TType.STRUCT:
-                    self.maintenance = tapsonic.common.ttypes.maintenanceData()
+                    self.maintenance = tapsonic.general.ttypes.maintenanceData()
                     self.maintenance.read(iprot)
                 else:
                     iprot.skip(ftype)
@@ -531,30 +450,23 @@ setPassReward.thrift_spec = (
     None,  # 0
     (1, TType.STRING, 'call', 'UTF8', None, ),  # 1
     (2, TType.STRUCT, 'data', [setPassRewardDataInfo, None], None, ),  # 2
-    (3, TType.STRUCT, 'common_data', [tapsonic.common.ttypes.paramData, None], None, ),  # 3
-)
-all_structs.append(retReward)
-retReward.thrift_spec = (
-    None,  # 0
-    (1, TType.I16, 'reward_type', None, None, ),  # 1
-    (2, TType.I32, 'reward_id', None, None, ),  # 2
-    (3, TType.I64, 'reward_value', None, None, ),  # 3
+    (3, TType.STRUCT, 'common_data', [tapsonic.general.ttypes.paramData, None], None, ),  # 3
 )
 all_structs.append(setPassRewardRetDataInfo)
 setPassRewardRetDataInfo.thrift_spec = (
     None,  # 0
-    (1, TType.STRUCT, 'subscribe_pass_reward', [tapsonic.common.ttypes.userSubscribePassReward, None], None, ),  # 1
-    (2, TType.LIST, 'reward_data', (TType.STRUCT, [retReward, None], False), None, ),  # 2
+    (1, TType.STRUCT, 'subscribe_pass_reward', [tapsonic.general.ttypes.userSubscribePassReward, None], None, ),  # 1
+    (2, TType.LIST, 'reward_data', (TType.STRUCT, [tapsonic.general.ttypes.retReward, None], False), None, ),  # 2
 )
 all_structs.append(setPassRewardReturn)
 setPassRewardReturn.thrift_spec = (
     None,  # 0
-    (1, TType.STRUCT, 'error', [tapsonic.common.ttypes.errorRetCode, None], None, ),  # 1
-    (2, TType.STRUCT, 'server_time', [tapsonic.common.ttypes.serverTimeRet, None], None, ),  # 2
+    (1, TType.STRUCT, 'error', [tapsonic.general.ttypes.errorRetCode, None], None, ),  # 1
+    (2, TType.STRUCT, 'server_time', [tapsonic.general.ttypes.serverTimeRet, None], None, ),  # 2
     (3, TType.STRING, 'mode', 'UTF8', None, ),  # 3
     (4, TType.STRING, 'call', 'UTF8', None, ),  # 4
     (5, TType.STRUCT, 'data', [setPassRewardRetDataInfo, None], None, ),  # 5
-    (6, TType.STRUCT, 'maintenance', [tapsonic.common.ttypes.maintenanceData, None], None, ),  # 6
+    (6, TType.STRUCT, 'maintenance', [tapsonic.general.ttypes.maintenanceData, None], None, ),  # 6
 )
 fix_spec(all_structs)
 del all_structs
