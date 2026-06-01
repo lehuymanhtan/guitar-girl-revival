@@ -7271,22 +7271,22 @@ class getSubscribeList(object):
                     self.i_TimeLimit = iprot.readI16()
                 else:
                     iprot.skip(ftype)
-            elif fid == 5:
+            elif fid == 11:
                 if ftype == TType.I32:
                     self.i_StartYear = iprot.readI32()
                 else:
                     iprot.skip(ftype)
-            elif fid == 6:
+            elif fid == 12:
                 if ftype == TType.I32:
                     self.i_RepeatMonth = iprot.readI32()
                 else:
                     iprot.skip(ftype)
-            elif fid == 7:
+            elif fid == 13:
                 if ftype == TType.I32:
                     self.i_MonthGroupIndex = iprot.readI32()
                 else:
                     iprot.skip(ftype)
-            elif fid == 8:
+            elif fid == 7:
                 if ftype == TType.I16:
                     self.b_IsActive = iprot.readI16()
                 else:
@@ -7318,21 +7318,21 @@ class getSubscribeList(object):
             oprot.writeFieldBegin('i_TimeLimit', TType.I16, 4)
             oprot.writeI16(self.i_TimeLimit)
             oprot.writeFieldEnd()
+        if self.b_IsActive is not None:
+            oprot.writeFieldBegin('b_IsActive', TType.I16, 7)
+            oprot.writeI16(self.b_IsActive)
+            oprot.writeFieldEnd()
         if self.i_StartYear is not None:
-            oprot.writeFieldBegin('i_StartYear', TType.I32, 5)
+            oprot.writeFieldBegin('i_StartYear', TType.I32, 11)
             oprot.writeI32(self.i_StartYear)
             oprot.writeFieldEnd()
         if self.i_RepeatMonth is not None:
-            oprot.writeFieldBegin('i_RepeatMonth', TType.I32, 6)
+            oprot.writeFieldBegin('i_RepeatMonth', TType.I32, 12)
             oprot.writeI32(self.i_RepeatMonth)
             oprot.writeFieldEnd()
         if self.i_MonthGroupIndex is not None:
-            oprot.writeFieldBegin('i_MonthGroupIndex', TType.I32, 7)
+            oprot.writeFieldBegin('i_MonthGroupIndex', TType.I32, 13)
             oprot.writeI32(self.i_MonthGroupIndex)
-            oprot.writeFieldEnd()
-        if self.b_IsActive is not None:
-            oprot.writeFieldBegin('b_IsActive', TType.I16, 8)
-            oprot.writeI16(self.b_IsActive)
             oprot.writeFieldEnd()
         oprot.writeFieldStop()
         oprot.writeStructEnd()
@@ -14078,10 +14078,15 @@ getSubscribeList.thrift_spec = (
     (2, TType.I16, 'i_Area', None, None, ),  # 2
     (3, TType.STRING, 's_Type', 'UTF8', None, ),  # 3
     (4, TType.I16, 'i_TimeLimit', None, None, ),  # 4
-    (5, TType.I32, 'i_StartYear', None, None, ),  # 5
-    (6, TType.I32, 'i_RepeatMonth', None, None, ),  # 6
-    (7, TType.I32, 'i_MonthGroupIndex', None, None, ),  # 7
-    (8, TType.I16, 'b_IsActive', None, None, ),  # 8
+    None,  # 5
+    None,  # 6
+    (7, TType.I16, 'b_IsActive', None, None, ),  # 7
+    None,  # 8
+    None,  # 9
+    None,  # 10
+    (11, TType.I32, 'i_StartYear', None, None, ),  # 11
+    (12, TType.I32, 'i_RepeatMonth', None, None, ),  # 12
+    (13, TType.I32, 'i_MonthGroupIndex', None, None, ),  # 13
 )
 all_structs.append(getSubscribePassReward)
 getSubscribePassReward.thrift_spec = (
