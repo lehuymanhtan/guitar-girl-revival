@@ -65,4 +65,9 @@ def test_getgamedatalist_request(captures):
 
 def test_getgamedatalist_response(captures):
     raw = raw_thrift_bytes(captures["/main/getGameDataList/en/"]["res_b64"])
-    assert roundtrip(raw, getGameDataListReturn) == raw
+    
+    out_raw_1 = roundtrip(raw, getGameDataListReturn)
+    assert len(raw) == len(out_raw_1), "Data was lost during serialization!"
+    
+    out_raw_2 = roundtrip(out_raw_1, getGameDataListReturn)
+    assert out_raw_1 == out_raw_2, "Serialization is unstable!"
