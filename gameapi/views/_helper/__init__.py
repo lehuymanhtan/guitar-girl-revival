@@ -9,7 +9,7 @@ from django.http import HttpRequest, HttpResponse
 from thrift.protocol import TBinaryProtocol
 from thrift.transport import TTransport
 
-import thrift_gen.tapsonic.common.ttypes as common_type
+import thrift_gen.tapsonic.general.ttypes as common_type
 
 DOTNET_EPOCH = datetime(1, 1, 1)
 

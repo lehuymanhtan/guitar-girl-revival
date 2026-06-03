@@ -5,3 +5,5 @@ db.sqlite3
 plan.md
 thrift_found.md
 .venv/
+burp_capture/
+scripts/extract_captures.py

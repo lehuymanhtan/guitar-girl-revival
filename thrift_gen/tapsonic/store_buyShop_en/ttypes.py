@@ -12,7 +12,7 @@ from thrift.TRecursive import fix_spec
 from uuid import UUID
 
 import sys
-import tapsonic.common.ttypes
+import tapsonic.general.ttypes
 
 from thrift.transport import TTransport
 all_structs = []
@@ -243,7 +243,7 @@ class buyShop(object):
                     iprot.skip(ftype)
             elif fid == 4:
                 if ftype == TType.STRUCT:
-                    self.common_data = tapsonic.common.ttypes.paramData()
+                    self.common_data = tapsonic.general.ttypes.paramData()
                     self.common_data.read(iprot)
                 else:
                     iprot.skip(ftype)
@@ -292,7 +292,7 @@ class buyShop(object):
         return not (self == other)
 
 
-class retReward(object):
+class buyShopRetReward(object):
     """
     Attributes:
      - reward_type
@@ -342,7 +342,7 @@ class retReward(object):
         if oprot._fast_encode is not None and self.thrift_spec is not None:
             oprot.trans.write(oprot._fast_encode(self, [self.__class__, self.thrift_spec]))
             return
-        oprot.writeStructBegin('retReward')
+        oprot.writeStructBegin('buyShopRetReward')
         if self.reward_type is not None:
             oprot.writeFieldBegin('reward_type', TType.I16, 1)
             oprot.writeI16(self.reward_type)
@@ -415,7 +415,7 @@ class buyShopRetDataInfo(object):
                     self.reward_data = []
                     (_etype3, _size0) = iprot.readListBegin()
                     for _i4 in range(_size0):
-                        _elem5 = retReward()
+                        _elem5 = buyShopRetReward()
                         _elem5.read(iprot)
                         self.reward_data.append(_elem5)
                     iprot.readListEnd()
@@ -423,7 +423,7 @@ class buyShopRetDataInfo(object):
                     iprot.skip(ftype)
             elif fid == 4:
                 if ftype == TType.STRUCT:
-                    self.user_ad_level = tapsonic.common.ttypes.UserAdLevel()
+                    self.user_ad_level = tapsonic.general.ttypes.UserAdLevel()
                     self.user_ad_level.read(iprot)
                 else:
                     iprot.skip(ftype)
@@ -508,13 +508,13 @@ class buyShopReturn(object):
                 break
             if fid == 1:
                 if ftype == TType.STRUCT:
-                    self.error = tapsonic.common.ttypes.errorRetCode()
+                    self.error = tapsonic.general.ttypes.errorRetCode()
                     self.error.read(iprot)
                 else:
                     iprot.skip(ftype)
             elif fid == 2:
                 if ftype == TType.STRUCT:
-                    self.server_time = tapsonic.common.ttypes.serverTimeRet()
+                    self.server_time = tapsonic.general.ttypes.serverTimeRet()
                     self.server_time.read(iprot)
                 else:
                     iprot.skip(ftype)
@@ -536,7 +536,7 @@ class buyShopReturn(object):
                     iprot.skip(ftype)
             elif fid == 6:
                 if ftype == TType.STRUCT:
-                    self.maintenance = tapsonic.common.ttypes.maintenanceData()
+                    self.maintenance = tapsonic.general.ttypes.maintenanceData()
                     self.maintenance.read(iprot)
                 else:
                     iprot.skip(ftype)
@@ -613,10 +613,10 @@ buyShop.thrift_spec = (
     (1, TType.STRING, 'call', 'UTF8', None, ),  # 1
     (2, TType.STRUCT, 'data', [buyShopDataInfo, None], None, ),  # 2
     (3, TType.STRING, 'sub_mode', 'UTF8', None, ),  # 3
-    (4, TType.STRUCT, 'common_data', [tapsonic.common.ttypes.paramData, None], None, ),  # 4
+    (4, TType.STRUCT, 'common_data', [tapsonic.general.ttypes.paramData, None], None, ),  # 4
 )
-all_structs.append(retReward)
-retReward.thrift_spec = (
+all_structs.append(buyShopRetReward)
+buyShopRetReward.thrift_spec = (
     None,  # 0
     (1, TType.I16, 'reward_type', None, None, ),  # 1
     (2, TType.I32, 'reward_id', None, None, ),  # 2
@@ -627,18 +627,18 @@ buyShopRetDataInfo.thrift_spec = (
     None,  # 0
     (1, TType.I64, 'u_cp', None, None, ),  # 1
     (2, TType.DOUBLE, 'u_candy', None, None, ),  # 2
-    (3, TType.LIST, 'reward_data', (TType.STRUCT, [retReward, None], False), None, ),  # 3
-    (4, TType.STRUCT, 'user_ad_level', [tapsonic.common.ttypes.UserAdLevel, None], None, ),  # 4
+    (3, TType.LIST, 'reward_data', (TType.STRUCT, [buyShopRetReward, None], False), None, ),  # 3
+    (4, TType.STRUCT, 'user_ad_level', [tapsonic.general.ttypes.UserAdLevel, None], None, ),  # 4
 )
 all_structs.append(buyShopReturn)
 buyShopReturn.thrift_spec = (
     None,  # 0
-    (1, TType.STRUCT, 'error', [tapsonic.common.ttypes.errorRetCode, None], None, ),  # 1
-    (2, TType.STRUCT, 'server_time', [tapsonic.common.ttypes.serverTimeRet, None], None, ),  # 2
+    (1, TType.STRUCT, 'error', [tapsonic.general.ttypes.errorRetCode, None], None, ),  # 1
+    (2, TType.STRUCT, 'server_time', [tapsonic.general.ttypes.serverTimeRet, None], None, ),  # 2
     (3, TType.STRING, 'mode', 'UTF8', None, ),  # 3
     (4, TType.STRING, 'call', 'UTF8', None, ),  # 4
     (5, TType.STRUCT, 'data', [buyShopRetDataInfo, None], None, ),  # 5
-    (6, TType.STRUCT, 'maintenance', [tapsonic.common.ttypes.maintenanceData, None], None, ),  # 6
+    (6, TType.STRUCT, 'maintenance', [tapsonic.general.ttypes.maintenanceData, None], None, ),  # 6
 )
 fix_spec(all_structs)
 del all_structs

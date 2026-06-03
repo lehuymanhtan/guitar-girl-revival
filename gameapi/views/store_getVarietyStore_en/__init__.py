@@ -3,7 +3,7 @@ import copy
 from functools import lru_cache
 
 import thrift_gen.tapsonic.store_getVarietyStore_en.ttypes as store_getVarietyStore_en
-import thrift_gen.tapsonic.common.ttypes as common_type
+import thrift_gen.tapsonic.general.ttypes as common_type
 
 from .. import _helper as helper
 

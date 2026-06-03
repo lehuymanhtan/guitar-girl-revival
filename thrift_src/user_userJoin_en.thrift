@@ -1,9 +1,10 @@
 // Auto-generated from IL2CPP dump + Burp capture
 // Endpoint: /user/userJoin/en/
 
+include "general.thrift"
+
 namespace py tapsonic.user_userJoin_en
 
-include "common.thrift"
 
 struct userJoinDataInfo {
     1: optional i16 os,
@@ -20,7 +21,7 @@ struct userJoinDataInfo {
 struct userJoin {
     1: optional string call,
     2: optional userJoinDataInfo data,
-    3: optional common.paramData common_data,
+    3: optional general.paramData common_data,
 }
 
 struct userJoinRetDataInfo {
@@ -29,10 +30,48 @@ struct userJoinRetDataInfo {
 }
 
 struct userJoinReturn {
-    1: optional common.errorRetCode error,
-    2: optional common.serverTimeRet server_time,
+    1: optional general.errorRetCode error,
+    2: optional general.serverTimeRet server_time,
     3: optional string mode,
     4: optional string call,
     5: optional userJoinRetDataInfo data,
-    6: optional common.maintenanceData maintenance,
+    6: optional general.maintenanceData maintenance,
 }
+
+/*======================================================================
+ BURP EXAMPLES FOR CALL: userJoin
+======================================================================
+ Example 1:
+   Request:
+     {   1: {'type': 'STRING', 'value': 'userJoin'},
+         2: {   'type': 'STRUCT',
+                'value': {   1: {'type': 'I16', 'value': 1},
+                             2: {'type': 'I16', 'value': 1},
+                             3: {'type': 'STRING', 'value': '431494216'},
+                             4: {   'type': 'STRING',
+                                     'value': '<device_uuid_redacted>'},
+                              5: {'type': 'STRING', 'value': '<device_token_redacted>'},
+                              6: {'type': 'STRING', 'value': '<sns_id_redacted>'},
+                              7: {   'type': 'STRING',
+                                     'value': '<access_token_redacted>'},
+                             8: {'type': 'STRING', 'value': 'none'},
+                             9: {'type': 'STRING', 'value': 'vn'}}},
+         3: {   'type': 'STRUCT',
+                'value': {   1: {'type': 'I32', 'value': 800},
+                             2: {'type': 'STRING', 'value': 'real'},
+                             3: {'type': 'I16', 'value': 1}}}}
+   Response:
+     {   1: {   'type': 'STRUCT',
+                'value': {   1: {'type': 'I32', 'value': 0},
+                             2: {'type': 'STRING', 'value': ''}}},
+         2: {   'type': 'STRUCT',
+                'value': {   1: {'type': 'I32', 'value': 1768405998},
+                             2: {'type': 'I64', 'value': 20260115005318}}},
+         3: {'type': 'STRING', 'value': 'user'},
+         4: {'type': 'STRING', 'value': 'userJoin'},
+         5: {   'type': 'STRUCT',
+                'value': {   1: {'type': 'I32', 'value': 10300460},
+                             2: {'type': 'STRING', 'value': '1768405998050'}}},
+         6: {'type': 'STRUCT', 'value': {}}}
+
+======================================================================*/

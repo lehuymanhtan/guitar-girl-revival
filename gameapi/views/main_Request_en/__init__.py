@@ -1,4 +1,4 @@
-import thrift_gen.tapsonic.common.ttypes as common_type
+import thrift_gen.tapsonic.general.ttypes as common_type
 import thrift_gen.tapsonic.main_Request_en.ttypes as main_Request_en
 
 from .. import _helper as helper

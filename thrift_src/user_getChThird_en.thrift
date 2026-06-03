@@ -1,9 +1,10 @@
 // Auto-generated from IL2CPP dump + Burp capture
 // Endpoint: /user/getChThird/en/
 
+include "general.thrift"
+
 namespace py tapsonic.user_getChThird_en
 
-include "common.thrift"
 
 struct getChThirdDataInfo {
     1: optional i32 u_seq,
@@ -15,13 +16,7 @@ struct getChThirdDataInfo {
 struct getChThird {
     1: optional string call,
     2: optional getChThirdDataInfo data,
-    3: optional common.paramData common_data,
-}
-
-struct UserApData {
-    1: optional i32 i_Ap,
-    2: optional i32 i_FullApTime,
-    3: optional i32 i_MaxAp,
+    3: optional general.paramData common_data,
 }
 
 struct UserChThirdChapterReward {
@@ -33,16 +28,155 @@ struct UserChThirdChapterReward {
 
 struct getChThirdRetDataInfo {
     1: optional i32 u_seq,
-    2: optional UserApData user_ap,
-    3: optional list<common.UserChThirdStage> user_ch_third_stage,
+    2: optional general.UserApData user_ap,
+    3: optional list<general.UserChThirdStage> user_ch_third_stage,
     4: optional list<UserChThirdChapterReward> user_ch_third_chapter_reward,
 }
 
 struct getChThirdReturn {
-    1: optional common.errorRetCode error,
-    2: optional common.serverTimeRet server_time,
+    1: optional general.errorRetCode error,
+    2: optional general.serverTimeRet server_time,
     3: optional string mode,
     4: optional string call,
     5: optional getChThirdRetDataInfo data,
-    6: optional common.maintenanceData maintenance,
+    6: optional general.maintenanceData maintenance,
 }
+
+/*======================================================================
+ BURP EXAMPLES FOR CALL: getChThird
+======================================================================
+ Example 1:
+   Request:
+     {   1: {'type': 'STRING', 'value': 'getChThird'},
+         2: {   'type': 'STRUCT',
+                'value': {   1: {'type': 'I32', 'value': 7276629},
+                             2: {'type': 'STRING', 'value': '1614162043022'},
+                             3: {'type': 'STRING', 'value': '315504848'},
+                             4: {   'type': 'STRING',
+                                    'value': '6057191819962c308248100d62e86ead'}}},
+         3: {   'type': 'STRUCT',
+                'value': {   1: {'type': 'I32', 'value': 800},
+                             2: {'type': 'STRING', 'value': 'real'},
+                             3: {'type': 'I16', 'value': 1}}}}
+   Response:
+     {   1: {   'type': 'STRUCT',
+                'value': {   1: {'type': 'I32', 'value': 0},
+                             2: {'type': 'STRING', 'value': ''}}},
+         2: {   'type': 'STRUCT',
+                'value': {   1: {'type': 'I32', 'value': 1767189554},
+                             2: {'type': 'I64', 'value': 20251231225914}}},
+         3: {'type': 'STRING', 'value': 'user'},
+         4: {'type': 'STRING', 'value': 'getChThird'},
+         5: {   'type': 'STRUCT',
+                'value': {   1: {'type': 'I32', 'value': 7276629},
+                             2: {   'type': 'STRUCT',
+                                    'value': {   1: {'type': 'I32', 'value': 495},
+                                                 2: {   'type': 'I32',
+                                                        'value': 1767189544},
+                                                 3: {'type': 'I32', 'value': 60}}},
+                             3: {   'type': 'LIST',
+                                    'value': [   {   1: {   'type': 'I32',
+                                                            'value': 1001},
+                                                     2: {'type': 'I32', 'value': 1},
+                                                     3: {'type': 'I32', 'value': 1},
+                                                     4: {'type': 'I32', 'value': 3}},
+                                                 {   1: {   'type': 'I32',
+                                                            'value': 1002},
+                                                     2: {'type': 'I32', 'value': 1},
+                                                     3: {'type': 'I32', 'value': 2},
+                                                     4: {'type': 'I32', 'value': 0}},
+                                                 {   1: {   'type': 'I32',
+                                                            'value': 1003},
+                                                     2: {'type': 'I32', 'value': 1},
+                                                     3: {'type': 'I32', 'value': 3},
+                                                     4: {'type': 'I32', 'value': 0}},
+                                                 {   1: {   'type': 'I32',
+                                                            'value': 1004},
+                                                     2: {'type': 'I32', 'value': 1},
+                                                     3: {'type': 'I32', 'value': 4},
+                                                     4: {'type': 'I32', 'value': 3}},
+                                                 {   1: {   'type': 'I32',
+                                                            'value': 1005},
+                                                     2: {'type': 'I32', 'value': 1},
+                                                     3: {'type': 'I32', 'value': 5},
+                                                     4: {'type': 'I32', 'value': 0}},
+                                                 {   1: {   'type': 'I32',
+                                                            'value': 1006},
+                                                     2: {'type': 'I32', 'value': 1},
+                                                     3: {'type': 'I32', 'value': 6},
+                                                     4: {'type': 'I32', 'value': 3}},
+                                                 {   1: {   'type': 'I32',
+                                                            'value': 1007},
+                                                     2: {'type': 'I32', 'value': 1},
+                                                     3: {'type': 'I32', 'value': 7},
+                                                     4: {'type': 'I32', 'value': 0}},
+                                                 {   1: {   'type': 'I32',
+                                                            'value': 1008},
+                                                     2: {'type': 'I32', 'value': 1},
+                                                     3: {'type': 'I32', 'value': 8},
+                                                     4: {'type': 'I32', 'value': 3}},
+                                                 {   1: {   'type': 'I32',
+                                                            'value': 1009},
+                                                     2: {'type': 'I32', 'value': 1},
+                                                     3: {'type': 'I32', 'value': 9},
+                                                     4: {'type': 'I32', 'value': 0}},
+                                                 {   1: {   'type': 'I32',
+                                                            'value': 1010},
+                                                     2: {'type': 'I32', 'value': 1},
+                                                     3: {'type': 'I32', 'value': 10},
+                                                     4: {'type': 'I32', 'value': 3}},
+                                                 {   1: {   'type': 'I32',
+                                                            'value': 1011},
+                                                     2: {'type': 'I32', 'value': 1},
+                                                     3: {'type': 'I32', 'value': 11},
+                                                     4: {'type': 'I32', 'value': 3}},
+                                                 {   1: {   'type': 'I32',
+                                                            'value': 1012},
+                                                     2: {'type': 'I32', 'value': 1},
+                                                     3: {'type': 'I32', 'value': 12},
+                                                     4: {'type': 'I32', 'value': 0}},
+                                                 {   1: {   'type': 'I32',
+                                                            'value': 1013},
+                                                     2: {'type': 'I32', 'value': 1},
+                                                     3: {'type': 'I32', 'value': 13},
+                                                     4: {'type': 'I32', 'value': 3}},
+                                                 {   1: {   'type': 'I32',
+                                                            'value': 1014},
+                                                     2: {'type': 'I32', 'value': 1},
+                                                     3: {'type': 'I32', 'value': 14},
+                                                     4: {'type': 'I32', 'value': 0}},
+                                                 {   1: {   'type': 'I32',
+                                                            'value': 1015},
+                                                     2: {'type': 'I32', 'value': 1},
+                                                     3: {'type': 'I32', 'value': 15},
+                                                     4: {'type': 'I32', 'value': 3}},
+                                                 {   1: {   'type': 'I32',
+                                                            'value': 1016},
+                                                     2: {'type': 'I32', 'value': 1},
+                                                     3: {'type': 'I32', 'value': 16},
+                                                     4: {'type': 'I32', 'value': 0}},
+                                                 {   1: {   'type': 'I32',
+                                                            'value': 1017},
+                                                     2: {'type': 'I32', 'value': 1},
+                                                     3: {'type': 'I32', 'value': 17},
+                                                     4: {'type': 'I32', 'value': 3}},
+                                                 {   1: {   'type': 'I32',
+                                                            'value': 1018},
+                                                     2: {'type': 'I32', 'value': 1},
+                                                     3: {'type': 'I32', 'value': 18},
+                                                     4: {'type': 'I32', 'value': 0}},
+                                                 {   1: {   'type': 'I32',
+                                                            'value': 1019},
+                                                     2: {'type': 'I32', 'value': 1},
+                                                     3: {'type': 'I32', 'value': 19},
+                                                     4: {   'type': 'I32',
+                                                            'value': 2}}]},
+                             4: {   'type': 'LIST',
+                                    'value': [   {   1: {'type': 'I32', 'value': 1},
+                                                     2: {'type': 'I32', 'value': 1},
+                                                     3: {'type': 'I32', 'value': 1},
+                                                     4: {   'type': 'I32',
+                                                            'value': 0}}]}}},
+         6: {'type': 'STRUCT', 'value': {}}}
+
+======================================================================*/

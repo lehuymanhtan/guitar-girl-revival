@@ -12,7 +12,7 @@ from thrift.TRecursive import fix_spec
 from uuid import UUID
 
 import sys
-import tapsonic.common.ttypes
+import tapsonic.general.ttypes
 
 from thrift.transport import TTransport
 all_structs = []
@@ -177,7 +177,7 @@ class buyContents(object):
                     iprot.skip(ftype)
             elif fid == 4:
                 if ftype == TType.STRUCT:
-                    self.common_data = tapsonic.common.ttypes.paramData()
+                    self.common_data = tapsonic.general.ttypes.paramData()
                     self.common_data.read(iprot)
                 else:
                     iprot.skip(ftype)
@@ -265,13 +265,13 @@ class buyContentsRetDataInfo(object):
                     iprot.skip(ftype)
             elif fid == 3:
                 if ftype == TType.STRUCT:
-                    self.user_skill = tapsonic.common.ttypes.userSkill()
+                    self.user_skill = tapsonic.general.ttypes.userSkill()
                     self.user_skill.read(iprot)
                 else:
                     iprot.skip(ftype)
             elif fid == 4:
                 if ftype == TType.STRUCT:
-                    self.user_unit = tapsonic.common.ttypes.userUnit()
+                    self.user_unit = tapsonic.general.ttypes.userUnit()
                     self.user_unit.read(iprot)
                 else:
                     iprot.skip(ftype)
@@ -353,13 +353,13 @@ class buyContentsReturn(object):
                 break
             if fid == 1:
                 if ftype == TType.STRUCT:
-                    self.error = tapsonic.common.ttypes.errorRetCode()
+                    self.error = tapsonic.general.ttypes.errorRetCode()
                     self.error.read(iprot)
                 else:
                     iprot.skip(ftype)
             elif fid == 2:
                 if ftype == TType.STRUCT:
-                    self.server_time = tapsonic.common.ttypes.serverTimeRet()
+                    self.server_time = tapsonic.general.ttypes.serverTimeRet()
                     self.server_time.read(iprot)
                 else:
                     iprot.skip(ftype)
@@ -381,7 +381,7 @@ class buyContentsReturn(object):
                     iprot.skip(ftype)
             elif fid == 6:
                 if ftype == TType.STRUCT:
-                    self.maintenance = tapsonic.common.ttypes.maintenanceData()
+                    self.maintenance = tapsonic.general.ttypes.maintenanceData()
                     self.maintenance.read(iprot)
                 else:
                     iprot.skip(ftype)
@@ -452,25 +452,25 @@ buyContents.thrift_spec = (
     (1, TType.STRING, 'call', 'UTF8', None, ),  # 1
     (2, TType.STRUCT, 'data', [buyContentsDataInfo, None], None, ),  # 2
     (3, TType.STRING, 'sub_mode', 'UTF8', None, ),  # 3
-    (4, TType.STRUCT, 'common_data', [tapsonic.common.ttypes.paramData, None], None, ),  # 4
+    (4, TType.STRUCT, 'common_data', [tapsonic.general.ttypes.paramData, None], None, ),  # 4
 )
 all_structs.append(buyContentsRetDataInfo)
 buyContentsRetDataInfo.thrift_spec = (
     None,  # 0
     (1, TType.I64, 'u_cp', None, None, ),  # 1
     (2, TType.DOUBLE, 'u_candy', None, None, ),  # 2
-    (3, TType.STRUCT, 'user_skill', [tapsonic.common.ttypes.userSkill, None], None, ),  # 3
-    (4, TType.STRUCT, 'user_unit', [tapsonic.common.ttypes.userUnit, None], None, ),  # 4
+    (3, TType.STRUCT, 'user_skill', [tapsonic.general.ttypes.userSkill, None], None, ),  # 3
+    (4, TType.STRUCT, 'user_unit', [tapsonic.general.ttypes.userUnit, None], None, ),  # 4
 )
 all_structs.append(buyContentsReturn)
 buyContentsReturn.thrift_spec = (
     None,  # 0
-    (1, TType.STRUCT, 'error', [tapsonic.common.ttypes.errorRetCode, None], None, ),  # 1
-    (2, TType.STRUCT, 'server_time', [tapsonic.common.ttypes.serverTimeRet, None], None, ),  # 2
+    (1, TType.STRUCT, 'error', [tapsonic.general.ttypes.errorRetCode, None], None, ),  # 1
+    (2, TType.STRUCT, 'server_time', [tapsonic.general.ttypes.serverTimeRet, None], None, ),  # 2
     (3, TType.STRING, 'mode', 'UTF8', None, ),  # 3
     (4, TType.STRING, 'call', 'UTF8', None, ),  # 4
     (5, TType.STRUCT, 'data', [buyContentsRetDataInfo, None], None, ),  # 5
-    (6, TType.STRUCT, 'maintenance', [tapsonic.common.ttypes.maintenanceData, None], None, ),  # 6
+    (6, TType.STRUCT, 'maintenance', [tapsonic.general.ttypes.maintenanceData, None], None, ),  # 6
 )
 fix_spec(all_structs)
 del all_structs

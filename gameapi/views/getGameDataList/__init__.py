@@ -3,7 +3,7 @@ import copy
 from functools import lru_cache
 
 from .getGameDataList import ttypes as getGameDataListTypes
-import thrift_gen.tapsonic.common.ttypes as common_type
+import thrift_gen.tapsonic.general.ttypes as common_type
 
 from .. import _helper as helper
 

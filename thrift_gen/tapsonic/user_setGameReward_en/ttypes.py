@@ -12,7 +12,7 @@ from thrift.TRecursive import fix_spec
 from uuid import UUID
 
 import sys
-import tapsonic.common.ttypes
+import tapsonic.general.ttypes
 
 from thrift.transport import TTransport
 all_structs = []
@@ -203,7 +203,7 @@ class setGameReward(object):
                     iprot.skip(ftype)
             elif fid == 3:
                 if ftype == TType.STRUCT:
-                    self.common_data = tapsonic.common.ttypes.paramData()
+                    self.common_data = tapsonic.general.ttypes.paramData()
                     self.common_data.read(iprot)
                 else:
                     iprot.skip(ftype)
@@ -313,7 +313,7 @@ class setGameRewardRetDataInfo(object):
                     iprot.skip(ftype)
             elif fid == 7:
                 if ftype == TType.STRUCT:
-                    self.user_follower_profile = tapsonic.common.ttypes.UserFollowerProfile()
+                    self.user_follower_profile = tapsonic.general.ttypes.UserFollowerProfile()
                     self.user_follower_profile.read(iprot)
                 else:
                     iprot.skip(ftype)
@@ -407,13 +407,13 @@ class setGameRewardReturn(object):
                 break
             if fid == 1:
                 if ftype == TType.STRUCT:
-                    self.error = tapsonic.common.ttypes.errorRetCode()
+                    self.error = tapsonic.general.ttypes.errorRetCode()
                     self.error.read(iprot)
                 else:
                     iprot.skip(ftype)
             elif fid == 2:
                 if ftype == TType.STRUCT:
-                    self.server_time = tapsonic.common.ttypes.serverTimeRet()
+                    self.server_time = tapsonic.general.ttypes.serverTimeRet()
                     self.server_time.read(iprot)
                 else:
                     iprot.skip(ftype)
@@ -435,7 +435,7 @@ class setGameRewardReturn(object):
                     iprot.skip(ftype)
             elif fid == 6:
                 if ftype == TType.STRUCT:
-                    self.maintenance = tapsonic.common.ttypes.maintenanceData()
+                    self.maintenance = tapsonic.general.ttypes.maintenanceData()
                     self.maintenance.read(iprot)
                 else:
                     iprot.skip(ftype)
@@ -508,7 +508,7 @@ setGameReward.thrift_spec = (
     None,  # 0
     (1, TType.STRING, 'call', 'UTF8', None, ),  # 1
     (2, TType.STRUCT, 'data', [setGameRewardDataInfo, None], None, ),  # 2
-    (3, TType.STRUCT, 'common_data', [tapsonic.common.ttypes.paramData, None], None, ),  # 3
+    (3, TType.STRUCT, 'common_data', [tapsonic.general.ttypes.paramData, None], None, ),  # 3
 )
 all_structs.append(setGameRewardRetDataInfo)
 setGameRewardRetDataInfo.thrift_spec = (
@@ -519,17 +519,17 @@ setGameRewardRetDataInfo.thrift_spec = (
     (4, TType.STRING, 'reward_type', 'UTF8', None, ),  # 4
     (5, TType.I64, 'reward_value', None, None, ),  # 5
     (6, TType.STRING, 'status', 'UTF8', None, ),  # 6
-    (7, TType.STRUCT, 'user_follower_profile', [tapsonic.common.ttypes.UserFollowerProfile, None], None, ),  # 7
+    (7, TType.STRUCT, 'user_follower_profile', [tapsonic.general.ttypes.UserFollowerProfile, None], None, ),  # 7
 )
 all_structs.append(setGameRewardReturn)
 setGameRewardReturn.thrift_spec = (
     None,  # 0
-    (1, TType.STRUCT, 'error', [tapsonic.common.ttypes.errorRetCode, None], None, ),  # 1
-    (2, TType.STRUCT, 'server_time', [tapsonic.common.ttypes.serverTimeRet, None], None, ),  # 2
+    (1, TType.STRUCT, 'error', [tapsonic.general.ttypes.errorRetCode, None], None, ),  # 1
+    (2, TType.STRUCT, 'server_time', [tapsonic.general.ttypes.serverTimeRet, None], None, ),  # 2
     (3, TType.STRING, 'mode', 'UTF8', None, ),  # 3
     (4, TType.STRING, 'call', 'UTF8', None, ),  # 4
     (5, TType.STRUCT, 'data', [setGameRewardRetDataInfo, None], None, ),  # 5
-    (6, TType.STRUCT, 'maintenance', [tapsonic.common.ttypes.maintenanceData, None], None, ),  # 6
+    (6, TType.STRUCT, 'maintenance', [tapsonic.general.ttypes.maintenanceData, None], None, ),  # 6
 )
 fix_spec(all_structs)
 del all_structs

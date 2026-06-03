@@ -227,8 +227,8 @@ class UserFollowerQuestSave(models.Model):
 
 class AttendanceLog(models.Model):
     player = models.ForeignKey(Player, on_delete=models.CASCADE, related_name='attendances')
-    day = models.DateField()
-    rewarded_at = models.DateTimeField(auto_now_add=True)
+
+    claimmed_at = models.DateTimeField(auto_now_add=True)
 
 class Event(models.Model):
     idx = models.BigIntegerField(unique=True)

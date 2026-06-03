@@ -10,6 +10,7 @@ from .views.main_getUpdateTime_en import getUpdateTime
 from .views.user_userJoin_en import userJoin
 from .views.user_userLogin_en import userLogin
 from .views.user_userSave_en import userSave
+from .views.user_setAttendance_en import setAttendance
 
 urlpatterns = [
     path('main/getGameDataList/en/', getGameDataList, name='getGameDataList'),
@@ -22,5 +23,6 @@ urlpatterns = [
     path('user/userJoin/en/', userJoin, name='userJoin'),
     path('user/userLogin/en/', userLogin, name='userLogin'),
     path('user/userSave/en/', userSave, name='userSave'),
+    path('user/setAttendance/en/', setAttendance, name='setAttendance'),
 ]
 

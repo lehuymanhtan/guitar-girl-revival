@@ -1,4 +1,4 @@
-import thrift_gen.tapsonic.common.ttypes as common_type
+import thrift_gen.tapsonic.general.ttypes as common_type
 import thrift_gen.tapsonic.main_defaultSettingList_en.ttypes as main_defaultSettingList_en
 
 from gameapi import models
