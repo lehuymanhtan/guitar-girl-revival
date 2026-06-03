@@ -292,6 +292,87 @@ class buyShop(object):
         return not (self == other)
 
 
+class buyShopRetReward(object):
+    """
+    Attributes:
+     - reward_type
+     - reward_id
+     - reward_value
+
+    """
+    thrift_spec = None
+
+
+    def __init__(self, reward_type = None, reward_id = None, reward_value = None,):
+        self.reward_type = reward_type
+        self.reward_id = reward_id
+        self.reward_value = reward_value
+
+    def read(self, iprot):
+        if iprot._fast_decode is not None and isinstance(iprot.trans, TTransport.CReadableTransport) and self.thrift_spec is not None:
+            iprot._fast_decode(self, iprot, [self.__class__, self.thrift_spec])
+            return
+        iprot.readStructBegin()
+        while True:
+            (fname, ftype, fid) = iprot.readFieldBegin()
+            if ftype == TType.STOP:
+                break
+            if fid == 1:
+                if ftype == TType.I16:
+                    self.reward_type = iprot.readI16()
+                else:
+                    iprot.skip(ftype)
+            elif fid == 2:
+                if ftype == TType.I32:
+                    self.reward_id = iprot.readI32()
+                else:
+                    iprot.skip(ftype)
+            elif fid == 3:
+                if ftype == TType.I64:
+                    self.reward_value = iprot.readI64()
+                else:
+                    iprot.skip(ftype)
+            else:
+                iprot.skip(ftype)
+            iprot.readFieldEnd()
+        iprot.readStructEnd()
+
+    def write(self, oprot):
+        self.validate()
+        if oprot._fast_encode is not None and self.thrift_spec is not None:
+            oprot.trans.write(oprot._fast_encode(self, [self.__class__, self.thrift_spec]))
+            return
+        oprot.writeStructBegin('buyShopRetReward')
+        if self.reward_type is not None:
+            oprot.writeFieldBegin('reward_type', TType.I16, 1)
+            oprot.writeI16(self.reward_type)
+            oprot.writeFieldEnd()
+        if self.reward_id is not None:
+            oprot.writeFieldBegin('reward_id', TType.I32, 2)
+            oprot.writeI32(self.reward_id)
+            oprot.writeFieldEnd()
+        if self.reward_value is not None:
+            oprot.writeFieldBegin('reward_value', TType.I64, 3)
+            oprot.writeI64(self.reward_value)
+            oprot.writeFieldEnd()
+        oprot.writeFieldStop()
+        oprot.writeStructEnd()
+
+    def validate(self):
+        return
+
+    def __repr__(self):
+        L = ['%s=%r' % (key, value)
+             for key, value in self.__dict__.items()]
+        return '%s(%s)' % (self.__class__.__name__, ', '.join(L))
+
+    def __eq__(self, other):
+        return isinstance(other, self.__class__) and self.__dict__ == other.__dict__
+
+    def __ne__(self, other):
+        return not (self == other)
+
+
 class buyShopRetDataInfo(object):
     """
     Attributes:
@@ -334,7 +415,7 @@ class buyShopRetDataInfo(object):
                     self.reward_data = []
                     (_etype3, _size0) = iprot.readListBegin()
                     for _i4 in range(_size0):
-                        _elem5 = tapsonic.general.ttypes.retReward()
+                        _elem5 = buyShopRetReward()
                         _elem5.read(iprot)
                         self.reward_data.append(_elem5)
                     iprot.readListEnd()
@@ -534,12 +615,19 @@ buyShop.thrift_spec = (
     (3, TType.STRING, 'sub_mode', 'UTF8', None, ),  # 3
     (4, TType.STRUCT, 'common_data', [tapsonic.general.ttypes.paramData, None], None, ),  # 4
 )
+all_structs.append(buyShopRetReward)
+buyShopRetReward.thrift_spec = (
+    None,  # 0
+    (1, TType.I16, 'reward_type', None, None, ),  # 1
+    (2, TType.I32, 'reward_id', None, None, ),  # 2
+    (3, TType.I64, 'reward_value', None, None, ),  # 3
+)
 all_structs.append(buyShopRetDataInfo)
 buyShopRetDataInfo.thrift_spec = (
     None,  # 0
     (1, TType.I64, 'u_cp', None, None, ),  # 1
     (2, TType.DOUBLE, 'u_candy', None, None, ),  # 2
-    (3, TType.LIST, 'reward_data', (TType.STRUCT, [tapsonic.general.ttypes.retReward, None], False), None, ),  # 3
+    (3, TType.LIST, 'reward_data', (TType.STRUCT, [buyShopRetReward, None], False), None, ),  # 3
     (4, TType.STRUCT, 'user_ad_level', [tapsonic.general.ttypes.UserAdLevel, None], None, ),  # 4
 )
 all_structs.append(buyShopReturn)

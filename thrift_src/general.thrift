@@ -310,6 +310,6 @@ struct UserApData {
 struct retReward {
     1: optional i16 reward_type,
     2: optional i32 reward_id,
-    3: optional i64 reward_value,
+    3: optional double reward_value,
 }
 

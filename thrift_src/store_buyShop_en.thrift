@@ -28,10 +28,16 @@ struct buyShop {
     4: optional general.paramData common_data,
 }
 
+struct buyShopRetReward {
+    1: optional i16 reward_type,
+    2: optional i32 reward_id,
+    3: optional i64 reward_value,
+}
+
 struct buyShopRetDataInfo {
     1: optional i64 u_cp,
     2: optional double u_candy,
-    3: optional list<general.retReward> reward_data,
+    3: optional list<buyShopRetReward> reward_data,
     4: optional general.UserAdLevel user_ad_level,
 }
 

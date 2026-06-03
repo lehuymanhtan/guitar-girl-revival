@@ -3956,8 +3956,8 @@ class retReward(object):
                 else:
                     iprot.skip(ftype)
             elif fid == 3:
-                if ftype == TType.I64:
-                    self.reward_value = iprot.readI64()
+                if ftype == TType.DOUBLE:
+                    self.reward_value = iprot.readDouble()
                 else:
                     iprot.skip(ftype)
             else:
@@ -3980,8 +3980,8 @@ class retReward(object):
             oprot.writeI32(self.reward_id)
             oprot.writeFieldEnd()
         if self.reward_value is not None:
-            oprot.writeFieldBegin('reward_value', TType.I64, 3)
-            oprot.writeI64(self.reward_value)
+            oprot.writeFieldBegin('reward_value', TType.DOUBLE, 3)
+            oprot.writeDouble(self.reward_value)
             oprot.writeFieldEnd()
         oprot.writeFieldStop()
         oprot.writeStructEnd()
@@ -4324,7 +4324,7 @@ retReward.thrift_spec = (
     None,  # 0
     (1, TType.I16, 'reward_type', None, None, ),  # 1
     (2, TType.I32, 'reward_id', None, None, ),  # 2
-    (3, TType.I64, 'reward_value', None, None, ),  # 3
+    (3, TType.DOUBLE, 'reward_value', None, None, ),  # 3
 )
 fix_spec(all_structs)
 del all_structs
