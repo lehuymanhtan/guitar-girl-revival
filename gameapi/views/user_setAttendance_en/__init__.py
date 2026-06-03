@@ -29,11 +29,11 @@ def setAttendance(request: HttpRequest):
     if not user:
         return HttpResponse("Bad Request", status=400)
 
-    type = req.data.type
+    attendance_type = req.data.type
     
     status = 'N'
     
-    if type == 'add':
+    if attendance_type == 'add':
         status = 'ADD'
         
         
