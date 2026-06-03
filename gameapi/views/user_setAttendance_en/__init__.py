@@ -41,8 +41,8 @@ def setAttendance(request: HttpRequest):
     return user_setAttendance_en.setAttendanceReturn(
         error=common_type.errorRetCode(code=0, errmsg=""),
         server_time=helper.auto_response_time(),
-        service="user",
-        method="setAttendance",
+        mode="user",
+        call="setAttendance",
         data=user_setAttendance_en.setAttendanceRetDataInfo(
             status=status,
             user_follower_quest=None,
