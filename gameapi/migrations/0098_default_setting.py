@@ -36,7 +36,7 @@ def add_default_setting(apps, schema_editor):
 class Migration(migrations.Migration):
     # TODO: update dependency to the previous migration in gameapi.
     dependencies = [
-        ("gameapi", "0001_initial"),
+        ("gameapi", "0002_post_postitem_userpost"),
     ]
 
     operations = [

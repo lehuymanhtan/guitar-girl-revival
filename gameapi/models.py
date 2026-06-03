@@ -271,3 +271,57 @@ class DefaultSetting(models.Model):
     key = models.CharField(max_length=128, unique=True)
     value = models.TextField()
 
+class Post(models.Model):
+    idx = models.BigAutoField(primary_key=True)
+    notice_type = models.SmallIntegerField(default=0)
+    title_ko = models.CharField(max_length=255, blank=True)
+    memo_ko = models.TextField(blank=True)
+    title_en = models.CharField(max_length=255, blank=True)
+    memo_en = models.TextField(blank=True)
+    title_jp = models.CharField(max_length=255, blank=True)
+    memo_jp = models.TextField(blank=True)
+    title_zh_chs = models.CharField(max_length=255, blank=True)
+    memo_zh_chs = models.TextField(blank=True)
+    title_zh_cht = models.CharField(max_length=255, blank=True)
+    memo_zh_cht = models.TextField(blank=True)
+    title_vi = models.CharField(max_length=255, blank=True)
+    memo_vi = models.TextField(blank=True)
+    title_es = models.CharField(max_length=255, blank=True)
+    memo_es = models.TextField(blank=True)
+    title_it = models.CharField(max_length=255, blank=True)
+    memo_it = models.TextField(blank=True)
+    title_id = models.CharField(max_length=255, blank=True)
+    memo_id = models.TextField(blank=True)
+    title_th = models.CharField(max_length=255, blank=True)
+    memo_th = models.TextField(blank=True)
+    title_pt = models.CharField(max_length=255, blank=True)
+    memo_pt = models.TextField(blank=True)
+    title_hi = models.CharField(max_length=255, blank=True)
+    memo_hi = models.TextField(blank=True)
+
+    have_reward = models.SmallIntegerField(default=0)
+    unlimit_flg = models.SmallIntegerField(default=0)
+    create_time = models.BigIntegerField(default=0)
+    del_time = models.BigIntegerField(default=0)
+    url = models.CharField(max_length=255, blank=True)
+    image_resource_name = models.CharField(max_length=255, blank=True)
+
+class PostItem(models.Model):
+    post = models.ForeignKey(Post, on_delete=models.CASCADE, related_name='items')
+    i_RewardType = models.IntegerField()
+    i_RewardId = models.IntegerField()
+    d_RewardQuantity = models.FloatField()
+
+class UserPost(models.Model):
+    player = models.ForeignKey(Player, on_delete=models.CASCADE, related_name='posts')
+    post = models.ForeignKey(Post, on_delete=models.CASCADE)
+    status = models.SmallIntegerField(default=0)
+    flg = models.SmallIntegerField(default=0)
+
+    class Meta:
+        constraints = [
+            models.UniqueConstraint(
+                fields=["player", "post"],
+                name="user_post_unique",
+            ),
+        ]
