@@ -325,3 +325,25 @@ class UserPost(models.Model):
                 name="user_post_unique",
             ),
         ]
+
+class FollowerGiftItemData(models.Model):
+    i_id = models.IntegerField(primary_key=True)
+    i_GiftType = models.IntegerField(default=0)
+    d_Value = models.BigIntegerField(default=0)
+    i_Limit = models.IntegerField(default=0)
+    s_Name_EN = models.CharField(max_length=255, blank=True, null=True)
+
+class FollowerProfileLevelData(models.Model):
+    i_id = models.IntegerField(primary_key=True)
+    i_ProfileID = models.IntegerField()
+    i_Level = models.IntegerField()
+    d_RequireEXP = models.BigIntegerField(default=0)
+    i_AddCandy = models.IntegerField(default=0)
+
+    class Meta:
+        constraints = [
+            models.UniqueConstraint(
+                fields=["i_ProfileID", "i_Level"],
+                name="follower_profile_level_unique",
+            ),
+        ]

@@ -13,6 +13,7 @@ from .views.user_userSave_en import userSave
 from .views.user_setAttendance_en import setAttendance
 from .views.post_getPost_en import getPost
 from .views.post_getPostTime_en import getPostTime
+from .views.user_setFollowerProfileGift_en import user_setFollowerProfileGift_en
 
 urlpatterns = [
     path('main/getGameDataList/en/', getGameDataList, name='getGameDataList'),
@@ -26,6 +27,7 @@ urlpatterns = [
     path('user/userLogin/en/', userLogin, name='userLogin'),
     path('user/userSave/en/', userSave, name='userSave'),
     path('user/setAttendance/en/', setAttendance, name='setAttendance'),
+    path('user/setFollowerProfileGift/en/', user_setFollowerProfileGift_en, name='user_setFollowerProfileGift_en'),
     path('post/getPost/en/', getPost, name='getPost'),
     path('post/getPostTime/en/', getPostTime, name='getPostTime'),
 ]
