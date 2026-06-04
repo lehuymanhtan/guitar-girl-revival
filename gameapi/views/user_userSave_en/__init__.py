@@ -1,3 +1,4 @@
+from django.db import transaction
 from django.http import HttpRequest, HttpResponse
 
 import thrift_gen.tapsonic.general.ttypes as common_type
@@ -8,6 +9,7 @@ from .. import _helper as helper
 
 
 @helper.wrapper_helper
+@transaction.atomic
 def userSave(request: HttpRequest):
     raw_data = request.POST.get("tapsonic_data", None)
     if not raw_data:
