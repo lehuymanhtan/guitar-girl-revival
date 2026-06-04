@@ -35,7 +35,7 @@ def reverse_load_gamedata(apps, schema_editor):
 
 class Migration(migrations.Migration):
     dependencies = [
-        ('gameapi', '0003_followergiftitemdata_followerprofileleveldata'),
+        ('gameapi', '0096_seed_achievementdata_dailymissiondata'),
     ]
 
     operations = [

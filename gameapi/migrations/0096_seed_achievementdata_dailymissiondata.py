@@ -57,7 +57,7 @@ def seed_data(apps, schema_editor):
 
 class Migration(migrations.Migration):
     dependencies = [
-        ('gameapi', '0100_achievementdata_dailymissiondata'),
+        ('gameapi', '0004_achievementdata_dailymissiondata'),
     ]
 
     operations = [

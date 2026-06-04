@@ -6,7 +6,7 @@ from django.db import migrations, models
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('gameapi', '0099_add_event_info'),
+        ('gameapi', '0003_followergiftitemdata_followerprofileleveldata'),
     ]
 
     operations = [
