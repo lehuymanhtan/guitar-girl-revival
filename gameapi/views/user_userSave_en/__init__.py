@@ -1,3 +1,5 @@
+from datetime import datetime
+
 from django.db import transaction
 from django.http import HttpRequest, HttpResponse
 
@@ -186,6 +188,9 @@ def userSave(request: HttpRequest):
             },
         )
     
+    user.u_save_date = datetime.now()
+    user.save()
+
     return user_userSave_en.userSaveReturn(
         error=common_type.errorRetCode(code=0, errmsg=""),
         server_time=helper.auto_response_time(),
