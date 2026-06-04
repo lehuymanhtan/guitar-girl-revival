@@ -120,7 +120,7 @@ def user_setFollowerProfileGift_en(request: HttpRequest):
             
     except models.Player.DoesNotExist:
         return endpoint_types.setFollowerProfileGiftReturn(
-            error=common_type.errorRetCode(code=902, errmsg="Player not found"),
+            error=common_type.errorRetCode(code=900, errmsg="Unregisterd User"),
             server_time=helper.auto_response_time(),
             mode="user",
             call="setFollowerProfileGift",

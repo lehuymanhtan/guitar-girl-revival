@@ -347,3 +347,33 @@ class FollowerProfileLevelData(models.Model):
                 name="follower_profile_level_unique",
             ),
         ]
+
+class AchievementData(models.Model):
+    i_id = models.IntegerField(primary_key=True)
+    s_RewardType = models.CharField(max_length=64)
+    i_Reward_1 = models.BigIntegerField(default=0)
+    i_Reward_2 = models.BigIntegerField(default=0)
+    i_Reward_3 = models.BigIntegerField(default=0)
+    i_Reward_4 = models.BigIntegerField(default=0)
+    i_Reward_5 = models.BigIntegerField(default=0)
+    i_Reward_6 = models.BigIntegerField(default=0)
+    i_Reward_7 = models.BigIntegerField(default=0)
+    i_Reward_8 = models.BigIntegerField(default=0)
+    i_Reward_9 = models.BigIntegerField(default=0)
+    i_Reward_10 = models.BigIntegerField(default=0)
+    i_Reward_11 = models.BigIntegerField(default=0)
+    i_Reward_12 = models.BigIntegerField(default=0)
+    i_Reward_13 = models.BigIntegerField(default=0)
+    i_Reward_14 = models.BigIntegerField(default=0)
+    i_Reward_15 = models.BigIntegerField(default=0)
+    i_Reward_16 = models.BigIntegerField(default=0)
+    i_Reward_17 = models.BigIntegerField(default=0)
+    i_Reward_18 = models.BigIntegerField(default=0)
+    i_Reward_19 = models.BigIntegerField(default=0)
+    i_Reward_20 = models.BigIntegerField(default=0)
+    i_MaxLevel = models.SmallIntegerField(default=0)
+
+class DailyMissionData(models.Model):
+    i_id = models.IntegerField(primary_key=True)
+    s_RewardType = models.CharField(max_length=64)
+    i_Reward_1 = models.IntegerField(default=0)

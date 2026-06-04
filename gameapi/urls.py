@@ -14,6 +14,7 @@ from .views.user_setAttendance_en import setAttendance
 from .views.post_getPost_en import getPost
 from .views.post_getPostTime_en import getPostTime
 from .views.user_setFollowerProfileGift_en import user_setFollowerProfileGift_en
+from .views.user_setGameReward_en import setGameReward
 
 urlpatterns = [
     path('main/getGameDataList/en/', getGameDataList, name='getGameDataList'),
@@ -30,5 +31,6 @@ urlpatterns = [
     path('user/setFollowerProfileGift/en/', user_setFollowerProfileGift_en, name='user_setFollowerProfileGift_en'),
     path('post/getPost/en/', getPost, name='getPost'),
     path('post/getPostTime/en/', getPostTime, name='getPostTime'),
+    path('user/setGameReward/en/', setGameReward, name='setGameReward'),
 ]
 
