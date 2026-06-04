@@ -187,8 +187,8 @@ def userSave(request: HttpRequest):
     return user_userSave_en.userSaveReturn(
         error=common_type.errorRetCode(code=0, errmsg=""),
         server_time=helper.auto_response_time(),
-        service="main",
-        method="userSave",
+        mode="main",
+        call="userSave",
         data=user_userSave_en.userSaveRetDataInfo(status="Y"),
         maintenance=common_type.maintenanceData()
     )

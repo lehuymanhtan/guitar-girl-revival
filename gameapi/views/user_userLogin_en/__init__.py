@@ -48,9 +48,9 @@ def userLogin(request: HttpRequest):
                 mode="main",
                 call="userLogin",
                 data=user_userLogin_en.userLoginRetDataInfo(
-                    user=user_userLogin_en.userData(
+                    user=common_type.userData(
                         u_seq=user.u_seq,
-                        u_id=user.u_id
+                        u_id=str(user.u_id)
                     )
                 ),
                 maintenance=common_type.maintenanceData()
@@ -61,8 +61,8 @@ def userLogin(request: HttpRequest):
         return user_userLogin_en.userLoginReturn(
             error=common_type.errorRetCode(code=998, errmsg="Sorry. Not a registered user."),
             server_time=helper.auto_response_time(),
-            service="main",
-            method="userLogin",
+            mode="main",
+            call="userLogin",
             data=None,
             maintenance=common_type.maintenanceData()
         )
@@ -72,12 +72,12 @@ def userLogin(request: HttpRequest):
     data = user_userLogin_en.userLoginReturn(
         error=common_type.errorRetCode(code=0, errmsg=""),
         server_time=helper.auto_response_time(),
-        service="main",
-        method="userLogin",
+        mode="main",
+        call="userLogin",
         data=user_userLogin_en.userLoginRetDataInfo(
-            user=user_userLogin_en.userData(
+            user=common_type.userData(
                 u_seq=user.u_seq,
-                u_id=user.u_id,
+                u_id=str(user.u_id),
                 u_name=f'Player{user.u_seq}',
                 u_nick=f'Player{user.u_seq}',
                 u_cp=user.u_cp,
@@ -96,11 +96,11 @@ def userLogin(request: HttpRequest):
                 u_tutorial_step=user.u_tutorial_step,
                 u_review_popup=user.u_review_popup,
                 device_uuid="",
-                numberOfFreeChoco=user.u_cp,
-                numberOfPaidChoco=0
+                u_free_cp=user.u_cp,
+                u_charge_cp=0
             ),
             area_data={
-                1: user_userLogin_en.userAreaData(
+                1: common_type.userAreaData(
                     u_area_num=1,
                     d_Candy=0,
                     d_Like=0,
@@ -113,7 +113,7 @@ def userLogin(request: HttpRequest):
                     s_Gp1=ch1_data.s_Gp1,
                     s_Gp2=ch2_data.s_Gp2
                 ),
-                2: user_userLogin_en.UserLoginResponseGeneralUserDataMap(
+                2: common_type.userAreaData(
                     u_area_num=2,
                     d_Candy=0,
                     d_Like=0,
@@ -131,9 +131,9 @@ def userLogin(request: HttpRequest):
                 user_achievement=[
                     common_type.userAchievement(
                         i_id=ach.i_id,
-                        i_Level=ach.level,
+                        i_Level=ach.i_Level,
                         d_Quantity=ach.d_Quantity,
-                        s_Quantity=ach.progress
+                        s_Quantity=ach.s_Quantity
                     ) for ach in user.achievements.all()
                 ],
                 user_buff=[
