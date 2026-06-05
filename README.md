@@ -1,4 +1,4 @@
-# Guitar Girl Revival Server
+# Guitar Girl Revival
 
 A custom, reverse-engineered backend server implementation for the mobile game **Guitar Girl**.
 
