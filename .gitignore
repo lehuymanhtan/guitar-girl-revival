@@ -7,3 +7,17 @@ thrift_found.md
 .venv/
 burp_capture/
 scripts/extract_captures.py
+
+# MemPalace per-project files (issue #185)
+mempalace.yaml
+entities.
+
+.agents/
+*.md
+!README.md
+scratch/
+
+.pytest_cache/
+
+cert.pem
+cert.key

@@ -7,6 +7,7 @@ class Player(models.Model):
     uuid = models.CharField(max_length=128) # external id
     u_cp = models.BigIntegerField(default=0)
     u_candy = models.FloatField(default=0)
+    u_cookie = models.BigIntegerField(default=0)
     u_last_login = models.DateTimeField(null=True)
     u_last_communication = models.DateTimeField(null=True)
     u_save_date = models.DateTimeField(null=True)
@@ -99,6 +100,7 @@ class UserUnit(models.Model):
 class UserSkill(models.Model):
     player = models.ForeignKey(Player, on_delete=models.CASCADE, related_name='skills')
     i_id = models.BigIntegerField()
+    i_Level = models.BigIntegerField(default=1)
     b_Activate = models.SmallIntegerField(default=0)
     l_ActivateOnTicks = models.BigIntegerField(default=0)
     l_ActivateOffTicks = models.BigIntegerField(default=0)
@@ -271,3 +273,118 @@ class DefaultSetting(models.Model):
     key = models.CharField(max_length=128, unique=True)
     value = models.TextField()
 
+class Post(models.Model):
+    idx = models.BigAutoField(primary_key=True)
+    notice_type = models.SmallIntegerField(default=0)
+    title_ko = models.CharField(max_length=255, blank=True)
+    memo_ko = models.TextField(blank=True)
+    title_en = models.CharField(max_length=255, blank=True)
+    memo_en = models.TextField(blank=True)
+    title_jp = models.CharField(max_length=255, blank=True)
+    memo_jp = models.TextField(blank=True)
+    title_zh_chs = models.CharField(max_length=255, blank=True)
+    memo_zh_chs = models.TextField(blank=True)
+    title_zh_cht = models.CharField(max_length=255, blank=True)
+    memo_zh_cht = models.TextField(blank=True)
+    title_vi = models.CharField(max_length=255, blank=True)
+    memo_vi = models.TextField(blank=True)
+    title_es = models.CharField(max_length=255, blank=True)
+    memo_es = models.TextField(blank=True)
+    title_it = models.CharField(max_length=255, blank=True)
+    memo_it = models.TextField(blank=True)
+    title_id = models.CharField(max_length=255, blank=True)
+    memo_id = models.TextField(blank=True)
+    title_th = models.CharField(max_length=255, blank=True)
+    memo_th = models.TextField(blank=True)
+    title_pt = models.CharField(max_length=255, blank=True)
+    memo_pt = models.TextField(blank=True)
+    title_hi = models.CharField(max_length=255, blank=True)
+    memo_hi = models.TextField(blank=True)
+
+    have_reward = models.SmallIntegerField(default=0)
+    unlimit_flg = models.SmallIntegerField(default=0)
+    create_time = models.BigIntegerField(default=0)
+    del_time = models.BigIntegerField(default=0)
+    url = models.CharField(max_length=255, blank=True)
+    image_resource_name = models.CharField(max_length=255, blank=True)
+
+class PostItem(models.Model):
+    post = models.ForeignKey(Post, on_delete=models.CASCADE, related_name='items')
+    i_RewardType = models.IntegerField()
+    i_RewardId = models.IntegerField()
+    d_RewardQuantity = models.FloatField()
+
+class UserPost(models.Model):
+    player = models.ForeignKey(Player, on_delete=models.CASCADE, related_name='posts')
+    post = models.ForeignKey(Post, on_delete=models.CASCADE)
+    status = models.SmallIntegerField(default=0)
+    flg = models.SmallIntegerField(default=0)
+
+    class Meta:
+        constraints = [
+            models.UniqueConstraint(
+                fields=["player", "post"],
+                name="user_post_unique",
+            ),
+        ]
+
+class FollowerGiftItemData(models.Model):
+    i_id = models.IntegerField(primary_key=True)
+    i_GiftType = models.IntegerField(default=0)
+    d_Value = models.BigIntegerField(default=0)
+    i_Limit = models.IntegerField(default=0)
+    s_Name_EN = models.CharField(max_length=255, blank=True, null=True)
+
+class FollowerProfileLevelData(models.Model):
+    i_id = models.IntegerField(primary_key=True)
+    i_ProfileID = models.IntegerField()
+    i_Level = models.IntegerField()
+    d_RequireEXP = models.BigIntegerField(default=0)
+    i_RewardGroup = models.IntegerField(default=0)
+    i_AddCandy = models.IntegerField(default=0)
+
+    class Meta:
+        constraints = [
+            models.UniqueConstraint(
+                fields=["i_ProfileID", "i_Level"],
+                name="follower_profile_level_unique",
+            ),
+        ]
+
+class RewardGroupData(models.Model):
+    i_id = models.IntegerField(primary_key=True)
+    i_Group = models.IntegerField(default=0)
+    i_RewardType = models.IntegerField(default=0)
+    i_RewardID = models.IntegerField(default=0)
+    l_RewardQuantity = models.FloatField(default=0)
+    i_BuyFirstQuantity = models.IntegerField(default=0)
+
+class AchievementData(models.Model):
+    i_id = models.IntegerField(primary_key=True)
+    s_RewardType = models.CharField(max_length=64)
+    i_Reward_1 = models.BigIntegerField(default=0)
+    i_Reward_2 = models.BigIntegerField(default=0)
+    i_Reward_3 = models.BigIntegerField(default=0)
+    i_Reward_4 = models.BigIntegerField(default=0)
+    i_Reward_5 = models.BigIntegerField(default=0)
+    i_Reward_6 = models.BigIntegerField(default=0)
+    i_Reward_7 = models.BigIntegerField(default=0)
+    i_Reward_8 = models.BigIntegerField(default=0)
+    i_Reward_9 = models.BigIntegerField(default=0)
+    i_Reward_10 = models.BigIntegerField(default=0)
+    i_Reward_11 = models.BigIntegerField(default=0)
+    i_Reward_12 = models.BigIntegerField(default=0)
+    i_Reward_13 = models.BigIntegerField(default=0)
+    i_Reward_14 = models.BigIntegerField(default=0)
+    i_Reward_15 = models.BigIntegerField(default=0)
+    i_Reward_16 = models.BigIntegerField(default=0)
+    i_Reward_17 = models.BigIntegerField(default=0)
+    i_Reward_18 = models.BigIntegerField(default=0)
+    i_Reward_19 = models.BigIntegerField(default=0)
+    i_Reward_20 = models.BigIntegerField(default=0)
+    i_MaxLevel = models.SmallIntegerField(default=0)
+
+class DailyMissionData(models.Model):
+    i_id = models.IntegerField(primary_key=True)
+    s_RewardType = models.CharField(max_length=64)
+    i_Reward_1 = models.IntegerField(default=0)

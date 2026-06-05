@@ -18,521 +18,612 @@ def add_event_info(apps, schema_editor):
 
     # TODO: add event data.
     # Event 1
-    e1 = Event.objects.create(idx=1, event_name='출석부', event_type='DailyReward')
-    e1
-    EventReward.objects.create(
+    e1, _ = Event.objects.get_or_create(idx=1, defaults={'event_name': '출석부', 'event_type': 'DailyReward'})
+    EventReward.objects.get_or_create(
         event=e1,
         reward_idx=1,
-        reward_num=1,
-        reward_type=1,
-        reward_id=1,
-        reward_value=100,
-        s_CustomIconType='DailyReward',
-        s_CustomIconSprite='reward_01'
+        defaults={
+            'reward_num': 1,
+            'reward_type': 1,
+            'reward_id': 1,
+            'reward_value': 100,
+            's_CustomIconType': 'DailyReward',
+            's_CustomIconSprite': 'reward_01'
+        }
     )
-    EventReward.objects.create(
+    EventReward.objects.get_or_create(
         event=e1,
         reward_idx=2,
-        reward_num=2,
-        reward_type=3,
-        reward_id=9,
-        reward_value=1,
-        s_CustomIconType='',
-        s_CustomIconSprite=''
+        defaults={
+            'reward_num': 2,
+            'reward_type': 3,
+            'reward_id': 9,
+            'reward_value': 1,
+            's_CustomIconType': '',
+            's_CustomIconSprite': ''
+        }
     )
-    EventReward.objects.create(
+    EventReward.objects.get_or_create(
         event=e1,
         reward_idx=3,
-        reward_num=3,
-        reward_type=1,
-        reward_id=1,
-        reward_value=200,
-        s_CustomIconType='DailyReward',
-        s_CustomIconSprite='reward_03'
+        defaults={
+            'reward_num': 3,
+            'reward_type': 1,
+            'reward_id': 1,
+            'reward_value': 200,
+            's_CustomIconType': 'DailyReward',
+            's_CustomIconSprite': 'reward_03'
+        }
     )
-    EventReward.objects.create(
+    EventReward.objects.get_or_create(
         event=e1,
         reward_idx=4,
-        reward_num=4,
-        reward_type=1,
-        reward_id=2,
-        reward_value=50,
-        s_CustomIconType='DailyReward',
-        s_CustomIconSprite='reward_04'
+        defaults={
+            'reward_num': 4,
+            'reward_type': 1,
+            'reward_id': 2,
+            'reward_value': 50,
+            's_CustomIconType': 'DailyReward',
+            's_CustomIconSprite': 'reward_04'
+        }
     )
-    EventReward.objects.create(
+    EventReward.objects.get_or_create(
         event=e1,
         reward_idx=5,
-        reward_num=5,
-        reward_type=1,
-        reward_id=1,
-        reward_value=300,
-        s_CustomIconType='DailyReward',
-        s_CustomIconSprite='reward_05'
+        defaults={
+            'reward_num': 5,
+            'reward_type': 1,
+            'reward_id': 1,
+            'reward_value': 300,
+            's_CustomIconType': 'DailyReward',
+            's_CustomIconSprite': 'reward_05'
+        }
     )
-    EventReward.objects.create(
+    EventReward.objects.get_or_create(
         event=e1,
         reward_idx=6,
-        reward_num=6,
-        reward_type=1,
-        reward_id=2,
-        reward_value=50,
-        s_CustomIconType='DailyReward',
-        s_CustomIconSprite='reward_06'
+        defaults={
+            'reward_num': 6,
+            'reward_type': 1,
+            'reward_id': 2,
+            'reward_value': 50,
+            's_CustomIconType': 'DailyReward',
+            's_CustomIconSprite': 'reward_06'
+        }
     )
-    EventReward.objects.create(
+    EventReward.objects.get_or_create(
         event=e1,
         reward_idx=7,
-        reward_num=7,
-        reward_type=2,
-        reward_id=13,
-        reward_value=1,
-        s_CustomIconType='DailyReward',
-        s_CustomIconSprite='reward_02'
+        defaults={
+            'reward_num': 7,
+            'reward_type': 2,
+            'reward_id': 13,
+            'reward_value': 1,
+            's_CustomIconType': 'DailyReward',
+            's_CustomIconSprite': 'reward_02'
+        }
     )
 
     # Event 2
-    e2 = Event.objects.create(idx=2, event_name='1주년 출석부', event_type='DailyReward_PeriodCheck_First')
-    e2
-    EventReward.objects.create(
+    e2, _ = Event.objects.get_or_create(idx=2, defaults={'event_name': '1주년 출석부', 'event_type': 'DailyReward_PeriodCheck_First'})
+    EventReward.objects.get_or_create(
         event=e2,
         reward_idx=101,
-        reward_num=1,
-        reward_type=1,
-        reward_id=2,
-        reward_value=111,
-        s_CustomIconType='YearEvent',
-        s_CustomIconSprite='reward_03'
+        defaults={
+            'reward_num': 1,
+            'reward_type': 1,
+            'reward_id': 2,
+            'reward_value': 111,
+            's_CustomIconType': 'YearEvent',
+            's_CustomIconSprite': 'reward_03'
+        }
     )
-    EventReward.objects.create(
+    EventReward.objects.get_or_create(
         event=e2,
         reward_idx=102,
-        reward_num=2,
-        reward_type=1,
-        reward_id=1,
-        reward_value=365,
-        s_CustomIconType='YearEvent',
-        s_CustomIconSprite='reward_02'
+        defaults={
+            'reward_num': 2,
+            'reward_type': 1,
+            'reward_id': 1,
+            'reward_value': 365,
+            's_CustomIconType': 'YearEvent',
+            's_CustomIconSprite': 'reward_02'
+        }
     )
-    EventReward.objects.create(
+    EventReward.objects.get_or_create(
         event=e2,
         reward_idx=103,
-        reward_num=3,
-        reward_type=9,
-        reward_id=35,
-        reward_value=1,
-        s_CustomIconType='YearEvent',
-        s_CustomIconSprite='reward_05'
+        defaults={
+            'reward_num': 3,
+            'reward_type': 9,
+            'reward_id': 35,
+            'reward_value': 1,
+            's_CustomIconType': 'YearEvent',
+            's_CustomIconSprite': 'reward_05'
+        }
     )
-    EventReward.objects.create(
+    EventReward.objects.get_or_create(
         event=e2,
         reward_idx=104,
-        reward_num=4,
-        reward_type=11,
-        reward_id=1,
-        reward_value=111,
-        s_CustomIconType='YearEvent',
-        s_CustomIconSprite='reward_04'
+        defaults={
+            'reward_num': 4,
+            'reward_type': 11,
+            'reward_id': 1,
+            'reward_value': 111,
+            's_CustomIconType': 'YearEvent',
+            's_CustomIconSprite': 'reward_04'
+        }
     )
-    EventReward.objects.create(
+    EventReward.objects.get_or_create(
         event=e2,
         reward_idx=105,
-        reward_num=5,
-        reward_type=1,
-        reward_id=1,
-        reward_value=365,
-        s_CustomIconType='YearEvent',
-        s_CustomIconSprite='reward_02'
+        defaults={
+            'reward_num': 5,
+            'reward_type': 1,
+            'reward_id': 1,
+            'reward_value': 365,
+            's_CustomIconType': 'YearEvent',
+            's_CustomIconSprite': 'reward_02'
+        }
     )
-    EventReward.objects.create(
+    EventReward.objects.get_or_create(
         event=e2,
         reward_idx=106,
-        reward_num=6,
-        reward_type=1,
-        reward_id=11,
-        reward_value=111,
-        s_CustomIconType='YearEvent',
-        s_CustomIconSprite='reward_01'
+        defaults={
+            'reward_num': 6,
+            'reward_type': 1,
+            'reward_id': 11,
+            'reward_value': 111,
+            's_CustomIconType': 'YearEvent',
+            's_CustomIconSprite': 'reward_01'
+        }
     )
-    EventReward.objects.create(
+    EventReward.objects.get_or_create(
         event=e2,
         reward_idx=107,
-        reward_num=7,
-        reward_type=3,
-        reward_id=29,
-        reward_value=1,
-        s_CustomIconType='YearEvent',
-        s_CustomIconSprite='reward_06'
+        defaults={
+            'reward_num': 7,
+            'reward_type': 3,
+            'reward_id': 29,
+            'reward_value': 1,
+            's_CustomIconType': 'YearEvent',
+            's_CustomIconSprite': 'reward_06'
+        }
     )
-    EventReward.objects.create(
+    EventReward.objects.get_or_create(
         event=e2,
         reward_idx=108,
-        reward_num=8,
-        reward_type=1,
-        reward_id=2,
-        reward_value=111,
-        s_CustomIconType='YearEvent',
-        s_CustomIconSprite='reward_03'
+        defaults={
+            'reward_num': 8,
+            'reward_type': 1,
+            'reward_id': 2,
+            'reward_value': 111,
+            's_CustomIconType': 'YearEvent',
+            's_CustomIconSprite': 'reward_03'
+        }
     )
-    EventReward.objects.create(
+    EventReward.objects.get_or_create(
         event=e2,
         reward_idx=109,
-        reward_num=9,
-        reward_type=1,
-        reward_id=1,
-        reward_value=365,
-        s_CustomIconType='YearEvent',
-        s_CustomIconSprite='reward_02'
+        defaults={
+            'reward_num': 9,
+            'reward_type': 1,
+            'reward_id': 1,
+            'reward_value': 365,
+            's_CustomIconType': 'YearEvent',
+            's_CustomIconSprite': 'reward_02'
+        }
     )
-    EventReward.objects.create(
+    EventReward.objects.get_or_create(
         event=e2,
         reward_idx=110,
-        reward_num=10,
-        reward_type=9,
-        reward_id=241,
-        reward_value=1,
-        s_CustomIconType='YearEvent',
-        s_CustomIconSprite='reward_07'
+        defaults={
+            'reward_num': 10,
+            'reward_type': 9,
+            'reward_id': 241,
+            'reward_value': 1,
+            's_CustomIconType': 'YearEvent',
+            's_CustomIconSprite': 'reward_07'
+        }
     )
-    EventReward.objects.create(
+    EventReward.objects.get_or_create(
         event=e2,
         reward_idx=111,
-        reward_num=11,
-        reward_type=11,
-        reward_id=1,
-        reward_value=365,
-        s_CustomIconType='YearEvent',
-        s_CustomIconSprite='reward_04'
+        defaults={
+            'reward_num': 11,
+            'reward_type': 11,
+            'reward_id': 1,
+            'reward_value': 365,
+            's_CustomIconType': 'YearEvent',
+            's_CustomIconSprite': 'reward_04'
+        }
     )
-    EventReward.objects.create(
+    EventReward.objects.get_or_create(
         event=e2,
         reward_idx=112,
-        reward_num=12,
-        reward_type=1,
-        reward_id=1,
-        reward_value=1000,
-        s_CustomIconType='YearEvent',
-        s_CustomIconSprite='reward_02'
+        defaults={
+            'reward_num': 12,
+            'reward_type': 1,
+            'reward_id': 1,
+            'reward_value': 1000,
+            's_CustomIconType': 'YearEvent',
+            's_CustomIconSprite': 'reward_02'
+        }
     )
-    EventReward.objects.create(
+    EventReward.objects.get_or_create(
         event=e2,
         reward_idx=113,
-        reward_num=13,
-        reward_type=1,
-        reward_id=11,
-        reward_value=365,
-        s_CustomIconType='YearEvent',
-        s_CustomIconSprite='reward_01'
+        defaults={
+            'reward_num': 13,
+            'reward_type': 1,
+            'reward_id': 11,
+            'reward_value': 365,
+            's_CustomIconType': 'YearEvent',
+            's_CustomIconSprite': 'reward_01'
+        }
     )
-    EventReward.objects.create(
+    EventReward.objects.get_or_create(
         event=e2,
         reward_idx=114,
-        reward_num=14,
-        reward_type=3,
-        reward_id=227,
-        reward_value=1,
-        s_CustomIconType='YearEvent',
-        s_CustomIconSprite='reward_08'
+        defaults={
+            'reward_num': 14,
+            'reward_type': 3,
+            'reward_id': 227,
+            'reward_value': 1,
+            's_CustomIconType': 'YearEvent',
+            's_CustomIconSprite': 'reward_08'
+        }
     )
 
     # Event 3
-    e3 = Event.objects.create(idx=3, event_name='상시 출석부', event_type='DailyAttendance')
-    e3
-    EventReward.objects.create(
+    e3, _ = Event.objects.get_or_create(idx=3, defaults={'event_name': '상시 출석부', 'event_type': 'DailyAttendance'})
+    EventReward.objects.get_or_create(
         event=e3,
         reward_idx=201,
-        reward_num=1,
-        reward_type=11,
-        reward_id=1,
-        reward_value=50,
-        s_CustomIconType='DailyAttendanceReward',
-        s_CustomIconSprite='reward_01'
+        defaults={
+            'reward_num': 1,
+            'reward_type': 11,
+            'reward_id': 1,
+            'reward_value': 50,
+            's_CustomIconType': 'DailyAttendanceReward',
+            's_CustomIconSprite': 'reward_01'
+        }
     )
-    EventReward.objects.create(
+    EventReward.objects.get_or_create(
         event=e3,
         reward_idx=202,
-        reward_num=2,
-        reward_type=1,
-        reward_id=2,
-        reward_value=30,
-        s_CustomIconType='DailyAttendanceReward',
-        s_CustomIconSprite='reward_02'
+        defaults={
+            'reward_num': 2,
+            'reward_type': 1,
+            'reward_id': 2,
+            'reward_value': 30,
+            's_CustomIconType': 'DailyAttendanceReward',
+            's_CustomIconSprite': 'reward_02'
+        }
     )
-    EventReward.objects.create(
+    EventReward.objects.get_or_create(
         event=e3,
         reward_idx=203,
-        reward_num=3,
-        reward_type=1,
-        reward_id=11,
-        reward_value=50,
-        s_CustomIconType='DailyAttendanceReward',
-        s_CustomIconSprite='reward_03'
+        defaults={
+            'reward_num': 3,
+            'reward_type': 1,
+            'reward_id': 11,
+            'reward_value': 50,
+            's_CustomIconType': 'DailyAttendanceReward',
+            's_CustomIconSprite': 'reward_03'
+        }
     )
-    EventReward.objects.create(
+    EventReward.objects.get_or_create(
         event=e3,
         reward_idx=204,
-        reward_num=4,
-        reward_type=11,
-        reward_id=1,
-        reward_value=100,
-        s_CustomIconType='DailyAttendanceReward',
-        s_CustomIconSprite='reward_01'
+        defaults={
+            'reward_num': 4,
+            'reward_type': 11,
+            'reward_id': 1,
+            'reward_value': 100,
+            's_CustomIconType': 'DailyAttendanceReward',
+            's_CustomIconSprite': 'reward_01'
+        }
     )
-    EventReward.objects.create(
+    EventReward.objects.get_or_create(
         event=e3,
         reward_idx=205,
-        reward_num=5,
-        reward_type=1,
-        reward_id=2,
-        reward_value=50,
-        s_CustomIconType='DailyAttendanceReward',
-        s_CustomIconSprite='reward_02'
+        defaults={
+            'reward_num': 5,
+            'reward_type': 1,
+            'reward_id': 2,
+            'reward_value': 50,
+            's_CustomIconType': 'DailyAttendanceReward',
+            's_CustomIconSprite': 'reward_02'
+        }
     )
-    EventReward.objects.create(
+    EventReward.objects.get_or_create(
         event=e3,
         reward_idx=206,
-        reward_num=6,
-        reward_type=1,
-        reward_id=11,
-        reward_value=100,
-        s_CustomIconType='DailyAttendanceReward',
-        s_CustomIconSprite='reward_03'
+        defaults={
+            'reward_num': 6,
+            'reward_type': 1,
+            'reward_id': 11,
+            'reward_value': 100,
+            's_CustomIconType': 'DailyAttendanceReward',
+            's_CustomIconSprite': 'reward_03'
+        }
     )
-    EventReward.objects.create(
+    EventReward.objects.get_or_create(
         event=e3,
         reward_idx=207,
-        reward_num=7,
-        reward_type=1,
-        reward_id=1,
-        reward_value=150,
-        s_CustomIconType='DailyAttendanceReward',
-        s_CustomIconSprite='reward_04'
+        defaults={
+            'reward_num': 7,
+            'reward_type': 1,
+            'reward_id': 1,
+            'reward_value': 150,
+            's_CustomIconType': 'DailyAttendanceReward',
+            's_CustomIconSprite': 'reward_04'
+        }
     )
 
     # Event 202110
-    e202110 = Event.objects.create(
+    e202110, _ = Event.objects.get_or_create(
         idx=202110,
-        event_name='2021년 10월 로그인 출석부',
-        event_type='DailyReward_PeriodCheck_First'
+        defaults={'event_name': '2021년 10월 로그인 출석부', 'event_type': 'DailyReward_PeriodCheck_First'}
     )
-    e202110
-    EventReward.objects.create(
+    EventReward.objects.get_or_create(
         event=e202110,
         reward_idx=20211001,
-        reward_num=1,
-        reward_type=1,
-        reward_id=1,
-        reward_value=100,
-        s_CustomIconType='LoginEvent_2021_10',
-        s_CustomIconSprite='reward_01'
+        defaults={
+            'reward_num': 1,
+            'reward_type': 1,
+            'reward_id': 1,
+            'reward_value': 100,
+            's_CustomIconType': 'LoginEvent_2021_10',
+            's_CustomIconSprite': 'reward_01'
+        }
     )
-    EventReward.objects.create(
+    EventReward.objects.get_or_create(
         event=e202110,
         reward_idx=20211002,
-        reward_num=2,
-        reward_type=1,
-        reward_id=8,
-        reward_value=10000,
-        s_CustomIconType='LoginEvent_2021_10',
-        s_CustomIconSprite='reward_02'
+        defaults={
+            'reward_num': 2,
+            'reward_type': 1,
+            'reward_id': 8,
+            'reward_value': 10000,
+            's_CustomIconType': 'LoginEvent_2021_10',
+            's_CustomIconSprite': 'reward_02'
+        }
     )
-    EventReward.objects.create(
+    EventReward.objects.get_or_create(
         event=e202110,
         reward_idx=20211003,
-        reward_num=3,
-        reward_type=1,
-        reward_id=11,
-        reward_value=60,
-        s_CustomIconType='LoginEvent_2021_10',
-        s_CustomIconSprite='reward_03'
+        defaults={
+            'reward_num': 3,
+            'reward_type': 1,
+            'reward_id': 11,
+            'reward_value': 60,
+            's_CustomIconType': 'LoginEvent_2021_10',
+            's_CustomIconSprite': 'reward_03'
+        }
     )
-    EventReward.objects.create(
+    EventReward.objects.get_or_create(
         event=e202110,
         reward_idx=20211004,
-        reward_num=4,
-        reward_type=1,
-        reward_id=2,
-        reward_value=200,
-        s_CustomIconType='LoginEvent_2021_10',
-        s_CustomIconSprite='reward_04'
+        defaults={
+            'reward_num': 4,
+            'reward_type': 1,
+            'reward_id': 2,
+            'reward_value': 200,
+            's_CustomIconType': 'LoginEvent_2021_10',
+            's_CustomIconSprite': 'reward_04'
+        }
     )
-    EventReward.objects.create(
+    EventReward.objects.get_or_create(
         event=e202110,
         reward_idx=20211005,
-        reward_num=5,
-        reward_type=11,
-        reward_id=1,
-        reward_value=100,
-        s_CustomIconType='LoginEvent_2021_10',
-        s_CustomIconSprite='reward_05'
+        defaults={
+            'reward_num': 5,
+            'reward_type': 11,
+            'reward_id': 1,
+            'reward_value': 100,
+            's_CustomIconType': 'LoginEvent_2021_10',
+            's_CustomIconSprite': 'reward_05'
+        }
     )
-    EventReward.objects.create(
+    EventReward.objects.get_or_create(
         event=e202110,
         reward_idx=20211006,
-        reward_num=6,
-        reward_type=1,
-        reward_id=11,
-        reward_value=60,
-        s_CustomIconType='LoginEvent_2021_10',
-        s_CustomIconSprite='reward_03'
+        defaults={
+            'reward_num': 6,
+            'reward_type': 1,
+            'reward_id': 11,
+            'reward_value': 60,
+            's_CustomIconType': 'LoginEvent_2021_10',
+            's_CustomIconSprite': 'reward_03'
+        }
     )
-    EventReward.objects.create(
+    EventReward.objects.get_or_create(
         event=e202110,
         reward_idx=20211007,
-        reward_num=7,
-        reward_type=9,
-        reward_id=36,
-        reward_value=1,
-        s_CustomIconType='LoginEvent_2021_10',
-        s_CustomIconSprite='reward_06'
+        defaults={
+            'reward_num': 7,
+            'reward_type': 9,
+            'reward_id': 36,
+            'reward_value': 1,
+            's_CustomIconType': 'LoginEvent_2021_10',
+            's_CustomIconSprite': 'reward_06'
+        }
     )
-    EventReward.objects.create(
+    EventReward.objects.get_or_create(
         event=e202110,
         reward_idx=20211008,
-        reward_num=8,
-        reward_type=1,
-        reward_id=1,
-        reward_value=100,
-        s_CustomIconType='LoginEvent_2021_10',
-        s_CustomIconSprite='reward_01'
+        defaults={
+            'reward_num': 8,
+            'reward_type': 1,
+            'reward_id': 1,
+            'reward_value': 100,
+            's_CustomIconType': 'LoginEvent_2021_10',
+            's_CustomIconSprite': 'reward_01'
+        }
     )
-    EventReward.objects.create(
+    EventReward.objects.get_or_create(
         event=e202110,
         reward_idx=20211009,
-        reward_num=9,
-        reward_type=1,
-        reward_id=8,
-        reward_value=10000,
-        s_CustomIconType='LoginEvent_2021_10',
-        s_CustomIconSprite='reward_02'
+        defaults={
+            'reward_num': 9,
+            'reward_type': 1,
+            'reward_id': 8,
+            'reward_value': 10000,
+            's_CustomIconType': 'LoginEvent_2021_10',
+            's_CustomIconSprite': 'reward_02'
+        }
     )
-    EventReward.objects.create(
+    EventReward.objects.get_or_create(
         event=e202110,
         reward_idx=20211010,
-        reward_num=10,
-        reward_type=1,
-        reward_id=11,
-        reward_value=60,
-        s_CustomIconType='LoginEvent_2021_10',
-        s_CustomIconSprite='reward_03'
+        defaults={
+            'reward_num': 10,
+            'reward_type': 1,
+            'reward_id': 11,
+            'reward_value': 60,
+            's_CustomIconType': 'LoginEvent_2021_10',
+            's_CustomIconSprite': 'reward_03'
+        }
     )
-    EventReward.objects.create(
+    EventReward.objects.get_or_create(
         event=e202110,
         reward_idx=20211011,
-        reward_num=11,
-        reward_type=1,
-        reward_id=2,
-        reward_value=200,
-        s_CustomIconType='LoginEvent_2021_10',
-        s_CustomIconSprite='reward_04'
+        defaults={
+            'reward_num': 11,
+            'reward_type': 1,
+            'reward_id': 2,
+            'reward_value': 200,
+            's_CustomIconType': 'LoginEvent_2021_10',
+            's_CustomIconSprite': 'reward_04'
+        }
     )
-    EventReward.objects.create(
+    EventReward.objects.get_or_create(
         event=e202110,
         reward_idx=20211012,
-        reward_num=12,
-        reward_type=11,
-        reward_id=1,
-        reward_value=100,
-        s_CustomIconType='LoginEvent_2021_10',
-        s_CustomIconSprite='reward_05'
+        defaults={
+            'reward_num': 12,
+            'reward_type': 11,
+            'reward_id': 1,
+            'reward_value': 100,
+            's_CustomIconType': 'LoginEvent_2021_10',
+            's_CustomIconSprite': 'reward_05'
+        }
     )
-    EventReward.objects.create(
+    EventReward.objects.get_or_create(
         event=e202110,
         reward_idx=20211013,
-        reward_num=13,
-        reward_type=1,
-        reward_id=1,
-        reward_value=100,
-        s_CustomIconType='LoginEvent_2021_10',
-        s_CustomIconSprite='reward_01'
+        defaults={
+            'reward_num': 13,
+            'reward_type': 1,
+            'reward_id': 1,
+            'reward_value': 100,
+            's_CustomIconType': 'LoginEvent_2021_10',
+            's_CustomIconSprite': 'reward_01'
+        }
     )
-    EventReward.objects.create(
+    EventReward.objects.get_or_create(
         event=e202110,
         reward_idx=20211014,
-        reward_num=14,
-        reward_type=3,
-        reward_id=30,
-        reward_value=1,
-        s_CustomIconType='LoginEvent_2021_10',
-        s_CustomIconSprite='reward_07'
+        defaults={
+            'reward_num': 14,
+            'reward_type': 3,
+            'reward_id': 30,
+            'reward_value': 1,
+            's_CustomIconType': 'LoginEvent_2021_10',
+            's_CustomIconSprite': 'reward_07'
+        }
     )
 
     # Event 202111
-    e202111 = Event.objects.create(
+    e202111, _ = Event.objects.get_or_create(
         idx=202111,
-        event_name='2021년 11월 로그인 이벤트 (신규 유저 선택 보상),\n2022년 1월 로그인 이벤트 (신규 유저 선택 보상)',
-        event_type='DailyReward_Select_NewUser'
+        defaults={'event_name': '2021년 11월 로그인 이벤트 (신규 유저 선택 보상),\n2022년 1월 로그인 이벤트 (신규 유저 선택 보상)', 'event_type': 'DailyReward_Select_NewUser'}
     )
-    e202111
-    EventReward.objects.create(
+    EventReward.objects.get_or_create(
         event=e202111,
         reward_idx=20211101,
-        reward_num=1,
-        reward_type=0,
-        reward_id=0,
-        reward_value=0,
-        s_CustomIconType='',
-        s_CustomIconSprite=''
+        defaults={
+            'reward_num': 1,
+            'reward_type': 0,
+            'reward_id': 0,
+            'reward_value': 0,
+            's_CustomIconType': '',
+            's_CustomIconSprite': ''
+        }
     )
-    EventReward.objects.create(
+    EventReward.objects.get_or_create(
         event=e202111,
         reward_idx=20211102,
-        reward_num=2,
-        reward_type=0,
-        reward_id=0,
-        reward_value=0,
-        s_CustomIconType='',
-        s_CustomIconSprite=''
+        defaults={
+            'reward_num': 2,
+            'reward_type': 0,
+            'reward_id': 0,
+            'reward_value': 0,
+            's_CustomIconType': '',
+            's_CustomIconSprite': ''
+        }
     )
-    EventReward.objects.create(
+    EventReward.objects.get_or_create(
         event=e202111,
         reward_idx=20211103,
-        reward_num=3,
-        reward_type=0,
-        reward_id=0,
-        reward_value=0,
-        s_CustomIconType='',
-        s_CustomIconSprite=''
+        defaults={
+            'reward_num': 3,
+            'reward_type': 0,
+            'reward_id': 0,
+            'reward_value': 0,
+            's_CustomIconType': '',
+            's_CustomIconSprite': ''
+        }
     )
-    EventReward.objects.create(
+    EventReward.objects.get_or_create(
         event=e202111,
         reward_idx=20211104,
-        reward_num=4,
-        reward_type=0,
-        reward_id=0,
-        reward_value=0,
-        s_CustomIconType='',
-        s_CustomIconSprite=''
+        defaults={
+            'reward_num': 4,
+            'reward_type': 0,
+            'reward_id': 0,
+            'reward_value': 0,
+            's_CustomIconType': '',
+            's_CustomIconSprite': ''
+        }
     )
-    EventReward.objects.create(
+    EventReward.objects.get_or_create(
         event=e202111,
         reward_idx=20211105,
-        reward_num=5,
-        reward_type=0,
-        reward_id=0,
-        reward_value=0,
-        s_CustomIconType='',
-        s_CustomIconSprite=''
+        defaults={
+            'reward_num': 5,
+            'reward_type': 0,
+            'reward_id': 0,
+            'reward_value': 0,
+            's_CustomIconType': '',
+            's_CustomIconSprite': ''
+        }
     )
-    EventReward.objects.create(
+    EventReward.objects.get_or_create(
         event=e202111,
         reward_idx=20211106,
-        reward_num=6,
-        reward_type=0,
-        reward_id=0,
-        reward_value=0,
-        s_CustomIconType='',
-        s_CustomIconSprite=''
+        defaults={
+            'reward_num': 6,
+            'reward_type': 0,
+            'reward_id': 0,
+            'reward_value': 0,
+            's_CustomIconType': '',
+            's_CustomIconSprite': ''
+        }
     )
-    EventReward.objects.create(
+    EventReward.objects.get_or_create(
         event=e202111,
         reward_idx=20211107,
-        reward_num=7,
-        reward_type=13,
-        reward_id=10,
-        reward_value=1,
-        s_CustomIconType='',
-        s_CustomIconSprite=''
+        defaults={
+            'reward_num': 7,
+            'reward_type': 13,
+            'reward_id': 10,
+            'reward_value': 1,
+            's_CustomIconType': '',
+            's_CustomIconSprite': ''
+        }
     )
 
 

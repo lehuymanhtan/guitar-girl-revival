@@ -1,3 +1,6 @@
+from datetime import datetime
+
+from django.db import transaction
 from django.http import HttpRequest, HttpResponse
 
 import thrift_gen.tapsonic.general.ttypes as common_type
@@ -8,6 +11,7 @@ from .. import _helper as helper
 
 
 @helper.wrapper_helper
+@transaction.atomic
 def userSave(request: HttpRequest):
     raw_data = request.POST.get("tapsonic_data", None)
     if not raw_data:
@@ -184,11 +188,14 @@ def userSave(request: HttpRequest):
             },
         )
     
+    user.u_save_date = datetime.now()
+    user.save()
+
     return user_userSave_en.userSaveReturn(
         error=common_type.errorRetCode(code=0, errmsg=""),
         server_time=helper.auto_response_time(),
-        service="main",
-        method="userSave",
+        mode="main",
+        call="userSave",
         data=user_userSave_en.userSaveRetDataInfo(status="Y"),
         maintenance=common_type.maintenanceData()
     )

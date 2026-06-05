@@ -38,8 +38,8 @@ def getEventRewardList(request: HttpRequest):
                     s_CustomIconSprite=reward.s_CustomIconSprite
                 )
             )
-        data[event.idx] = main_getEventRewardList_en.getEventRewardListDataInfo(
-            event_idx=event.idx,
+        data[event.idx] = main_getEventRewardList_en.getEventRewardListRetDataInfo(
+            group_idx=event.idx,
             reward_list=reward_list
         )
     
