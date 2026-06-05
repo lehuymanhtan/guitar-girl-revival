@@ -7,6 +7,7 @@ class Player(models.Model):
     uuid = models.CharField(max_length=128) # external id
     u_cp = models.BigIntegerField(default=0)
     u_candy = models.FloatField(default=0)
+    u_cookie = models.BigIntegerField(default=0)
     u_last_login = models.DateTimeField(null=True)
     u_last_communication = models.DateTimeField(null=True)
     u_save_date = models.DateTimeField(null=True)
@@ -99,6 +100,7 @@ class UserUnit(models.Model):
 class UserSkill(models.Model):
     player = models.ForeignKey(Player, on_delete=models.CASCADE, related_name='skills')
     i_id = models.BigIntegerField()
+    i_Level = models.BigIntegerField(default=1)
     b_Activate = models.SmallIntegerField(default=0)
     l_ActivateOnTicks = models.BigIntegerField(default=0)
     l_ActivateOffTicks = models.BigIntegerField(default=0)
