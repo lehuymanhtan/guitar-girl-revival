@@ -340,6 +340,7 @@ class FollowerProfileLevelData(models.Model):
     i_ProfileID = models.IntegerField()
     i_Level = models.IntegerField()
     d_RequireEXP = models.BigIntegerField(default=0)
+    i_RewardGroup = models.IntegerField(default=0)
     i_AddCandy = models.IntegerField(default=0)
 
     class Meta:
@@ -349,6 +350,14 @@ class FollowerProfileLevelData(models.Model):
                 name="follower_profile_level_unique",
             ),
         ]
+
+class RewardGroupData(models.Model):
+    i_id = models.IntegerField(primary_key=True)
+    i_Group = models.IntegerField(default=0)
+    i_RewardType = models.IntegerField(default=0)
+    i_RewardID = models.IntegerField(default=0)
+    l_RewardQuantity = models.FloatField(default=0)
+    i_BuyFirstQuantity = models.IntegerField(default=0)
 
 class AchievementData(models.Model):
     i_id = models.IntegerField(primary_key=True)

@@ -9,53 +9,6 @@ from gameapi import models
 from .. import _helper as helper
 
 
-def _apply_reward(player, reward, area1):
-    """Apply the reward to the player's server-side state."""
-    rtype = reward.reward_type
-    rid   = reward.reward_id
-    rval  = reward.reward_value
-
-    if rtype == 1:  # consume
-        if rid == 1:  # Chocolate (CP / Choco Point)
-            player.u_cp += rval
-            player.save(update_fields=['u_cp'])
-        elif rid == 2:  # Candy
-            player.u_candy += rval
-            player.save(update_fields=['u_candy'])
-        elif rid == 8 and area1:  # Fan
-            area1.i_UserFanCount += rval
-            area1.save(update_fields=['i_UserFanCount'])
-        elif rid == 11:  # Cookie (Ch3 currency)
-            player.u_cookie += rval
-            player.save(update_fields=['u_cookie'])
-
-    elif rtype == 2:  # music
-        models.UserMusic.objects.get_or_create(
-            player=player, i_id=rid,
-            defaults={'i_Level': 1, 'i_BonusLevel': 0}
-        )
-    elif rtype == 3:  # costume
-        models.UserCostume.objects.get_or_create(
-            player=player, i_id=rid,
-            defaults={'i_Level': 1, 'i_BonusLevel': 0}
-        )
-    elif rtype == 9:  # Guitar
-        models.UserGuitar.objects.get_or_create(
-            player=player, i_id=rid,
-            defaults={'i_Level': 1, 'i_BonusLevel': 0}
-        )
-    elif rtype == 11:  # follower gift item
-        gift, _ = models.UserFollowerGiftItem.objects.get_or_create(
-            player=player, i_id=rid,
-            defaults={'i_Value': 0}
-        )
-        gift.i_Value += rval
-        gift.save(update_fields=['i_Value'])
-    elif rtype == 13:  # character — skip (inactive event 202111, no info yet)
-        pass
-    # rtype == 0 or unknown: skip
-
-
 @helper.wrapper_helper
 def setEventReward(request: HttpRequest):
     raw_data = request.POST.get('tapsonic_data', None)
@@ -110,7 +63,7 @@ def setEventReward(request: HttpRequest):
 
             # 3. Apply reward server-side
             area1 = player.areas.filter(u_area_num=1).first()
-            _apply_reward(player, next_reward, area1)
+            helper.apply_reward(player, area1, next_reward.reward_type, next_reward.reward_id, next_reward.reward_value)
 
             # 4. Mark as claimed
             get_date = int(datetime.now().strftime("%Y%m%d"))
@@ -123,8 +76,9 @@ def setEventReward(request: HttpRequest):
 
             # 5. Return updated balances
             # Re-fetch area1 in case Fan was applied
-            area1 = player.areas.filter(u_area_num=1).first()
-            u_fans = area1.i_UserFanCount if area1 else 0
+            # area1 = player.areas.filter(u_area_num=1).first()
+            # u_fans = area1.i_UserFanCount if area1 else 0
+            u_fans = 0
 
             return endpoint_types.setEventRewardReturn(
                 error=common_type.errorRetCode(code=0, errmsg=""),

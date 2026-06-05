@@ -18,6 +18,7 @@ from .views.user_setGameReward_en import setGameReward
 from .views.user_setTutorialNew_en import setTutorialNew
 from .views.user_lastSaveTime_en import lastSaveTime
 from .views.user_setEventReward_en import setEventReward
+from .views.user_setUserFollowerProfileReward_en import setUserFollowerProfileReward
 
 urlpatterns = [
     path('main/getGameDataList/en/', getGameDataList, name='getGameDataList'),
@@ -38,5 +39,6 @@ urlpatterns = [
     path('user/setTutorialNew/en/', setTutorialNew, name='setTutorialNew'),
     path('user/lastSaveTime/en/', lastSaveTime, name='lastSaveTime'),
     path('user/setEventReward/en/', setEventReward, name='setEventReward'),
+    path('user/setUserFollowerProfileReward/en/', setUserFollowerProfileReward, name='setUserFollowerProfileReward'),
 ]
 

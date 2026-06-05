@@ -1,0 +1,3 @@
+@echo off
+echo Starting Django SSL Server on port 443...
+python manage.py runsslserver --certificate "cert.pem" --key "cert.key" 0.0.0.0:443

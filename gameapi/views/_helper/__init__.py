@@ -32,7 +32,7 @@ def loadRawResponse(file_path: str) -> str:
     return decodeToBinary(data)
 
 
-def decodeToBinary(data: str) -> bytes:
+def decodeToBinary(data: str):
     data = urllib.parse.unquote(data)
     data = base64.b64decode(data)
     data = bz2.decompress(data)
@@ -61,6 +61,8 @@ def wrapper_helper(func):
         if request.method != "POST":
             return HttpResponse("Bad Request", status=400)
         data = func(request, *args, **kwargs)
+        if isinstance(data, HttpResponse):
+            return data
         return HttpResponse(_packDataHelper(data), content_type="text/plain")
 
     return wrapper
@@ -84,3 +86,44 @@ def datetime_to_ticks(dt_object) -> int:
         + (delta.microseconds * 10)
     )
     return ticks_value
+
+def apply_reward(player, area1, rtype, rid, rval):
+    from gameapi import models
+    if rtype == 1:  # consume
+        if rid == 1:  # Chocolate (CP / Choco Point)
+            player.u_cp += rval
+            player.save(update_fields=['u_cp'])
+        elif rid == 2:  # Candy
+            player.u_candy += rval
+            player.save(update_fields=['u_candy'])
+        elif rid == 8 and area1:  # Fan
+            area1.i_UserFanCount += rval
+            area1.save(update_fields=['i_UserFanCount'])
+        elif rid == 11:  # Cookie (Ch3 currency)
+            player.u_cookie += rval
+            player.save(update_fields=['u_cookie'])
+
+    elif rtype == 2:  # music
+        models.UserMusic.objects.get_or_create(
+            player=player, i_id=rid,
+            defaults={'i_Level': 1, 'i_BonusLevel': 0}
+        )
+    elif rtype == 3:  # costume
+        models.UserCostume.objects.get_or_create(
+            player=player, i_id=rid,
+            defaults={'i_Level': 1, 'i_BonusLevel': 0}
+        )
+    elif rtype == 9:  # Guitar
+        models.UserGuitar.objects.get_or_create(
+            player=player, i_id=rid,
+            defaults={'i_Level': 1, 'i_BonusLevel': 0}
+        )
+    elif rtype == 11:  # follower gift item
+        gift, _ = models.UserFollowerGiftItem.objects.get_or_create(
+            player=player, i_id=rid,
+            defaults={'i_Value': 0}
+        )
+        gift.i_Value += rval
+        gift.save(update_fields=['i_Value'])
+    elif rtype == 13:  # character — skip (inactive event 202111, no info yet)
+        pass
