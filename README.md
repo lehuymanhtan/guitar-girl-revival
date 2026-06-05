@@ -2,7 +2,8 @@
 
 A custom, reverse-engineered backend server implementation for the mobile game **Guitar Girl**.
 
-> ⚠️ **Status: Work In Progress (WIP)**
+> [!IMPORTANT]
+> **Status: Work In Progress (WIP)**
 > This project is currently in development. It currently allows players to authenticate and successfully log into the game, but many in-game features and endpoints are still broken or unimplemented.
 
 ## About the Game
