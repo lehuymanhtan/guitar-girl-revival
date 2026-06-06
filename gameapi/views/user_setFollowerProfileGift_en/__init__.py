@@ -30,7 +30,7 @@ def user_setFollowerProfileGift_en(request: HttpRequest):
             
             if profile_id is None or gift_id is None or use_gift_value is None:
                 return endpoint_types.setFollowerProfileGiftReturn(
-                    error=common_type.errorRetCode(code=900, errmsg="Invalid parameters"),
+                    error=common_type.errorRetCode(code=909, errmsg="Invalid parameters"),
                     server_time=helper.auto_response_time(),
                     mode="user",
                     call="setFollowerProfileGift",
@@ -47,7 +47,7 @@ def user_setFollowerProfileGift_en(request: HttpRequest):
                 )
             except Exception:
                 return endpoint_types.setFollowerProfileGiftReturn(
-                    error=common_type.errorRetCode(code=900, errmsg="Could not find/create gift item"),
+                    error=common_type.errorRetCode(code=909, errmsg="Could not find/create gift item"),
                     server_time=helper.auto_response_time(),
                     mode="user",
                     call="setFollowerProfileGift",
@@ -120,7 +120,7 @@ def user_setFollowerProfileGift_en(request: HttpRequest):
             
     except models.Player.DoesNotExist:
         return endpoint_types.setFollowerProfileGiftReturn(
-            error=common_type.errorRetCode(code=900, errmsg="Unregisterd User"),
+            error=common_type.errorRetCode(code=909, errmsg="Unregisterd User"),
             server_time=helper.auto_response_time(),
             mode="user",
             call="setFollowerProfileGift",

@@ -30,7 +30,7 @@ def setGameReward(request: HttpRequest):
 
             if reward_type is None or reward_id is None or level is None:
                 return endpoint_types.setGameRewardReturn(
-                    error=common_type.errorRetCode(code=900, errmsg="Invalid parameters"),
+                    error=common_type.errorRetCode(code=909, errmsg="Invalid parameters"),
                     server_time=helper.auto_response_time(),
                     mode="user",
                     call="setGameReward",
@@ -46,7 +46,7 @@ def setGameReward(request: HttpRequest):
                     dm_data = models.DailyMissionData.objects.get(i_id=reward_id)
                 except models.DailyMissionData.DoesNotExist:
                     return endpoint_types.setGameRewardReturn(
-                        error=common_type.errorRetCode(code=900, errmsg="Daily mission not found"),
+                        error=common_type.errorRetCode(code=909, errmsg="Daily mission not found"),
                         server_time=helper.auto_response_time(),
                         mode="user",
                         call="setGameReward",
@@ -70,7 +70,7 @@ def setGameReward(request: HttpRequest):
                     ach_data = models.AchievementData.objects.get(i_id=reward_id)
                 except models.AchievementData.DoesNotExist:
                     return endpoint_types.setGameRewardReturn(
-                        error=common_type.errorRetCode(code=900, errmsg="Achievement not found"),
+                        error=common_type.errorRetCode(code=909, errmsg="Achievement not found"),
                         server_time=helper.auto_response_time(),
                         mode="user",
                         call="setGameReward",
@@ -86,7 +86,7 @@ def setGameReward(request: HttpRequest):
 
                 if user_ach.i_Level != level:
                     return endpoint_types.setGameRewardReturn(
-                        error=common_type.errorRetCode(code=900, errmsg="Level mismatch or already claimed"),
+                        error=common_type.errorRetCode(code=909, errmsg="Level mismatch or already claimed"),
                         server_time=helper.auto_response_time(),
                         mode="user",
                         call="setGameReward",
@@ -102,7 +102,7 @@ def setGameReward(request: HttpRequest):
 
             else:
                 return endpoint_types.setGameRewardReturn(
-                    error=common_type.errorRetCode(code=900, errmsg="Unknown reward type"),
+                    error=common_type.errorRetCode(code=909, errmsg="Unknown reward type"),
                     server_time=helper.auto_response_time(),
                     mode="user",
                     call="setGameReward",
@@ -129,7 +129,7 @@ def setGameReward(request: HttpRequest):
 
     except models.Player.DoesNotExist:
         return endpoint_types.setGameRewardReturn(
-            error=common_type.errorRetCode(code=900, errmsg="Unregisterd User"),
+            error=common_type.errorRetCode(code=909, errmsg="Unregisterd User"),
             server_time=helper.auto_response_time(),
             mode="user",
             call="setGameReward",

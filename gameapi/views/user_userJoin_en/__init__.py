@@ -22,7 +22,7 @@ def userJoin(request: HttpRequest):
     
     if models.Player.objects.filter(uuid=uuid).exists():
         return user_userJoin_en.userJoinReturn(
-                error=common_type.errorRetCode(code=900, errmsg="[userJoin] Already Registered!"),
+                error=common_type.errorRetCode(code=909, errmsg="[userJoin] Already Registered!"),
                 server_time=helper.auto_response_time(),
                 mode="main",
                 call="userJoin",
