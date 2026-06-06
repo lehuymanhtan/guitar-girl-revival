@@ -67,4 +67,4 @@ As many features are still WIP (e.g., event rewards, follower systems, etc.), co
 
 ## License
 
-This project is released into the public domain under [The Unlicense](https://unlicense.org/).
+This project is released into the public domain under AGPL-v3.0.
