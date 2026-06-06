@@ -304,6 +304,20 @@ struct UserApData {
 
 
 // ────────────────────────────────────────────────────────────────────
+// Post shared structs
+// ────────────────────────────────────────────────────────────────────
+
+struct PostDataInfo {
+    1: optional i32 u_seq,
+    2: optional string u_id,
+    3: optional string uuid,
+    4: optional string device_uuid,
+    5: optional i64 idx, // post/mail idx
+    6: optional i16 type,
+}
+
+
+// ────────────────────────────────────────────────────────────────────
 // Other shared structs
 // ────────────────────────────────────────────────────────────────────
 

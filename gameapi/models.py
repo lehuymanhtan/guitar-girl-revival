@@ -269,6 +269,19 @@ class UserEventReward(models.Model):
             ),
         ]
 
+class UserSamSeckEvent(models.Model):
+    player = models.ForeignKey(Player, on_delete=models.CASCADE, related_name='samseck_events')
+    reward_idx = models.IntegerField()
+    claimed_at = models.DateTimeField(auto_now_add=True)
+
+    class Meta:
+        constraints = [
+            models.UniqueConstraint(
+                fields=["player", "reward_idx"],
+                name="user_samseck_reward_unique",
+            ),
+        ]
+
 class DefaultSetting(models.Model):
     key = models.CharField(max_length=128, unique=True)
     value = models.TextField()
