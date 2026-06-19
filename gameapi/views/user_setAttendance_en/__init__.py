@@ -47,7 +47,7 @@ def setAttendance(request: HttpRequest):
             status=status,
             user_follower_quest=None,
             attendance_count=0,
-            attendance_date=0,
+            attendance_date=helper.datetime_to_unix_sec((datetime.datetime.now(datetime.timezone.utc) - datetime.timedelta(days=1)).replace(hour=15, minute=0, second=0, microsecond=0)),
             max_coutinuous_attendance_count=0
         ),
         maintenance=common_type.maintenanceData()

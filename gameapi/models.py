@@ -69,7 +69,7 @@ class UserDailyMission(models.Model):
     i_id = models.BigIntegerField()
     i_Level = models.BigIntegerField(default=1)
     d_Quantity = models.BigIntegerField(default=0)
-    upd_date = models.CharField(max_length=64, blank=True)
+    upd_date = models.DateTimeField(auto_now=True)
 
 class UserFollower(models.Model):
     player = models.ForeignKey(Player, on_delete=models.CASCADE, related_name='followers')

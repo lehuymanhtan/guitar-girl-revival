@@ -1,5 +1,5 @@
 from datetime import datetime
-
+from zoneinfo import ZoneInfo
 from django.http import HttpRequest, HttpResponse
 
 import thrift_gen.tapsonic.general.ttypes as common_type
@@ -67,6 +67,13 @@ def userLogin(request: HttpRequest):
             maintenance=common_type.maintenanceData()
         )
     
+    # for mission in user.daily_missions.all():
+    #     if mission.upd_date.date() < datetime.now().date():
+    #         mission.i_Level = 1
+    #         mission.d_Quantity = 0
+    #         mission.save()
+    
+    # user.refresh_from_db()  # Refresh user data after potential updates
     ch1_data:models.UserAreaInfo = user.areas.filter(u_area_num=1).first()
     ch2_data:models.UserAreaInfo = user.areas.filter(u_area_num=2).first()
     data = user_userLogin_en.userLoginReturn(
@@ -171,7 +178,7 @@ def userLogin(request: HttpRequest):
                         i_id=mission.i_id,
                         i_Level=mission.i_Level,
                         d_Quantity=mission.d_Quantity,
-                        upd_date=mission.upd_date
+                        upd_date=mission.upd_date.replace(tzinfo=ZoneInfo('UTC')).astimezone(ZoneInfo('Asia/Seoul')).strftime("%Y-%m-%d %H:%M:%S") # datetime object. need to return str in format "%Y-%m-%d %H:%M:%S" at gmt+9
                     ) for mission in user.daily_missions.all()
                 ],
                 user_follower=[
