@@ -4,6 +4,7 @@ from .views.getGameDataList import getGameDataList
 from .views.main_Request_en import init
 from .views.main_getServerTime_en import getServerTime
 from .views.store_getVarietyStore_en import getVarietyStore
+from .views.store_buyVarietyStore_en import buyVarietyStore
 from .views.main_defaultSettingList_en import defaultSettingList
 from .views.main_getEventRewardList_en import getEventRewardList
 from .views.main_getUpdateTime_en import getUpdateTime
@@ -33,6 +34,7 @@ urlpatterns = [
     path('main/getUpdateTime/en/', getUpdateTime, name='getUpdateTime'),
     path('main/Request/en/', init, name='init'),
     path('store/getVarietyStore/en/', getVarietyStore, name='getVarietyStore'),
+    path('store/buyVarietyStore/en/', buyVarietyStore, name='buyVarietyStore'),
     path('user/userJoin/en/', userJoin, name='userJoin'),
     path('user/userLogin/en/', userLogin, name='userLogin'),
     path('user/userSave/en/', userSave, name='userSave'),
