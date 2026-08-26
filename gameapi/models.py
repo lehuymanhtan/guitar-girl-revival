@@ -50,7 +50,7 @@ class UserCandyShop(models.Model):
     i_CurrentBuyCount = models.BigIntegerField(default=0)
     i_TotalBuyCount = models.BigIntegerField(default=0)
     l_LastBuyTick = models.FloatField(default=0)
-    upd_day = models.BigIntegerField(default=0)
+    upd_day = models.DateTimeField(auto_now=True)
 
 class UserCharacter(models.Model):
     player = models.ForeignKey(Player, on_delete=models.CASCADE, related_name='characters')

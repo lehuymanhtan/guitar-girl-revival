@@ -1,4 +1,5 @@
 import logging
+import datetime
 from django.db import transaction
 from django.http import HttpRequest, HttpResponse
 
@@ -55,8 +56,25 @@ def buyVarietyStore(request: HttpRequest):
                     maintenance=common_type.maintenanceData()
                 )
 
-            player.u_candy -= cost
-            player.save()
+            player.u_cp -= cost
+            player.save(update_fields=['u_cp'])
+
+            area1 = player.areas.filter(u_area_num=1).first()
+            helper.apply_reward(player, area1, int(item.i_RewardType), int(item.i_RewardId), int(item.i_RewardQuantity))
+            
+            # candy_shop, _ = models.UserCandyShop.objects.get_or_create(
+            #     player=player,
+            #     i_id=idx,
+            #     defaults={
+            #         'i_CurrentBuyCount': 0,
+            #         'i_TotalBuyCount': 0,
+            #         'l_LastBuyTick': datetime.datetime.now(datetime.timezone.utc).timestamp(),
+            #     }
+            # )
+            # candy_shop.i_CurrentBuyCount += 1
+            # candy_shop.i_TotalBuyCount += 1
+            # candy_shop.l_LastBuyTick = datetime.datetime.now().timestamp()
+            # candy_shop.save()
 
             return endpoint_types.buyVarietyStoreReturn(
                 error=common_type.errorRetCode(code=0, errmsg=""),

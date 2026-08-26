@@ -156,7 +156,8 @@ def userLogin(request: HttpRequest):
                         i_id=shop.i_id,
                         i_CurrentBuyCount=shop.i_CurrentBuyCount,
                         i_TotalBuyCount=shop.i_TotalBuyCount,
-                        l_LastBuyTick=shop.l_LastBuyTick
+                        l_LastBuyTick=shop.l_LastBuyTick,
+                        upd_day=shop.upd_day.strftime("%d%m%Y") # output in DDMMYYYY format
                     ) for shop in user.candy_shops.all()
                 ] if user.candy_shops.exists() else None,
                 user_character=[
