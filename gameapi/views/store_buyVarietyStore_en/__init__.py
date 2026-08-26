@@ -56,8 +56,8 @@ def buyVarietyStore(request: HttpRequest):
                     maintenance=common_type.maintenanceData()
                 )
 
-            player.u_cp -= cost
-            player.save(update_fields=['u_cp'])
+            player.u_candy -= cost
+            player.save(update_fields=['u_candy'])
 
             area1 = player.areas.filter(u_area_num=1).first()
             helper.apply_reward(player, area1, int(item.i_RewardType), int(item.i_RewardId), int(item.i_RewardQuantity))
