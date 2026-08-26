@@ -398,6 +398,7 @@ class AchievementData(models.Model):
     i_MaxLevel = models.SmallIntegerField(default=0)
 
 class DailyMissionData(models.Model):
+    # Save reword data for daily mission
     i_id = models.IntegerField(primary_key=True)
     s_RewardType = models.CharField(max_length=64)
     i_Reward_1 = models.IntegerField(default=0)

@@ -62,7 +62,7 @@ def setGameReward(request: HttpRequest):
                     i_id=reward_id,
                     defaults={'i_Level': level}
                 )
-                user_dm.i_Level += 1
+                # user_dm.i_Level += 1
                 user_dm.save()
 
             elif reward_type == "achievement":

@@ -1,4 +1,4 @@
-from datetime import datetime
+from datetime import datetime, timedelta
 from zoneinfo import ZoneInfo
 from django.http import HttpRequest, HttpResponse
 
@@ -179,7 +179,7 @@ def userLogin(request: HttpRequest):
                         i_id=mission.i_id,
                         i_Level=mission.i_Level,
                         d_Quantity=mission.d_Quantity,
-                        upd_date=mission.upd_date.replace(tzinfo=ZoneInfo('UTC')).astimezone(ZoneInfo('Asia/Seoul')).strftime("%Y-%m-%d %H:%M:%S") # datetime object. need to return str in format "%Y-%m-%d %H:%M:%S" at gmt+9
+                        upd_date=(mission.upd_date + timedelta(hours=2)).strftime("%Y-%m-%d %H:%M:%S") # datetime object. need to return str in format "%Y-%m-%d %H:%M:%S" at gmt+9 # TODO: properly handle timezone conversion
                     ) for mission in user.daily_missions.all()
                 ],
                 user_follower=[
