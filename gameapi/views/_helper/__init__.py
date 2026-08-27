@@ -75,7 +75,7 @@ def ticks_to_datetime(ticks_value) -> datetime:
     return DOTNET_EPOCH + timedelta(microseconds=microseconds)
 
 
-def datetime_to_ticks(dt_object) -> int:
+def datetime_to_ticks(dt_object: datetime) -> int:
     """Converts a Python UTC datetime object to a .NET Ticks value."""
 
     delta = dt_object - DOTNET_EPOCH
@@ -99,6 +99,9 @@ def apply_reward(player, area1, rtype, rid, rval):
         elif rid == 8 and area1:  # Fan
             area1.i_UserFanCount += rval
             area1.save(update_fields=['i_UserFanCount'])
+        elif rid == 4 and area1:  # Likes
+            area1.d_Like += rval
+            area1.save(update_fields=['d_Like'])
         elif rid == 11:  # Cookie (Ch3 currency)
             player.u_cookie += rval
             player.save(update_fields=['u_cookie'])
@@ -112,6 +115,11 @@ def apply_reward(player, area1, rtype, rid, rval):
         models.UserCostume.objects.get_or_create(
             player=player, i_id=rid,
             defaults={'i_Level': 1, 'i_BonusLevel': 0}
+        )
+    elif rtype == 4:  # Furniture/Prop
+        models.UserProp.objects.get_or_create(
+            player=player, i_id=rid,
+            defaults={'i_Level': 1}
         )
     elif rtype == 9:  # Guitar
         models.UserGuitar.objects.get_or_create(

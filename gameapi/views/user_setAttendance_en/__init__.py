@@ -8,10 +8,7 @@ from gameapi import models
 from .. import _helper as helper
 
 @helper.wrapper_helper
-def setAttendance(request: HttpRequest):
-    # TODO: properly implement this endpoint.
-    # return N / ADD for now
-    
+def setAttendance(request: HttpRequest):    
     raw_data = request.POST.get("tapsonic_data", None)
     if not raw_data:
         return HttpResponse("Bad Request", status=400)
@@ -31,24 +28,32 @@ def setAttendance(request: HttpRequest):
 
     attendance_type = req.data.type
     
-    status = 'N'
-    
+    status = 'N' # return Y if new day, N if not new day, ADD if add attendance, E if no attendance
+    attendance_date = 0
     if attendance_type == 'add':
         status = 'ADD'
-        
-        
-        
+        attendance = models.AttendanceLog.objects.create(player=user)
+        attendance_date = helper.datetime_to_unix_sec(attendance.claimmed_at)
+    else:
+        last_attendance = models.AttendanceLog.objects.filter(player=user).order_by('-claimmed_at').first()
+        if not last_attendance:
+            status = 'E'
+        else:
+            attendance_date = helper.datetime_to_unix_sec(last_attendance.claimmed_at)
+            if last_attendance.claimmed_at.date() != datetime.datetime.now().date():
+                status = 'Y'
+
     return user_setAttendance_en.setAttendanceReturn(
         error=common_type.errorRetCode(code=0, errmsg=""),
         server_time=helper.auto_response_time(),
         mode="user",
         call="setAttendance",
         data=user_setAttendance_en.setAttendanceRetDataInfo(
-            status=status,
+            status=status,  
             user_follower_quest=None,
-            attendance_count=0,
-            attendance_date=0,
-            max_coutinuous_attendance_count=0
+            attendance_count=1,
+            attendance_date=attendance_date,
+            max_coutinuous_attendance_count=1
         ),
         maintenance=common_type.maintenanceData()
     )

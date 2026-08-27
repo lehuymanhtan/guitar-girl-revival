@@ -1,0 +1,37 @@
+[
+  {
+    "b_IsActive": 1,
+    "end_date": "9999-12-31 23:59:00",
+    "event_type": "DailyReward",
+    "idx": 1,
+    "start_date": "0001-01-01 00:00:00"
+  },
+  {
+    "b_IsActive": 1,
+    "end_date": "2021-09-30 23:59:00",
+    "event_type": "DailyReward_PeriodCheck_First",
+    "idx": 2,
+    "start_date": "2021-08-02 00:00:00"
+  },
+  {
+    "b_IsActive": 1,
+    "end_date": "9999-12-31 23:59:00",
+    "event_type": "DailyAttendance",
+    "idx": 3,
+    "start_date": "0001-01-01 00:00:00"
+  },
+  {
+    "b_IsActive": 1,
+    "end_date": "2021-10-31 23:59:00",
+    "event_type": "DailyReward_PeriodCheck_First",
+    "idx": 202110,
+    "start_date": "2021-10-01 00:00:00"
+  },
+  {
+    "b_IsActive": 1,
+    "end_date": "2022-02-23 23:59:00",
+    "event_type": "DailyReward_Select_NewUser",
+    "idx": 202111,
+    "start_date": "2022-02-16 00:00:00"
+  }
+]

@@ -3920,6 +3920,120 @@ class UserApData(object):
         return not (self == other)
 
 
+class PostDataInfo(object):
+    """
+    Attributes:
+     - u_seq
+     - u_id
+     - uuid
+     - device_uuid
+     - idx
+     - type
+
+    """
+    thrift_spec = None
+
+
+    def __init__(self, u_seq = None, u_id = None, uuid = None, device_uuid = None, idx = None, type = None,):
+        self.u_seq = u_seq
+        self.u_id = u_id
+        self.uuid = uuid
+        self.device_uuid = device_uuid
+        self.idx = idx
+        self.type = type
+
+    def read(self, iprot):
+        if iprot._fast_decode is not None and isinstance(iprot.trans, TTransport.CReadableTransport) and self.thrift_spec is not None:
+            iprot._fast_decode(self, iprot, [self.__class__, self.thrift_spec])
+            return
+        iprot.readStructBegin()
+        while True:
+            (fname, ftype, fid) = iprot.readFieldBegin()
+            if ftype == TType.STOP:
+                break
+            if fid == 1:
+                if ftype == TType.I32:
+                    self.u_seq = iprot.readI32()
+                else:
+                    iprot.skip(ftype)
+            elif fid == 2:
+                if ftype == TType.STRING:
+                    self.u_id = iprot.readString().decode('utf-8', errors='replace') if sys.version_info[0] == 2 else iprot.readString()
+                else:
+                    iprot.skip(ftype)
+            elif fid == 3:
+                if ftype == TType.STRING:
+                    self.uuid = iprot.readString().decode('utf-8', errors='replace') if sys.version_info[0] == 2 else iprot.readString()
+                else:
+                    iprot.skip(ftype)
+            elif fid == 4:
+                if ftype == TType.STRING:
+                    self.device_uuid = iprot.readString().decode('utf-8', errors='replace') if sys.version_info[0] == 2 else iprot.readString()
+                else:
+                    iprot.skip(ftype)
+            elif fid == 5:
+                if ftype == TType.I64:
+                    self.idx = iprot.readI64()
+                else:
+                    iprot.skip(ftype)
+            elif fid == 6:
+                if ftype == TType.I16:
+                    self.type = iprot.readI16()
+                else:
+                    iprot.skip(ftype)
+            else:
+                iprot.skip(ftype)
+            iprot.readFieldEnd()
+        iprot.readStructEnd()
+
+    def write(self, oprot):
+        self.validate()
+        if oprot._fast_encode is not None and self.thrift_spec is not None:
+            oprot.trans.write(oprot._fast_encode(self, [self.__class__, self.thrift_spec]))
+            return
+        oprot.writeStructBegin('PostDataInfo')
+        if self.u_seq is not None:
+            oprot.writeFieldBegin('u_seq', TType.I32, 1)
+            oprot.writeI32(self.u_seq)
+            oprot.writeFieldEnd()
+        if self.u_id is not None:
+            oprot.writeFieldBegin('u_id', TType.STRING, 2)
+            oprot.writeString(self.u_id.encode('utf-8') if sys.version_info[0] == 2 else self.u_id)
+            oprot.writeFieldEnd()
+        if self.uuid is not None:
+            oprot.writeFieldBegin('uuid', TType.STRING, 3)
+            oprot.writeString(self.uuid.encode('utf-8') if sys.version_info[0] == 2 else self.uuid)
+            oprot.writeFieldEnd()
+        if self.device_uuid is not None:
+            oprot.writeFieldBegin('device_uuid', TType.STRING, 4)
+            oprot.writeString(self.device_uuid.encode('utf-8') if sys.version_info[0] == 2 else self.device_uuid)
+            oprot.writeFieldEnd()
+        if self.idx is not None:
+            oprot.writeFieldBegin('idx', TType.I64, 5)
+            oprot.writeI64(self.idx)
+            oprot.writeFieldEnd()
+        if self.type is not None:
+            oprot.writeFieldBegin('type', TType.I16, 6)
+            oprot.writeI16(self.type)
+            oprot.writeFieldEnd()
+        oprot.writeFieldStop()
+        oprot.writeStructEnd()
+
+    def validate(self):
+        return
+
+    def __repr__(self):
+        L = ['%s=%r' % (key, value)
+             for key, value in self.__dict__.items()]
+        return '%s(%s)' % (self.__class__.__name__, ', '.join(L))
+
+    def __eq__(self, other):
+        return isinstance(other, self.__class__) and self.__dict__ == other.__dict__
+
+    def __ne__(self, other):
+        return not (self == other)
+
+
 class retReward(object):
     """
     Attributes:
@@ -4318,6 +4432,16 @@ UserApData.thrift_spec = (
     (1, TType.I32, 'i_Ap', None, None, ),  # 1
     (2, TType.I32, 'i_FullApTime', None, None, ),  # 2
     (3, TType.I32, 'i_MaxAp', None, None, ),  # 3
+)
+all_structs.append(PostDataInfo)
+PostDataInfo.thrift_spec = (
+    None,  # 0
+    (1, TType.I32, 'u_seq', None, None, ),  # 1
+    (2, TType.STRING, 'u_id', 'UTF8', None, ),  # 2
+    (3, TType.STRING, 'uuid', 'UTF8', None, ),  # 3
+    (4, TType.STRING, 'device_uuid', 'UTF8', None, ),  # 4
+    (5, TType.I64, 'idx', None, None, ),  # 5
+    (6, TType.I16, 'type', None, None, ),  # 6
 )
 all_structs.append(retReward)
 retReward.thrift_spec = (

@@ -50,7 +50,7 @@ class UserCandyShop(models.Model):
     i_CurrentBuyCount = models.BigIntegerField(default=0)
     i_TotalBuyCount = models.BigIntegerField(default=0)
     l_LastBuyTick = models.FloatField(default=0)
-    upd_day = models.BigIntegerField(default=0)
+    upd_day = models.DateTimeField(auto_now=True)
 
 class UserCharacter(models.Model):
     player = models.ForeignKey(Player, on_delete=models.CASCADE, related_name='characters')
@@ -69,7 +69,7 @@ class UserDailyMission(models.Model):
     i_id = models.BigIntegerField()
     i_Level = models.BigIntegerField(default=1)
     d_Quantity = models.BigIntegerField(default=0)
-    upd_date = models.CharField(max_length=64, blank=True)
+    upd_date = models.DateTimeField(auto_now=True)
 
 class UserFollower(models.Model):
     player = models.ForeignKey(Player, on_delete=models.CASCADE, related_name='followers')
@@ -269,6 +269,19 @@ class UserEventReward(models.Model):
             ),
         ]
 
+class UserSamSeckEvent(models.Model):
+    player = models.ForeignKey(Player, on_delete=models.CASCADE, related_name='samseck_events')
+    reward_idx = models.IntegerField()
+    claimed_at = models.DateTimeField(auto_now_add=True)
+
+    class Meta:
+        constraints = [
+            models.UniqueConstraint(
+                fields=["player", "reward_idx"],
+                name="user_samseck_reward_unique",
+            ),
+        ]
+
 class DefaultSetting(models.Model):
     key = models.CharField(max_length=128, unique=True)
     value = models.TextField()
@@ -385,6 +398,7 @@ class AchievementData(models.Model):
     i_MaxLevel = models.SmallIntegerField(default=0)
 
 class DailyMissionData(models.Model):
+    # Save reword data for daily mission
     i_id = models.IntegerField(primary_key=True)
     s_RewardType = models.CharField(max_length=64)
     i_Reward_1 = models.IntegerField(default=0)
