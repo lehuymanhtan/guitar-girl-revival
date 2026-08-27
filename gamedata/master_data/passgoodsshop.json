@@ -1,0 +1,106 @@
+[
+  {
+    "b_IsActive": 1,
+    "i_GoodsTicketID": 1001,
+    "i_SaleShopID": 3001,
+    "i_ShopID": 2001,
+    "i_TicketID": 1,
+    "i_id": 1
+  },
+  {
+    "b_IsActive": 1,
+    "i_GoodsTicketID": 1002,
+    "i_SaleShopID": 3002,
+    "i_ShopID": 2002,
+    "i_TicketID": 2,
+    "i_id": 2
+  },
+  {
+    "b_IsActive": 1,
+    "i_GoodsTicketID": 1003,
+    "i_SaleShopID": 3003,
+    "i_ShopID": 2003,
+    "i_TicketID": 3,
+    "i_id": 3
+  },
+  {
+    "b_IsActive": 1,
+    "i_GoodsTicketID": 1004,
+    "i_SaleShopID": 3004,
+    "i_ShopID": 2004,
+    "i_TicketID": 4,
+    "i_id": 4
+  },
+  {
+    "b_IsActive": 1,
+    "i_GoodsTicketID": 1005,
+    "i_SaleShopID": 3005,
+    "i_ShopID": 2005,
+    "i_TicketID": 5,
+    "i_id": 5
+  },
+  {
+    "b_IsActive": 1,
+    "i_GoodsTicketID": 1006,
+    "i_SaleShopID": 3006,
+    "i_ShopID": 2006,
+    "i_TicketID": 6,
+    "i_id": 6
+  },
+  {
+    "b_IsActive": 1,
+    "i_GoodsTicketID": 1007,
+    "i_SaleShopID": 3007,
+    "i_ShopID": 2007,
+    "i_TicketID": 7,
+    "i_id": 7
+  },
+  {
+    "b_IsActive": 1,
+    "i_GoodsTicketID": 1008,
+    "i_SaleShopID": 3008,
+    "i_ShopID": 2008,
+    "i_TicketID": 8,
+    "i_id": 8
+  },
+  {
+    "b_IsActive": 1,
+    "i_GoodsTicketID": 1009,
+    "i_SaleShopID": 3009,
+    "i_ShopID": 2009,
+    "i_TicketID": 9,
+    "i_id": 9
+  },
+  {
+    "b_IsActive": 1,
+    "i_GoodsTicketID": 1010,
+    "i_SaleShopID": 3010,
+    "i_ShopID": 2010,
+    "i_TicketID": 10,
+    "i_id": 10
+  },
+  {
+    "b_IsActive": 1,
+    "i_GoodsTicketID": 1011,
+    "i_SaleShopID": 3011,
+    "i_ShopID": 2011,
+    "i_TicketID": 11,
+    "i_id": 11
+  },
+  {
+    "b_IsActive": 1,
+    "i_GoodsTicketID": 1012,
+    "i_SaleShopID": 3012,
+    "i_ShopID": 2012,
+    "i_TicketID": 12,
+    "i_id": 12
+  },
+  {
+    "b_IsActive": 1,
+    "i_GoodsTicketID": 1013,
+    "i_SaleShopID": 3013,
+    "i_ShopID": 2013,
+    "i_TicketID": 13,
+    "i_id": 13
+  }
+]

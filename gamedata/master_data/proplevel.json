@@ -1,0 +1,3062 @@
+[
+  {
+    "b_IsActive": 1,
+    "d_Cost": 10.0,
+    "d_PerksValue": 0.05,
+    "i_Level": 1,
+    "i_PerksId": 1,
+    "i_PropId": 1,
+    "i_id": 101
+  },
+  {
+    "b_IsActive": 1,
+    "d_Cost": 10.0,
+    "d_PerksValue": 0.06,
+    "i_Level": 2,
+    "i_PerksId": 1,
+    "i_PropId": 1,
+    "i_id": 102
+  },
+  {
+    "b_IsActive": 1,
+    "d_Cost": 10.0,
+    "d_PerksValue": 0.07,
+    "i_Level": 3,
+    "i_PerksId": 1,
+    "i_PropId": 1,
+    "i_id": 103
+  },
+  {
+    "b_IsActive": 1,
+    "d_Cost": 10.0,
+    "d_PerksValue": 0.08,
+    "i_Level": 4,
+    "i_PerksId": 1,
+    "i_PropId": 1,
+    "i_id": 104
+  },
+  {
+    "b_IsActive": 1,
+    "d_Cost": 10.0,
+    "d_PerksValue": 0.13,
+    "i_Level": 5,
+    "i_PerksId": 1,
+    "i_PropId": 1,
+    "i_id": 105
+  },
+  {
+    "b_IsActive": 1,
+    "d_Cost": 20.0,
+    "d_PerksValue": 0.14,
+    "i_Level": 6,
+    "i_PerksId": 1,
+    "i_PropId": 1,
+    "i_id": 106
+  },
+  {
+    "b_IsActive": 1,
+    "d_Cost": 20.0,
+    "d_PerksValue": 0.15,
+    "i_Level": 7,
+    "i_PerksId": 1,
+    "i_PropId": 1,
+    "i_id": 107
+  },
+  {
+    "b_IsActive": 1,
+    "d_Cost": 20.0,
+    "d_PerksValue": 0.16,
+    "i_Level": 8,
+    "i_PerksId": 1,
+    "i_PropId": 1,
+    "i_id": 108
+  },
+  {
+    "b_IsActive": 1,
+    "d_Cost": 20.0,
+    "d_PerksValue": 0.17,
+    "i_Level": 9,
+    "i_PerksId": 1,
+    "i_PropId": 1,
+    "i_id": 109
+  },
+  {
+    "b_IsActive": 1,
+    "d_Cost": 20.0,
+    "d_PerksValue": 0.22,
+    "i_Level": 10,
+    "i_PerksId": 1,
+    "i_PropId": 1,
+    "i_id": 110
+  },
+  {
+    "b_IsActive": 1,
+    "d_Cost": 30.0,
+    "d_PerksValue": 0.23,
+    "i_Level": 11,
+    "i_PerksId": 1,
+    "i_PropId": 1,
+    "i_id": 111
+  },
+  {
+    "b_IsActive": 1,
+    "d_Cost": 30.0,
+    "d_PerksValue": 0.24,
+    "i_Level": 12,
+    "i_PerksId": 1,
+    "i_PropId": 1,
+    "i_id": 112
+  },
+  {
+    "b_IsActive": 1,
+    "d_Cost": 30.0,
+    "d_PerksValue": 0.25,
+    "i_Level": 13,
+    "i_PerksId": 1,
+    "i_PropId": 1,
+    "i_id": 113
+  },
+  {
+    "b_IsActive": 1,
+    "d_Cost": 30.0,
+    "d_PerksValue": 0.26,
+    "i_Level": 14,
+    "i_PerksId": 1,
+    "i_PropId": 1,
+    "i_id": 114
+  },
+  {
+    "b_IsActive": 1,
+    "d_Cost": 30.0,
+    "d_PerksValue": 0.31,
+    "i_Level": 15,
+    "i_PerksId": 1,
+    "i_PropId": 1,
+    "i_id": 115
+  },
+  {
+    "b_IsActive": 1,
+    "d_Cost": 40.0,
+    "d_PerksValue": 0.32,
+    "i_Level": 16,
+    "i_PerksId": 1,
+    "i_PropId": 1,
+    "i_id": 116
+  },
+  {
+    "b_IsActive": 1,
+    "d_Cost": 40.0,
+    "d_PerksValue": 0.33,
+    "i_Level": 17,
+    "i_PerksId": 1,
+    "i_PropId": 1,
+    "i_id": 117
+  },
+  {
+    "b_IsActive": 1,
+    "d_Cost": 40.0,
+    "d_PerksValue": 0.34,
+    "i_Level": 18,
+    "i_PerksId": 1,
+    "i_PropId": 1,
+    "i_id": 118
+  },
+  {
+    "b_IsActive": 1,
+    "d_Cost": 40.0,
+    "d_PerksValue": 0.35,
+    "i_Level": 19,
+    "i_PerksId": 1,
+    "i_PropId": 1,
+    "i_id": 119
+  },
+  {
+    "b_IsActive": 1,
+    "d_Cost": 40.0,
+    "d_PerksValue": 0.4,
+    "i_Level": 20,
+    "i_PerksId": 1,
+    "i_PropId": 1,
+    "i_id": 120
+  },
+  {
+    "b_IsActive": 1,
+    "d_Cost": 30.0,
+    "d_PerksValue": 0.07,
+    "i_Level": 1,
+    "i_PerksId": 2,
+    "i_PropId": 2,
+    "i_id": 201
+  },
+  {
+    "b_IsActive": 1,
+    "d_Cost": 30.0,
+    "d_PerksValue": 0.08,
+    "i_Level": 2,
+    "i_PerksId": 2,
+    "i_PropId": 2,
+    "i_id": 202
+  },
+  {
+    "b_IsActive": 1,
+    "d_Cost": 30.0,
+    "d_PerksValue": 0.09,
+    "i_Level": 3,
+    "i_PerksId": 2,
+    "i_PropId": 2,
+    "i_id": 203
+  },
+  {
+    "b_IsActive": 1,
+    "d_Cost": 30.0,
+    "d_PerksValue": 0.1,
+    "i_Level": 4,
+    "i_PerksId": 2,
+    "i_PropId": 2,
+    "i_id": 204
+  },
+  {
+    "b_IsActive": 1,
+    "d_Cost": 30.0,
+    "d_PerksValue": 0.17,
+    "i_Level": 5,
+    "i_PerksId": 2,
+    "i_PropId": 2,
+    "i_id": 205
+  },
+  {
+    "b_IsActive": 1,
+    "d_Cost": 40.0,
+    "d_PerksValue": 0.18,
+    "i_Level": 6,
+    "i_PerksId": 2,
+    "i_PropId": 2,
+    "i_id": 206
+  },
+  {
+    "b_IsActive": 1,
+    "d_Cost": 40.0,
+    "d_PerksValue": 0.19,
+    "i_Level": 7,
+    "i_PerksId": 2,
+    "i_PropId": 2,
+    "i_id": 207
+  },
+  {
+    "b_IsActive": 1,
+    "d_Cost": 40.0,
+    "d_PerksValue": 0.2,
+    "i_Level": 8,
+    "i_PerksId": 2,
+    "i_PropId": 2,
+    "i_id": 208
+  },
+  {
+    "b_IsActive": 1,
+    "d_Cost": 40.0,
+    "d_PerksValue": 0.21,
+    "i_Level": 9,
+    "i_PerksId": 2,
+    "i_PropId": 2,
+    "i_id": 209
+  },
+  {
+    "b_IsActive": 1,
+    "d_Cost": 40.0,
+    "d_PerksValue": 0.28,
+    "i_Level": 10,
+    "i_PerksId": 2,
+    "i_PropId": 2,
+    "i_id": 210
+  },
+  {
+    "b_IsActive": 1,
+    "d_Cost": 50.0,
+    "d_PerksValue": 0.29,
+    "i_Level": 11,
+    "i_PerksId": 2,
+    "i_PropId": 2,
+    "i_id": 211
+  },
+  {
+    "b_IsActive": 1,
+    "d_Cost": 50.0,
+    "d_PerksValue": 0.3,
+    "i_Level": 12,
+    "i_PerksId": 2,
+    "i_PropId": 2,
+    "i_id": 212
+  },
+  {
+    "b_IsActive": 1,
+    "d_Cost": 50.0,
+    "d_PerksValue": 0.31,
+    "i_Level": 13,
+    "i_PerksId": 2,
+    "i_PropId": 2,
+    "i_id": 213
+  },
+  {
+    "b_IsActive": 1,
+    "d_Cost": 50.0,
+    "d_PerksValue": 0.32,
+    "i_Level": 14,
+    "i_PerksId": 2,
+    "i_PropId": 2,
+    "i_id": 214
+  },
+  {
+    "b_IsActive": 1,
+    "d_Cost": 50.0,
+    "d_PerksValue": 0.39,
+    "i_Level": 15,
+    "i_PerksId": 2,
+    "i_PropId": 2,
+    "i_id": 215
+  },
+  {
+    "b_IsActive": 1,
+    "d_Cost": 60.0,
+    "d_PerksValue": 0.4,
+    "i_Level": 16,
+    "i_PerksId": 2,
+    "i_PropId": 2,
+    "i_id": 216
+  },
+  {
+    "b_IsActive": 1,
+    "d_Cost": 60.0,
+    "d_PerksValue": 0.41,
+    "i_Level": 17,
+    "i_PerksId": 2,
+    "i_PropId": 2,
+    "i_id": 217
+  },
+  {
+    "b_IsActive": 1,
+    "d_Cost": 60.0,
+    "d_PerksValue": 0.42,
+    "i_Level": 18,
+    "i_PerksId": 2,
+    "i_PropId": 2,
+    "i_id": 218
+  },
+  {
+    "b_IsActive": 1,
+    "d_Cost": 60.0,
+    "d_PerksValue": 0.43,
+    "i_Level": 19,
+    "i_PerksId": 2,
+    "i_PropId": 2,
+    "i_id": 219
+  },
+  {
+    "b_IsActive": 1,
+    "d_Cost": 60.0,
+    "d_PerksValue": 0.5,
+    "i_Level": 20,
+    "i_PerksId": 2,
+    "i_PropId": 2,
+    "i_id": 220
+  },
+  {
+    "b_IsActive": 1,
+    "d_Cost": 30.0,
+    "d_PerksValue": 0.07,
+    "i_Level": 1,
+    "i_PerksId": 4,
+    "i_PropId": 3,
+    "i_id": 301
+  },
+  {
+    "b_IsActive": 1,
+    "d_Cost": 30.0,
+    "d_PerksValue": 0.08,
+    "i_Level": 2,
+    "i_PerksId": 4,
+    "i_PropId": 3,
+    "i_id": 302
+  },
+  {
+    "b_IsActive": 1,
+    "d_Cost": 30.0,
+    "d_PerksValue": 0.09,
+    "i_Level": 3,
+    "i_PerksId": 4,
+    "i_PropId": 3,
+    "i_id": 303
+  },
+  {
+    "b_IsActive": 1,
+    "d_Cost": 30.0,
+    "d_PerksValue": 0.1,
+    "i_Level": 4,
+    "i_PerksId": 4,
+    "i_PropId": 3,
+    "i_id": 304
+  },
+  {
+    "b_IsActive": 1,
+    "d_Cost": 30.0,
+    "d_PerksValue": 0.17,
+    "i_Level": 5,
+    "i_PerksId": 4,
+    "i_PropId": 3,
+    "i_id": 305
+  },
+  {
+    "b_IsActive": 1,
+    "d_Cost": 40.0,
+    "d_PerksValue": 0.18,
+    "i_Level": 6,
+    "i_PerksId": 4,
+    "i_PropId": 3,
+    "i_id": 306
+  },
+  {
+    "b_IsActive": 1,
+    "d_Cost": 40.0,
+    "d_PerksValue": 0.19,
+    "i_Level": 7,
+    "i_PerksId": 4,
+    "i_PropId": 3,
+    "i_id": 307
+  },
+  {
+    "b_IsActive": 1,
+    "d_Cost": 40.0,
+    "d_PerksValue": 0.2,
+    "i_Level": 8,
+    "i_PerksId": 4,
+    "i_PropId": 3,
+    "i_id": 308
+  },
+  {
+    "b_IsActive": 1,
+    "d_Cost": 40.0,
+    "d_PerksValue": 0.21,
+    "i_Level": 9,
+    "i_PerksId": 4,
+    "i_PropId": 3,
+    "i_id": 309
+  },
+  {
+    "b_IsActive": 1,
+    "d_Cost": 40.0,
+    "d_PerksValue": 0.28,
+    "i_Level": 10,
+    "i_PerksId": 4,
+    "i_PropId": 3,
+    "i_id": 310
+  },
+  {
+    "b_IsActive": 1,
+    "d_Cost": 50.0,
+    "d_PerksValue": 0.29,
+    "i_Level": 11,
+    "i_PerksId": 4,
+    "i_PropId": 3,
+    "i_id": 311
+  },
+  {
+    "b_IsActive": 1,
+    "d_Cost": 50.0,
+    "d_PerksValue": 0.3,
+    "i_Level": 12,
+    "i_PerksId": 4,
+    "i_PropId": 3,
+    "i_id": 312
+  },
+  {
+    "b_IsActive": 1,
+    "d_Cost": 50.0,
+    "d_PerksValue": 0.31,
+    "i_Level": 13,
+    "i_PerksId": 4,
+    "i_PropId": 3,
+    "i_id": 313
+  },
+  {
+    "b_IsActive": 1,
+    "d_Cost": 50.0,
+    "d_PerksValue": 0.32,
+    "i_Level": 14,
+    "i_PerksId": 4,
+    "i_PropId": 3,
+    "i_id": 314
+  },
+  {
+    "b_IsActive": 1,
+    "d_Cost": 50.0,
+    "d_PerksValue": 0.39,
+    "i_Level": 15,
+    "i_PerksId": 4,
+    "i_PropId": 3,
+    "i_id": 315
+  },
+  {
+    "b_IsActive": 1,
+    "d_Cost": 60.0,
+    "d_PerksValue": 0.4,
+    "i_Level": 16,
+    "i_PerksId": 4,
+    "i_PropId": 3,
+    "i_id": 316
+  },
+  {
+    "b_IsActive": 1,
+    "d_Cost": 60.0,
+    "d_PerksValue": 0.41,
+    "i_Level": 17,
+    "i_PerksId": 4,
+    "i_PropId": 3,
+    "i_id": 317
+  },
+  {
+    "b_IsActive": 1,
+    "d_Cost": 60.0,
+    "d_PerksValue": 0.42,
+    "i_Level": 18,
+    "i_PerksId": 4,
+    "i_PropId": 3,
+    "i_id": 318
+  },
+  {
+    "b_IsActive": 1,
+    "d_Cost": 60.0,
+    "d_PerksValue": 0.43,
+    "i_Level": 19,
+    "i_PerksId": 4,
+    "i_PropId": 3,
+    "i_id": 319
+  },
+  {
+    "b_IsActive": 1,
+    "d_Cost": 60.0,
+    "d_PerksValue": 0.5,
+    "i_Level": 20,
+    "i_PerksId": 4,
+    "i_PropId": 3,
+    "i_id": 320
+  },
+  {
+    "b_IsActive": 1,
+    "d_Cost": 50.0,
+    "d_PerksValue": 0.07,
+    "i_Level": 1,
+    "i_PerksId": 1,
+    "i_PropId": 4,
+    "i_id": 401
+  },
+  {
+    "b_IsActive": 1,
+    "d_Cost": 50.0,
+    "d_PerksValue": 0.08,
+    "i_Level": 2,
+    "i_PerksId": 1,
+    "i_PropId": 4,
+    "i_id": 402
+  },
+  {
+    "b_IsActive": 1,
+    "d_Cost": 50.0,
+    "d_PerksValue": 0.09,
+    "i_Level": 3,
+    "i_PerksId": 1,
+    "i_PropId": 4,
+    "i_id": 403
+  },
+  {
+    "b_IsActive": 1,
+    "d_Cost": 50.0,
+    "d_PerksValue": 0.1,
+    "i_Level": 4,
+    "i_PerksId": 1,
+    "i_PropId": 4,
+    "i_id": 404
+  },
+  {
+    "b_IsActive": 1,
+    "d_Cost": 50.0,
+    "d_PerksValue": 0.17,
+    "i_Level": 5,
+    "i_PerksId": 1,
+    "i_PropId": 4,
+    "i_id": 405
+  },
+  {
+    "b_IsActive": 1,
+    "d_Cost": 60.0,
+    "d_PerksValue": 0.18,
+    "i_Level": 6,
+    "i_PerksId": 1,
+    "i_PropId": 4,
+    "i_id": 406
+  },
+  {
+    "b_IsActive": 1,
+    "d_Cost": 60.0,
+    "d_PerksValue": 0.19,
+    "i_Level": 7,
+    "i_PerksId": 1,
+    "i_PropId": 4,
+    "i_id": 407
+  },
+  {
+    "b_IsActive": 1,
+    "d_Cost": 60.0,
+    "d_PerksValue": 0.2,
+    "i_Level": 8,
+    "i_PerksId": 1,
+    "i_PropId": 4,
+    "i_id": 408
+  },
+  {
+    "b_IsActive": 1,
+    "d_Cost": 60.0,
+    "d_PerksValue": 0.21,
+    "i_Level": 9,
+    "i_PerksId": 1,
+    "i_PropId": 4,
+    "i_id": 409
+  },
+  {
+    "b_IsActive": 1,
+    "d_Cost": 60.0,
+    "d_PerksValue": 0.28,
+    "i_Level": 10,
+    "i_PerksId": 1,
+    "i_PropId": 4,
+    "i_id": 410
+  },
+  {
+    "b_IsActive": 1,
+    "d_Cost": 70.0,
+    "d_PerksValue": 0.29,
+    "i_Level": 11,
+    "i_PerksId": 1,
+    "i_PropId": 4,
+    "i_id": 411
+  },
+  {
+    "b_IsActive": 1,
+    "d_Cost": 70.0,
+    "d_PerksValue": 0.3,
+    "i_Level": 12,
+    "i_PerksId": 1,
+    "i_PropId": 4,
+    "i_id": 412
+  },
+  {
+    "b_IsActive": 1,
+    "d_Cost": 70.0,
+    "d_PerksValue": 0.31,
+    "i_Level": 13,
+    "i_PerksId": 1,
+    "i_PropId": 4,
+    "i_id": 413
+  },
+  {
+    "b_IsActive": 1,
+    "d_Cost": 70.0,
+    "d_PerksValue": 0.32,
+    "i_Level": 14,
+    "i_PerksId": 1,
+    "i_PropId": 4,
+    "i_id": 414
+  },
+  {
+    "b_IsActive": 1,
+    "d_Cost": 70.0,
+    "d_PerksValue": 0.39,
+    "i_Level": 15,
+    "i_PerksId": 1,
+    "i_PropId": 4,
+    "i_id": 415
+  },
+  {
+    "b_IsActive": 1,
+    "d_Cost": 80.0,
+    "d_PerksValue": 0.4,
+    "i_Level": 16,
+    "i_PerksId": 1,
+    "i_PropId": 4,
+    "i_id": 416
+  },
+  {
+    "b_IsActive": 1,
+    "d_Cost": 80.0,
+    "d_PerksValue": 0.41,
+    "i_Level": 17,
+    "i_PerksId": 1,
+    "i_PropId": 4,
+    "i_id": 417
+  },
+  {
+    "b_IsActive": 1,
+    "d_Cost": 80.0,
+    "d_PerksValue": 0.42,
+    "i_Level": 18,
+    "i_PerksId": 1,
+    "i_PropId": 4,
+    "i_id": 418
+  },
+  {
+    "b_IsActive": 1,
+    "d_Cost": 80.0,
+    "d_PerksValue": 0.43,
+    "i_Level": 19,
+    "i_PerksId": 1,
+    "i_PropId": 4,
+    "i_id": 419
+  },
+  {
+    "b_IsActive": 1,
+    "d_Cost": 80.0,
+    "d_PerksValue": 0.5,
+    "i_Level": 20,
+    "i_PerksId": 1,
+    "i_PropId": 4,
+    "i_id": 420
+  },
+  {
+    "b_IsActive": 1,
+    "d_Cost": 50.0,
+    "d_PerksValue": 0.09,
+    "i_Level": 1,
+    "i_PerksId": 2,
+    "i_PropId": 5,
+    "i_id": 501
+  },
+  {
+    "b_IsActive": 1,
+    "d_Cost": 50.0,
+    "d_PerksValue": 0.1,
+    "i_Level": 2,
+    "i_PerksId": 2,
+    "i_PropId": 5,
+    "i_id": 502
+  },
+  {
+    "b_IsActive": 1,
+    "d_Cost": 50.0,
+    "d_PerksValue": 0.11,
+    "i_Level": 3,
+    "i_PerksId": 2,
+    "i_PropId": 5,
+    "i_id": 503
+  },
+  {
+    "b_IsActive": 1,
+    "d_Cost": 50.0,
+    "d_PerksValue": 0.12,
+    "i_Level": 4,
+    "i_PerksId": 2,
+    "i_PropId": 5,
+    "i_id": 504
+  },
+  {
+    "b_IsActive": 1,
+    "d_Cost": 50.0,
+    "d_PerksValue": 0.21,
+    "i_Level": 5,
+    "i_PerksId": 2,
+    "i_PropId": 5,
+    "i_id": 505
+  },
+  {
+    "b_IsActive": 1,
+    "d_Cost": 60.0,
+    "d_PerksValue": 0.22,
+    "i_Level": 6,
+    "i_PerksId": 2,
+    "i_PropId": 5,
+    "i_id": 506
+  },
+  {
+    "b_IsActive": 1,
+    "d_Cost": 60.0,
+    "d_PerksValue": 0.23,
+    "i_Level": 7,
+    "i_PerksId": 2,
+    "i_PropId": 5,
+    "i_id": 507
+  },
+  {
+    "b_IsActive": 1,
+    "d_Cost": 60.0,
+    "d_PerksValue": 0.24,
+    "i_Level": 8,
+    "i_PerksId": 2,
+    "i_PropId": 5,
+    "i_id": 508
+  },
+  {
+    "b_IsActive": 1,
+    "d_Cost": 60.0,
+    "d_PerksValue": 0.25,
+    "i_Level": 9,
+    "i_PerksId": 2,
+    "i_PropId": 5,
+    "i_id": 509
+  },
+  {
+    "b_IsActive": 1,
+    "d_Cost": 60.0,
+    "d_PerksValue": 0.34,
+    "i_Level": 10,
+    "i_PerksId": 2,
+    "i_PropId": 5,
+    "i_id": 510
+  },
+  {
+    "b_IsActive": 1,
+    "d_Cost": 70.0,
+    "d_PerksValue": 0.35,
+    "i_Level": 11,
+    "i_PerksId": 2,
+    "i_PropId": 5,
+    "i_id": 511
+  },
+  {
+    "b_IsActive": 1,
+    "d_Cost": 70.0,
+    "d_PerksValue": 0.36,
+    "i_Level": 12,
+    "i_PerksId": 2,
+    "i_PropId": 5,
+    "i_id": 512
+  },
+  {
+    "b_IsActive": 1,
+    "d_Cost": 70.0,
+    "d_PerksValue": 0.37,
+    "i_Level": 13,
+    "i_PerksId": 2,
+    "i_PropId": 5,
+    "i_id": 513
+  },
+  {
+    "b_IsActive": 1,
+    "d_Cost": 70.0,
+    "d_PerksValue": 0.38,
+    "i_Level": 14,
+    "i_PerksId": 2,
+    "i_PropId": 5,
+    "i_id": 514
+  },
+  {
+    "b_IsActive": 1,
+    "d_Cost": 70.0,
+    "d_PerksValue": 0.47,
+    "i_Level": 15,
+    "i_PerksId": 2,
+    "i_PropId": 5,
+    "i_id": 515
+  },
+  {
+    "b_IsActive": 1,
+    "d_Cost": 80.0,
+    "d_PerksValue": 0.48,
+    "i_Level": 16,
+    "i_PerksId": 2,
+    "i_PropId": 5,
+    "i_id": 516
+  },
+  {
+    "b_IsActive": 1,
+    "d_Cost": 80.0,
+    "d_PerksValue": 0.49,
+    "i_Level": 17,
+    "i_PerksId": 2,
+    "i_PropId": 5,
+    "i_id": 517
+  },
+  {
+    "b_IsActive": 1,
+    "d_Cost": 80.0,
+    "d_PerksValue": 0.5,
+    "i_Level": 18,
+    "i_PerksId": 2,
+    "i_PropId": 5,
+    "i_id": 518
+  },
+  {
+    "b_IsActive": 1,
+    "d_Cost": 80.0,
+    "d_PerksValue": 0.51,
+    "i_Level": 19,
+    "i_PerksId": 2,
+    "i_PropId": 5,
+    "i_id": 519
+  },
+  {
+    "b_IsActive": 1,
+    "d_Cost": 80.0,
+    "d_PerksValue": 0.6,
+    "i_Level": 20,
+    "i_PerksId": 2,
+    "i_PropId": 5,
+    "i_id": 520
+  },
+  {
+    "b_IsActive": 1,
+    "d_Cost": 50.0,
+    "d_PerksValue": 0.09,
+    "i_Level": 1,
+    "i_PerksId": 4,
+    "i_PropId": 6,
+    "i_id": 601
+  },
+  {
+    "b_IsActive": 1,
+    "d_Cost": 50.0,
+    "d_PerksValue": 0.1,
+    "i_Level": 2,
+    "i_PerksId": 4,
+    "i_PropId": 6,
+    "i_id": 602
+  },
+  {
+    "b_IsActive": 1,
+    "d_Cost": 50.0,
+    "d_PerksValue": 0.11,
+    "i_Level": 3,
+    "i_PerksId": 4,
+    "i_PropId": 6,
+    "i_id": 603
+  },
+  {
+    "b_IsActive": 1,
+    "d_Cost": 50.0,
+    "d_PerksValue": 0.12,
+    "i_Level": 4,
+    "i_PerksId": 4,
+    "i_PropId": 6,
+    "i_id": 604
+  },
+  {
+    "b_IsActive": 1,
+    "d_Cost": 50.0,
+    "d_PerksValue": 0.21,
+    "i_Level": 5,
+    "i_PerksId": 4,
+    "i_PropId": 6,
+    "i_id": 605
+  },
+  {
+    "b_IsActive": 1,
+    "d_Cost": 60.0,
+    "d_PerksValue": 0.22,
+    "i_Level": 6,
+    "i_PerksId": 4,
+    "i_PropId": 6,
+    "i_id": 606
+  },
+  {
+    "b_IsActive": 1,
+    "d_Cost": 60.0,
+    "d_PerksValue": 0.23,
+    "i_Level": 7,
+    "i_PerksId": 4,
+    "i_PropId": 6,
+    "i_id": 607
+  },
+  {
+    "b_IsActive": 1,
+    "d_Cost": 60.0,
+    "d_PerksValue": 0.24,
+    "i_Level": 8,
+    "i_PerksId": 4,
+    "i_PropId": 6,
+    "i_id": 608
+  },
+  {
+    "b_IsActive": 1,
+    "d_Cost": 60.0,
+    "d_PerksValue": 0.25,
+    "i_Level": 9,
+    "i_PerksId": 4,
+    "i_PropId": 6,
+    "i_id": 609
+  },
+  {
+    "b_IsActive": 1,
+    "d_Cost": 60.0,
+    "d_PerksValue": 0.34,
+    "i_Level": 10,
+    "i_PerksId": 4,
+    "i_PropId": 6,
+    "i_id": 610
+  },
+  {
+    "b_IsActive": 1,
+    "d_Cost": 70.0,
+    "d_PerksValue": 0.35,
+    "i_Level": 11,
+    "i_PerksId": 4,
+    "i_PropId": 6,
+    "i_id": 611
+  },
+  {
+    "b_IsActive": 1,
+    "d_Cost": 70.0,
+    "d_PerksValue": 0.36,
+    "i_Level": 12,
+    "i_PerksId": 4,
+    "i_PropId": 6,
+    "i_id": 612
+  },
+  {
+    "b_IsActive": 1,
+    "d_Cost": 70.0,
+    "d_PerksValue": 0.37,
+    "i_Level": 13,
+    "i_PerksId": 4,
+    "i_PropId": 6,
+    "i_id": 613
+  },
+  {
+    "b_IsActive": 1,
+    "d_Cost": 70.0,
+    "d_PerksValue": 0.38,
+    "i_Level": 14,
+    "i_PerksId": 4,
+    "i_PropId": 6,
+    "i_id": 614
+  },
+  {
+    "b_IsActive": 1,
+    "d_Cost": 70.0,
+    "d_PerksValue": 0.47,
+    "i_Level": 15,
+    "i_PerksId": 4,
+    "i_PropId": 6,
+    "i_id": 615
+  },
+  {
+    "b_IsActive": 1,
+    "d_Cost": 80.0,
+    "d_PerksValue": 0.48,
+    "i_Level": 16,
+    "i_PerksId": 4,
+    "i_PropId": 6,
+    "i_id": 616
+  },
+  {
+    "b_IsActive": 1,
+    "d_Cost": 80.0,
+    "d_PerksValue": 0.49,
+    "i_Level": 17,
+    "i_PerksId": 4,
+    "i_PropId": 6,
+    "i_id": 617
+  },
+  {
+    "b_IsActive": 1,
+    "d_Cost": 80.0,
+    "d_PerksValue": 0.5,
+    "i_Level": 18,
+    "i_PerksId": 4,
+    "i_PropId": 6,
+    "i_id": 618
+  },
+  {
+    "b_IsActive": 1,
+    "d_Cost": 80.0,
+    "d_PerksValue": 0.51,
+    "i_Level": 19,
+    "i_PerksId": 4,
+    "i_PropId": 6,
+    "i_id": 619
+  },
+  {
+    "b_IsActive": 1,
+    "d_Cost": 80.0,
+    "d_PerksValue": 0.6,
+    "i_Level": 20,
+    "i_PerksId": 4,
+    "i_PropId": 6,
+    "i_id": 620
+  },
+  {
+    "b_IsActive": 1,
+    "d_Cost": 100.0,
+    "d_PerksValue": 0.1,
+    "i_Level": 1,
+    "i_PerksId": 1,
+    "i_PropId": 7,
+    "i_id": 701
+  },
+  {
+    "b_IsActive": 1,
+    "d_Cost": 100.0,
+    "d_PerksValue": 0.12,
+    "i_Level": 2,
+    "i_PerksId": 1,
+    "i_PropId": 7,
+    "i_id": 702
+  },
+  {
+    "b_IsActive": 1,
+    "d_Cost": 100.0,
+    "d_PerksValue": 0.14,
+    "i_Level": 3,
+    "i_PerksId": 1,
+    "i_PropId": 7,
+    "i_id": 703
+  },
+  {
+    "b_IsActive": 1,
+    "d_Cost": 100.0,
+    "d_PerksValue": 0.16,
+    "i_Level": 4,
+    "i_PerksId": 1,
+    "i_PropId": 7,
+    "i_id": 704
+  },
+  {
+    "b_IsActive": 1,
+    "d_Cost": 100.0,
+    "d_PerksValue": 0.26,
+    "i_Level": 5,
+    "i_PerksId": 1,
+    "i_PropId": 7,
+    "i_id": 705
+  },
+  {
+    "b_IsActive": 1,
+    "d_Cost": 120.0,
+    "d_PerksValue": 0.28,
+    "i_Level": 6,
+    "i_PerksId": 1,
+    "i_PropId": 7,
+    "i_id": 706
+  },
+  {
+    "b_IsActive": 1,
+    "d_Cost": 120.0,
+    "d_PerksValue": 0.3,
+    "i_Level": 7,
+    "i_PerksId": 1,
+    "i_PropId": 7,
+    "i_id": 707
+  },
+  {
+    "b_IsActive": 1,
+    "d_Cost": 120.0,
+    "d_PerksValue": 0.32,
+    "i_Level": 8,
+    "i_PerksId": 1,
+    "i_PropId": 7,
+    "i_id": 708
+  },
+  {
+    "b_IsActive": 1,
+    "d_Cost": 120.0,
+    "d_PerksValue": 0.34,
+    "i_Level": 9,
+    "i_PerksId": 1,
+    "i_PropId": 7,
+    "i_id": 709
+  },
+  {
+    "b_IsActive": 1,
+    "d_Cost": 120.0,
+    "d_PerksValue": 0.44,
+    "i_Level": 10,
+    "i_PerksId": 1,
+    "i_PropId": 7,
+    "i_id": 710
+  },
+  {
+    "b_IsActive": 1,
+    "d_Cost": 140.0,
+    "d_PerksValue": 0.46,
+    "i_Level": 11,
+    "i_PerksId": 1,
+    "i_PropId": 7,
+    "i_id": 711
+  },
+  {
+    "b_IsActive": 1,
+    "d_Cost": 140.0,
+    "d_PerksValue": 0.48,
+    "i_Level": 12,
+    "i_PerksId": 1,
+    "i_PropId": 7,
+    "i_id": 712
+  },
+  {
+    "b_IsActive": 1,
+    "d_Cost": 140.0,
+    "d_PerksValue": 0.5,
+    "i_Level": 13,
+    "i_PerksId": 1,
+    "i_PropId": 7,
+    "i_id": 713
+  },
+  {
+    "b_IsActive": 1,
+    "d_Cost": 140.0,
+    "d_PerksValue": 0.52,
+    "i_Level": 14,
+    "i_PerksId": 1,
+    "i_PropId": 7,
+    "i_id": 714
+  },
+  {
+    "b_IsActive": 1,
+    "d_Cost": 140.0,
+    "d_PerksValue": 0.62,
+    "i_Level": 15,
+    "i_PerksId": 1,
+    "i_PropId": 7,
+    "i_id": 715
+  },
+  {
+    "b_IsActive": 1,
+    "d_Cost": 160.0,
+    "d_PerksValue": 0.64,
+    "i_Level": 16,
+    "i_PerksId": 1,
+    "i_PropId": 7,
+    "i_id": 716
+  },
+  {
+    "b_IsActive": 1,
+    "d_Cost": 160.0,
+    "d_PerksValue": 0.66,
+    "i_Level": 17,
+    "i_PerksId": 1,
+    "i_PropId": 7,
+    "i_id": 717
+  },
+  {
+    "b_IsActive": 1,
+    "d_Cost": 160.0,
+    "d_PerksValue": 0.68,
+    "i_Level": 18,
+    "i_PerksId": 1,
+    "i_PropId": 7,
+    "i_id": 718
+  },
+  {
+    "b_IsActive": 1,
+    "d_Cost": 160.0,
+    "d_PerksValue": 0.7,
+    "i_Level": 19,
+    "i_PerksId": 1,
+    "i_PropId": 7,
+    "i_id": 719
+  },
+  {
+    "b_IsActive": 1,
+    "d_Cost": 160.0,
+    "d_PerksValue": 0.8,
+    "i_Level": 20,
+    "i_PerksId": 1,
+    "i_PropId": 7,
+    "i_id": 720
+  },
+  {
+    "b_IsActive": 1,
+    "d_Cost": 100.0,
+    "d_PerksValue": 0.14,
+    "i_Level": 1,
+    "i_PerksId": 2,
+    "i_PropId": 8,
+    "i_id": 801
+  },
+  {
+    "b_IsActive": 1,
+    "d_Cost": 100.0,
+    "d_PerksValue": 0.16,
+    "i_Level": 2,
+    "i_PerksId": 2,
+    "i_PropId": 8,
+    "i_id": 802
+  },
+  {
+    "b_IsActive": 1,
+    "d_Cost": 100.0,
+    "d_PerksValue": 0.18,
+    "i_Level": 3,
+    "i_PerksId": 2,
+    "i_PropId": 8,
+    "i_id": 803
+  },
+  {
+    "b_IsActive": 1,
+    "d_Cost": 100.0,
+    "d_PerksValue": 0.2,
+    "i_Level": 4,
+    "i_PerksId": 2,
+    "i_PropId": 8,
+    "i_id": 804
+  },
+  {
+    "b_IsActive": 1,
+    "d_Cost": 100.0,
+    "d_PerksValue": 0.34,
+    "i_Level": 5,
+    "i_PerksId": 2,
+    "i_PropId": 8,
+    "i_id": 805
+  },
+  {
+    "b_IsActive": 1,
+    "d_Cost": 120.0,
+    "d_PerksValue": 0.36,
+    "i_Level": 6,
+    "i_PerksId": 2,
+    "i_PropId": 8,
+    "i_id": 806
+  },
+  {
+    "b_IsActive": 1,
+    "d_Cost": 120.0,
+    "d_PerksValue": 0.38,
+    "i_Level": 7,
+    "i_PerksId": 2,
+    "i_PropId": 8,
+    "i_id": 807
+  },
+  {
+    "b_IsActive": 1,
+    "d_Cost": 120.0,
+    "d_PerksValue": 0.4,
+    "i_Level": 8,
+    "i_PerksId": 2,
+    "i_PropId": 8,
+    "i_id": 808
+  },
+  {
+    "b_IsActive": 1,
+    "d_Cost": 120.0,
+    "d_PerksValue": 0.42,
+    "i_Level": 9,
+    "i_PerksId": 2,
+    "i_PropId": 8,
+    "i_id": 809
+  },
+  {
+    "b_IsActive": 1,
+    "d_Cost": 120.0,
+    "d_PerksValue": 0.56,
+    "i_Level": 10,
+    "i_PerksId": 2,
+    "i_PropId": 8,
+    "i_id": 810
+  },
+  {
+    "b_IsActive": 1,
+    "d_Cost": 140.0,
+    "d_PerksValue": 0.58,
+    "i_Level": 11,
+    "i_PerksId": 2,
+    "i_PropId": 8,
+    "i_id": 811
+  },
+  {
+    "b_IsActive": 1,
+    "d_Cost": 140.0,
+    "d_PerksValue": 0.6,
+    "i_Level": 12,
+    "i_PerksId": 2,
+    "i_PropId": 8,
+    "i_id": 812
+  },
+  {
+    "b_IsActive": 1,
+    "d_Cost": 140.0,
+    "d_PerksValue": 0.62,
+    "i_Level": 13,
+    "i_PerksId": 2,
+    "i_PropId": 8,
+    "i_id": 813
+  },
+  {
+    "b_IsActive": 1,
+    "d_Cost": 140.0,
+    "d_PerksValue": 0.64,
+    "i_Level": 14,
+    "i_PerksId": 2,
+    "i_PropId": 8,
+    "i_id": 814
+  },
+  {
+    "b_IsActive": 1,
+    "d_Cost": 140.0,
+    "d_PerksValue": 0.78,
+    "i_Level": 15,
+    "i_PerksId": 2,
+    "i_PropId": 8,
+    "i_id": 815
+  },
+  {
+    "b_IsActive": 1,
+    "d_Cost": 160.0,
+    "d_PerksValue": 0.8,
+    "i_Level": 16,
+    "i_PerksId": 2,
+    "i_PropId": 8,
+    "i_id": 816
+  },
+  {
+    "b_IsActive": 1,
+    "d_Cost": 160.0,
+    "d_PerksValue": 0.82,
+    "i_Level": 17,
+    "i_PerksId": 2,
+    "i_PropId": 8,
+    "i_id": 817
+  },
+  {
+    "b_IsActive": 1,
+    "d_Cost": 160.0,
+    "d_PerksValue": 0.84,
+    "i_Level": 18,
+    "i_PerksId": 2,
+    "i_PropId": 8,
+    "i_id": 818
+  },
+  {
+    "b_IsActive": 1,
+    "d_Cost": 160.0,
+    "d_PerksValue": 0.86,
+    "i_Level": 19,
+    "i_PerksId": 2,
+    "i_PropId": 8,
+    "i_id": 819
+  },
+  {
+    "b_IsActive": 1,
+    "d_Cost": 160.0,
+    "d_PerksValue": 1.0,
+    "i_Level": 20,
+    "i_PerksId": 2,
+    "i_PropId": 8,
+    "i_id": 820
+  },
+  {
+    "b_IsActive": 1,
+    "d_Cost": 100.0,
+    "d_PerksValue": 0.14,
+    "i_Level": 1,
+    "i_PerksId": 4,
+    "i_PropId": 9,
+    "i_id": 901
+  },
+  {
+    "b_IsActive": 1,
+    "d_Cost": 100.0,
+    "d_PerksValue": 0.16,
+    "i_Level": 2,
+    "i_PerksId": 4,
+    "i_PropId": 9,
+    "i_id": 902
+  },
+  {
+    "b_IsActive": 1,
+    "d_Cost": 100.0,
+    "d_PerksValue": 0.18,
+    "i_Level": 3,
+    "i_PerksId": 4,
+    "i_PropId": 9,
+    "i_id": 903
+  },
+  {
+    "b_IsActive": 1,
+    "d_Cost": 100.0,
+    "d_PerksValue": 0.2,
+    "i_Level": 4,
+    "i_PerksId": 4,
+    "i_PropId": 9,
+    "i_id": 904
+  },
+  {
+    "b_IsActive": 1,
+    "d_Cost": 100.0,
+    "d_PerksValue": 0.34,
+    "i_Level": 5,
+    "i_PerksId": 4,
+    "i_PropId": 9,
+    "i_id": 905
+  },
+  {
+    "b_IsActive": 1,
+    "d_Cost": 120.0,
+    "d_PerksValue": 0.36,
+    "i_Level": 6,
+    "i_PerksId": 4,
+    "i_PropId": 9,
+    "i_id": 906
+  },
+  {
+    "b_IsActive": 1,
+    "d_Cost": 120.0,
+    "d_PerksValue": 0.38,
+    "i_Level": 7,
+    "i_PerksId": 4,
+    "i_PropId": 9,
+    "i_id": 907
+  },
+  {
+    "b_IsActive": 1,
+    "d_Cost": 120.0,
+    "d_PerksValue": 0.4,
+    "i_Level": 8,
+    "i_PerksId": 4,
+    "i_PropId": 9,
+    "i_id": 908
+  },
+  {
+    "b_IsActive": 1,
+    "d_Cost": 120.0,
+    "d_PerksValue": 0.42,
+    "i_Level": 9,
+    "i_PerksId": 4,
+    "i_PropId": 9,
+    "i_id": 909
+  },
+  {
+    "b_IsActive": 1,
+    "d_Cost": 120.0,
+    "d_PerksValue": 0.56,
+    "i_Level": 10,
+    "i_PerksId": 4,
+    "i_PropId": 9,
+    "i_id": 910
+  },
+  {
+    "b_IsActive": 1,
+    "d_Cost": 140.0,
+    "d_PerksValue": 0.58,
+    "i_Level": 11,
+    "i_PerksId": 4,
+    "i_PropId": 9,
+    "i_id": 911
+  },
+  {
+    "b_IsActive": 1,
+    "d_Cost": 140.0,
+    "d_PerksValue": 0.6,
+    "i_Level": 12,
+    "i_PerksId": 4,
+    "i_PropId": 9,
+    "i_id": 912
+  },
+  {
+    "b_IsActive": 1,
+    "d_Cost": 140.0,
+    "d_PerksValue": 0.62,
+    "i_Level": 13,
+    "i_PerksId": 4,
+    "i_PropId": 9,
+    "i_id": 913
+  },
+  {
+    "b_IsActive": 1,
+    "d_Cost": 140.0,
+    "d_PerksValue": 0.64,
+    "i_Level": 14,
+    "i_PerksId": 4,
+    "i_PropId": 9,
+    "i_id": 914
+  },
+  {
+    "b_IsActive": 1,
+    "d_Cost": 140.0,
+    "d_PerksValue": 0.78,
+    "i_Level": 15,
+    "i_PerksId": 4,
+    "i_PropId": 9,
+    "i_id": 915
+  },
+  {
+    "b_IsActive": 1,
+    "d_Cost": 160.0,
+    "d_PerksValue": 0.8,
+    "i_Level": 16,
+    "i_PerksId": 4,
+    "i_PropId": 9,
+    "i_id": 916
+  },
+  {
+    "b_IsActive": 1,
+    "d_Cost": 160.0,
+    "d_PerksValue": 0.82,
+    "i_Level": 17,
+    "i_PerksId": 4,
+    "i_PropId": 9,
+    "i_id": 917
+  },
+  {
+    "b_IsActive": 1,
+    "d_Cost": 160.0,
+    "d_PerksValue": 0.84,
+    "i_Level": 18,
+    "i_PerksId": 4,
+    "i_PropId": 9,
+    "i_id": 918
+  },
+  {
+    "b_IsActive": 1,
+    "d_Cost": 160.0,
+    "d_PerksValue": 0.86,
+    "i_Level": 19,
+    "i_PerksId": 4,
+    "i_PropId": 9,
+    "i_id": 919
+  },
+  {
+    "b_IsActive": 1,
+    "d_Cost": 160.0,
+    "d_PerksValue": 1.0,
+    "i_Level": 20,
+    "i_PerksId": 4,
+    "i_PropId": 9,
+    "i_id": 920
+  },
+  {
+    "b_IsActive": 1,
+    "d_Cost": 150.0,
+    "d_PerksValue": 0.15,
+    "i_Level": 1,
+    "i_PerksId": 1,
+    "i_PropId": 10,
+    "i_id": 1001
+  },
+  {
+    "b_IsActive": 1,
+    "d_Cost": 150.0,
+    "d_PerksValue": 0.17,
+    "i_Level": 2,
+    "i_PerksId": 1,
+    "i_PropId": 10,
+    "i_id": 1002
+  },
+  {
+    "b_IsActive": 1,
+    "d_Cost": 150.0,
+    "d_PerksValue": 0.19,
+    "i_Level": 3,
+    "i_PerksId": 1,
+    "i_PropId": 10,
+    "i_id": 1003
+  },
+  {
+    "b_IsActive": 1,
+    "d_Cost": 150.0,
+    "d_PerksValue": 0.21,
+    "i_Level": 4,
+    "i_PerksId": 1,
+    "i_PropId": 10,
+    "i_id": 1004
+  },
+  {
+    "b_IsActive": 1,
+    "d_Cost": 150.0,
+    "d_PerksValue": 0.36,
+    "i_Level": 5,
+    "i_PerksId": 1,
+    "i_PropId": 10,
+    "i_id": 1005
+  },
+  {
+    "b_IsActive": 1,
+    "d_Cost": 180.0,
+    "d_PerksValue": 0.38,
+    "i_Level": 6,
+    "i_PerksId": 1,
+    "i_PropId": 10,
+    "i_id": 1006
+  },
+  {
+    "b_IsActive": 1,
+    "d_Cost": 180.0,
+    "d_PerksValue": 0.4,
+    "i_Level": 7,
+    "i_PerksId": 1,
+    "i_PropId": 10,
+    "i_id": 1007
+  },
+  {
+    "b_IsActive": 1,
+    "d_Cost": 180.0,
+    "d_PerksValue": 0.42,
+    "i_Level": 8,
+    "i_PerksId": 1,
+    "i_PropId": 10,
+    "i_id": 1008
+  },
+  {
+    "b_IsActive": 1,
+    "d_Cost": 180.0,
+    "d_PerksValue": 0.44,
+    "i_Level": 9,
+    "i_PerksId": 1,
+    "i_PropId": 10,
+    "i_id": 1009
+  },
+  {
+    "b_IsActive": 1,
+    "d_Cost": 180.0,
+    "d_PerksValue": 0.59,
+    "i_Level": 10,
+    "i_PerksId": 1,
+    "i_PropId": 10,
+    "i_id": 1010
+  },
+  {
+    "b_IsActive": 1,
+    "d_Cost": 210.0,
+    "d_PerksValue": 0.61,
+    "i_Level": 11,
+    "i_PerksId": 1,
+    "i_PropId": 10,
+    "i_id": 1011
+  },
+  {
+    "b_IsActive": 1,
+    "d_Cost": 210.0,
+    "d_PerksValue": 0.63,
+    "i_Level": 12,
+    "i_PerksId": 1,
+    "i_PropId": 10,
+    "i_id": 1012
+  },
+  {
+    "b_IsActive": 1,
+    "d_Cost": 210.0,
+    "d_PerksValue": 0.65,
+    "i_Level": 13,
+    "i_PerksId": 1,
+    "i_PropId": 10,
+    "i_id": 1013
+  },
+  {
+    "b_IsActive": 1,
+    "d_Cost": 210.0,
+    "d_PerksValue": 0.67,
+    "i_Level": 14,
+    "i_PerksId": 1,
+    "i_PropId": 10,
+    "i_id": 1014
+  },
+  {
+    "b_IsActive": 1,
+    "d_Cost": 210.0,
+    "d_PerksValue": 0.82,
+    "i_Level": 15,
+    "i_PerksId": 1,
+    "i_PropId": 10,
+    "i_id": 1015
+  },
+  {
+    "b_IsActive": 1,
+    "d_Cost": 240.0,
+    "d_PerksValue": 0.84,
+    "i_Level": 16,
+    "i_PerksId": 1,
+    "i_PropId": 10,
+    "i_id": 1016
+  },
+  {
+    "b_IsActive": 1,
+    "d_Cost": 240.0,
+    "d_PerksValue": 0.86,
+    "i_Level": 17,
+    "i_PerksId": 1,
+    "i_PropId": 10,
+    "i_id": 1017
+  },
+  {
+    "b_IsActive": 1,
+    "d_Cost": 240.0,
+    "d_PerksValue": 0.88,
+    "i_Level": 18,
+    "i_PerksId": 1,
+    "i_PropId": 10,
+    "i_id": 1018
+  },
+  {
+    "b_IsActive": 1,
+    "d_Cost": 240.0,
+    "d_PerksValue": 0.9,
+    "i_Level": 19,
+    "i_PerksId": 1,
+    "i_PropId": 10,
+    "i_id": 1019
+  },
+  {
+    "b_IsActive": 1,
+    "d_Cost": 240.0,
+    "d_PerksValue": 1.05,
+    "i_Level": 20,
+    "i_PerksId": 1,
+    "i_PropId": 10,
+    "i_id": 1020
+  },
+  {
+    "b_IsActive": 1,
+    "d_Cost": 150.0,
+    "d_PerksValue": 0.2,
+    "i_Level": 1,
+    "i_PerksId": 2,
+    "i_PropId": 11,
+    "i_id": 1101
+  },
+  {
+    "b_IsActive": 1,
+    "d_Cost": 150.0,
+    "d_PerksValue": 0.22,
+    "i_Level": 2,
+    "i_PerksId": 2,
+    "i_PropId": 11,
+    "i_id": 1102
+  },
+  {
+    "b_IsActive": 1,
+    "d_Cost": 150.0,
+    "d_PerksValue": 0.24,
+    "i_Level": 3,
+    "i_PerksId": 2,
+    "i_PropId": 11,
+    "i_id": 1103
+  },
+  {
+    "b_IsActive": 1,
+    "d_Cost": 150.0,
+    "d_PerksValue": 0.26,
+    "i_Level": 4,
+    "i_PerksId": 2,
+    "i_PropId": 11,
+    "i_id": 1104
+  },
+  {
+    "b_IsActive": 1,
+    "d_Cost": 150.0,
+    "d_PerksValue": 0.46,
+    "i_Level": 5,
+    "i_PerksId": 2,
+    "i_PropId": 11,
+    "i_id": 1105
+  },
+  {
+    "b_IsActive": 1,
+    "d_Cost": 180.0,
+    "d_PerksValue": 0.48,
+    "i_Level": 6,
+    "i_PerksId": 2,
+    "i_PropId": 11,
+    "i_id": 1106
+  },
+  {
+    "b_IsActive": 1,
+    "d_Cost": 180.0,
+    "d_PerksValue": 0.5,
+    "i_Level": 7,
+    "i_PerksId": 2,
+    "i_PropId": 11,
+    "i_id": 1107
+  },
+  {
+    "b_IsActive": 1,
+    "d_Cost": 180.0,
+    "d_PerksValue": 0.52,
+    "i_Level": 8,
+    "i_PerksId": 2,
+    "i_PropId": 11,
+    "i_id": 1108
+  },
+  {
+    "b_IsActive": 1,
+    "d_Cost": 180.0,
+    "d_PerksValue": 0.54,
+    "i_Level": 9,
+    "i_PerksId": 2,
+    "i_PropId": 11,
+    "i_id": 1109
+  },
+  {
+    "b_IsActive": 1,
+    "d_Cost": 180.0,
+    "d_PerksValue": 0.74,
+    "i_Level": 10,
+    "i_PerksId": 2,
+    "i_PropId": 11,
+    "i_id": 1110
+  },
+  {
+    "b_IsActive": 1,
+    "d_Cost": 210.0,
+    "d_PerksValue": 0.76,
+    "i_Level": 11,
+    "i_PerksId": 2,
+    "i_PropId": 11,
+    "i_id": 1111
+  },
+  {
+    "b_IsActive": 1,
+    "d_Cost": 210.0,
+    "d_PerksValue": 0.78,
+    "i_Level": 12,
+    "i_PerksId": 2,
+    "i_PropId": 11,
+    "i_id": 1112
+  },
+  {
+    "b_IsActive": 1,
+    "d_Cost": 210.0,
+    "d_PerksValue": 0.8,
+    "i_Level": 13,
+    "i_PerksId": 2,
+    "i_PropId": 11,
+    "i_id": 1113
+  },
+  {
+    "b_IsActive": 1,
+    "d_Cost": 210.0,
+    "d_PerksValue": 0.82,
+    "i_Level": 14,
+    "i_PerksId": 2,
+    "i_PropId": 11,
+    "i_id": 1114
+  },
+  {
+    "b_IsActive": 1,
+    "d_Cost": 210.0,
+    "d_PerksValue": 1.02,
+    "i_Level": 15,
+    "i_PerksId": 2,
+    "i_PropId": 11,
+    "i_id": 1115
+  },
+  {
+    "b_IsActive": 1,
+    "d_Cost": 240.0,
+    "d_PerksValue": 1.04,
+    "i_Level": 16,
+    "i_PerksId": 2,
+    "i_PropId": 11,
+    "i_id": 1116
+  },
+  {
+    "b_IsActive": 1,
+    "d_Cost": 240.0,
+    "d_PerksValue": 1.06,
+    "i_Level": 17,
+    "i_PerksId": 2,
+    "i_PropId": 11,
+    "i_id": 1117
+  },
+  {
+    "b_IsActive": 1,
+    "d_Cost": 240.0,
+    "d_PerksValue": 1.08,
+    "i_Level": 18,
+    "i_PerksId": 2,
+    "i_PropId": 11,
+    "i_id": 1118
+  },
+  {
+    "b_IsActive": 1,
+    "d_Cost": 240.0,
+    "d_PerksValue": 1.1,
+    "i_Level": 19,
+    "i_PerksId": 2,
+    "i_PropId": 11,
+    "i_id": 1119
+  },
+  {
+    "b_IsActive": 1,
+    "d_Cost": 240.0,
+    "d_PerksValue": 1.3,
+    "i_Level": 20,
+    "i_PerksId": 2,
+    "i_PropId": 11,
+    "i_id": 1120
+  },
+  {
+    "b_IsActive": 1,
+    "d_Cost": 150.0,
+    "d_PerksValue": 5.0,
+    "i_Level": 1,
+    "i_PerksId": 3,
+    "i_PropId": 12,
+    "i_id": 1201
+  },
+  {
+    "b_IsActive": 1,
+    "d_Cost": 150.0,
+    "d_PerksValue": 6.0,
+    "i_Level": 2,
+    "i_PerksId": 3,
+    "i_PropId": 12,
+    "i_id": 1202
+  },
+  {
+    "b_IsActive": 1,
+    "d_Cost": 150.0,
+    "d_PerksValue": 7.0,
+    "i_Level": 3,
+    "i_PerksId": 3,
+    "i_PropId": 12,
+    "i_id": 1203
+  },
+  {
+    "b_IsActive": 1,
+    "d_Cost": 150.0,
+    "d_PerksValue": 8.0,
+    "i_Level": 4,
+    "i_PerksId": 3,
+    "i_PropId": 12,
+    "i_id": 1204
+  },
+  {
+    "b_IsActive": 1,
+    "d_Cost": 150.0,
+    "d_PerksValue": 13.0,
+    "i_Level": 5,
+    "i_PerksId": 3,
+    "i_PropId": 12,
+    "i_id": 1205
+  },
+  {
+    "b_IsActive": 1,
+    "d_Cost": 160.0,
+    "d_PerksValue": 14.0,
+    "i_Level": 6,
+    "i_PerksId": 3,
+    "i_PropId": 12,
+    "i_id": 1206
+  },
+  {
+    "b_IsActive": 1,
+    "d_Cost": 160.0,
+    "d_PerksValue": 15.0,
+    "i_Level": 7,
+    "i_PerksId": 3,
+    "i_PropId": 12,
+    "i_id": 1207
+  },
+  {
+    "b_IsActive": 1,
+    "d_Cost": 160.0,
+    "d_PerksValue": 16.0,
+    "i_Level": 8,
+    "i_PerksId": 3,
+    "i_PropId": 12,
+    "i_id": 1208
+  },
+  {
+    "b_IsActive": 1,
+    "d_Cost": 160.0,
+    "d_PerksValue": 17.0,
+    "i_Level": 9,
+    "i_PerksId": 3,
+    "i_PropId": 12,
+    "i_id": 1209
+  },
+  {
+    "b_IsActive": 1,
+    "d_Cost": 160.0,
+    "d_PerksValue": 22.0,
+    "i_Level": 10,
+    "i_PerksId": 3,
+    "i_PropId": 12,
+    "i_id": 1210
+  },
+  {
+    "b_IsActive": 1,
+    "d_Cost": 170.0,
+    "d_PerksValue": 23.0,
+    "i_Level": 11,
+    "i_PerksId": 3,
+    "i_PropId": 12,
+    "i_id": 1211
+  },
+  {
+    "b_IsActive": 1,
+    "d_Cost": 170.0,
+    "d_PerksValue": 24.0,
+    "i_Level": 12,
+    "i_PerksId": 3,
+    "i_PropId": 12,
+    "i_id": 1212
+  },
+  {
+    "b_IsActive": 1,
+    "d_Cost": 170.0,
+    "d_PerksValue": 25.0,
+    "i_Level": 13,
+    "i_PerksId": 3,
+    "i_PropId": 12,
+    "i_id": 1213
+  },
+  {
+    "b_IsActive": 1,
+    "d_Cost": 170.0,
+    "d_PerksValue": 26.0,
+    "i_Level": 14,
+    "i_PerksId": 3,
+    "i_PropId": 12,
+    "i_id": 1214
+  },
+  {
+    "b_IsActive": 1,
+    "d_Cost": 170.0,
+    "d_PerksValue": 31.0,
+    "i_Level": 15,
+    "i_PerksId": 3,
+    "i_PropId": 12,
+    "i_id": 1215
+  },
+  {
+    "b_IsActive": 1,
+    "d_Cost": 180.0,
+    "d_PerksValue": 32.0,
+    "i_Level": 16,
+    "i_PerksId": 3,
+    "i_PropId": 12,
+    "i_id": 1216
+  },
+  {
+    "b_IsActive": 1,
+    "d_Cost": 180.0,
+    "d_PerksValue": 33.0,
+    "i_Level": 17,
+    "i_PerksId": 3,
+    "i_PropId": 12,
+    "i_id": 1217
+  },
+  {
+    "b_IsActive": 1,
+    "d_Cost": 180.0,
+    "d_PerksValue": 34.0,
+    "i_Level": 18,
+    "i_PerksId": 3,
+    "i_PropId": 12,
+    "i_id": 1218
+  },
+  {
+    "b_IsActive": 1,
+    "d_Cost": 180.0,
+    "d_PerksValue": 35.0,
+    "i_Level": 19,
+    "i_PerksId": 3,
+    "i_PropId": 12,
+    "i_id": 1219
+  },
+  {
+    "b_IsActive": 1,
+    "d_Cost": 180.0,
+    "d_PerksValue": 40.0,
+    "i_Level": 20,
+    "i_PerksId": 3,
+    "i_PropId": 12,
+    "i_id": 1220
+  },
+  {
+    "b_IsActive": 1,
+    "d_Cost": 150.0,
+    "d_PerksValue": 0.2,
+    "i_Level": 1,
+    "i_PerksId": 4,
+    "i_PropId": 13,
+    "i_id": 1301
+  },
+  {
+    "b_IsActive": 1,
+    "d_Cost": 150.0,
+    "d_PerksValue": 0.22,
+    "i_Level": 2,
+    "i_PerksId": 4,
+    "i_PropId": 13,
+    "i_id": 1302
+  },
+  {
+    "b_IsActive": 1,
+    "d_Cost": 150.0,
+    "d_PerksValue": 0.24,
+    "i_Level": 3,
+    "i_PerksId": 4,
+    "i_PropId": 13,
+    "i_id": 1303
+  },
+  {
+    "b_IsActive": 1,
+    "d_Cost": 150.0,
+    "d_PerksValue": 0.26,
+    "i_Level": 4,
+    "i_PerksId": 4,
+    "i_PropId": 13,
+    "i_id": 1304
+  },
+  {
+    "b_IsActive": 1,
+    "d_Cost": 150.0,
+    "d_PerksValue": 0.46,
+    "i_Level": 5,
+    "i_PerksId": 4,
+    "i_PropId": 13,
+    "i_id": 1305
+  },
+  {
+    "b_IsActive": 1,
+    "d_Cost": 180.0,
+    "d_PerksValue": 0.48,
+    "i_Level": 6,
+    "i_PerksId": 4,
+    "i_PropId": 13,
+    "i_id": 1306
+  },
+  {
+    "b_IsActive": 1,
+    "d_Cost": 180.0,
+    "d_PerksValue": 0.5,
+    "i_Level": 7,
+    "i_PerksId": 4,
+    "i_PropId": 13,
+    "i_id": 1307
+  },
+  {
+    "b_IsActive": 1,
+    "d_Cost": 180.0,
+    "d_PerksValue": 0.52,
+    "i_Level": 8,
+    "i_PerksId": 4,
+    "i_PropId": 13,
+    "i_id": 1308
+  },
+  {
+    "b_IsActive": 1,
+    "d_Cost": 180.0,
+    "d_PerksValue": 0.54,
+    "i_Level": 9,
+    "i_PerksId": 4,
+    "i_PropId": 13,
+    "i_id": 1309
+  },
+  {
+    "b_IsActive": 1,
+    "d_Cost": 180.0,
+    "d_PerksValue": 0.74,
+    "i_Level": 10,
+    "i_PerksId": 4,
+    "i_PropId": 13,
+    "i_id": 1310
+  },
+  {
+    "b_IsActive": 1,
+    "d_Cost": 210.0,
+    "d_PerksValue": 0.76,
+    "i_Level": 11,
+    "i_PerksId": 4,
+    "i_PropId": 13,
+    "i_id": 1311
+  },
+  {
+    "b_IsActive": 1,
+    "d_Cost": 210.0,
+    "d_PerksValue": 0.78,
+    "i_Level": 12,
+    "i_PerksId": 4,
+    "i_PropId": 13,
+    "i_id": 1312
+  },
+  {
+    "b_IsActive": 1,
+    "d_Cost": 210.0,
+    "d_PerksValue": 0.8,
+    "i_Level": 13,
+    "i_PerksId": 4,
+    "i_PropId": 13,
+    "i_id": 1313
+  },
+  {
+    "b_IsActive": 1,
+    "d_Cost": 210.0,
+    "d_PerksValue": 0.82,
+    "i_Level": 14,
+    "i_PerksId": 4,
+    "i_PropId": 13,
+    "i_id": 1314
+  },
+  {
+    "b_IsActive": 1,
+    "d_Cost": 210.0,
+    "d_PerksValue": 1.02,
+    "i_Level": 15,
+    "i_PerksId": 4,
+    "i_PropId": 13,
+    "i_id": 1315
+  },
+  {
+    "b_IsActive": 1,
+    "d_Cost": 240.0,
+    "d_PerksValue": 1.04,
+    "i_Level": 16,
+    "i_PerksId": 4,
+    "i_PropId": 13,
+    "i_id": 1316
+  },
+  {
+    "b_IsActive": 1,
+    "d_Cost": 240.0,
+    "d_PerksValue": 1.06,
+    "i_Level": 17,
+    "i_PerksId": 4,
+    "i_PropId": 13,
+    "i_id": 1317
+  },
+  {
+    "b_IsActive": 1,
+    "d_Cost": 240.0,
+    "d_PerksValue": 1.08,
+    "i_Level": 18,
+    "i_PerksId": 4,
+    "i_PropId": 13,
+    "i_id": 1318
+  },
+  {
+    "b_IsActive": 1,
+    "d_Cost": 240.0,
+    "d_PerksValue": 1.1,
+    "i_Level": 19,
+    "i_PerksId": 4,
+    "i_PropId": 13,
+    "i_id": 1319
+  },
+  {
+    "b_IsActive": 1,
+    "d_Cost": 240.0,
+    "d_PerksValue": 1.3,
+    "i_Level": 20,
+    "i_PerksId": 4,
+    "i_PropId": 13,
+    "i_id": 1320
+  },
+  {
+    "b_IsActive": 1,
+    "d_Cost": 200.0,
+    "d_PerksValue": 5.0,
+    "i_Level": 1,
+    "i_PerksId": 3,
+    "i_PropId": 14,
+    "i_id": 1401
+  },
+  {
+    "b_IsActive": 1,
+    "d_Cost": 200.0,
+    "d_PerksValue": 6.0,
+    "i_Level": 2,
+    "i_PerksId": 3,
+    "i_PropId": 14,
+    "i_id": 1402
+  },
+  {
+    "b_IsActive": 1,
+    "d_Cost": 200.0,
+    "d_PerksValue": 7.0,
+    "i_Level": 3,
+    "i_PerksId": 3,
+    "i_PropId": 14,
+    "i_id": 1403
+  },
+  {
+    "b_IsActive": 1,
+    "d_Cost": 200.0,
+    "d_PerksValue": 8.0,
+    "i_Level": 4,
+    "i_PerksId": 3,
+    "i_PropId": 14,
+    "i_id": 1404
+  },
+  {
+    "b_IsActive": 1,
+    "d_Cost": 200.0,
+    "d_PerksValue": 13.0,
+    "i_Level": 5,
+    "i_PerksId": 3,
+    "i_PropId": 14,
+    "i_id": 1405
+  },
+  {
+    "b_IsActive": 1,
+    "d_Cost": 210.0,
+    "d_PerksValue": 14.0,
+    "i_Level": 6,
+    "i_PerksId": 3,
+    "i_PropId": 14,
+    "i_id": 1406
+  },
+  {
+    "b_IsActive": 1,
+    "d_Cost": 210.0,
+    "d_PerksValue": 15.0,
+    "i_Level": 7,
+    "i_PerksId": 3,
+    "i_PropId": 14,
+    "i_id": 1407
+  },
+  {
+    "b_IsActive": 1,
+    "d_Cost": 210.0,
+    "d_PerksValue": 16.0,
+    "i_Level": 8,
+    "i_PerksId": 3,
+    "i_PropId": 14,
+    "i_id": 1408
+  },
+  {
+    "b_IsActive": 1,
+    "d_Cost": 210.0,
+    "d_PerksValue": 17.0,
+    "i_Level": 9,
+    "i_PerksId": 3,
+    "i_PropId": 14,
+    "i_id": 1409
+  },
+  {
+    "b_IsActive": 1,
+    "d_Cost": 210.0,
+    "d_PerksValue": 22.0,
+    "i_Level": 10,
+    "i_PerksId": 3,
+    "i_PropId": 14,
+    "i_id": 1410
+  },
+  {
+    "b_IsActive": 1,
+    "d_Cost": 220.0,
+    "d_PerksValue": 23.0,
+    "i_Level": 11,
+    "i_PerksId": 3,
+    "i_PropId": 14,
+    "i_id": 1411
+  },
+  {
+    "b_IsActive": 1,
+    "d_Cost": 220.0,
+    "d_PerksValue": 24.0,
+    "i_Level": 12,
+    "i_PerksId": 3,
+    "i_PropId": 14,
+    "i_id": 1412
+  },
+  {
+    "b_IsActive": 1,
+    "d_Cost": 220.0,
+    "d_PerksValue": 25.0,
+    "i_Level": 13,
+    "i_PerksId": 3,
+    "i_PropId": 14,
+    "i_id": 1413
+  },
+  {
+    "b_IsActive": 1,
+    "d_Cost": 220.0,
+    "d_PerksValue": 26.0,
+    "i_Level": 14,
+    "i_PerksId": 3,
+    "i_PropId": 14,
+    "i_id": 1414
+  },
+  {
+    "b_IsActive": 1,
+    "d_Cost": 220.0,
+    "d_PerksValue": 31.0,
+    "i_Level": 15,
+    "i_PerksId": 3,
+    "i_PropId": 14,
+    "i_id": 1415
+  },
+  {
+    "b_IsActive": 1,
+    "d_Cost": 230.0,
+    "d_PerksValue": 32.0,
+    "i_Level": 16,
+    "i_PerksId": 3,
+    "i_PropId": 14,
+    "i_id": 1416
+  },
+  {
+    "b_IsActive": 1,
+    "d_Cost": 230.0,
+    "d_PerksValue": 33.0,
+    "i_Level": 17,
+    "i_PerksId": 3,
+    "i_PropId": 14,
+    "i_id": 1417
+  },
+  {
+    "b_IsActive": 1,
+    "d_Cost": 230.0,
+    "d_PerksValue": 34.0,
+    "i_Level": 18,
+    "i_PerksId": 3,
+    "i_PropId": 14,
+    "i_id": 1418
+  },
+  {
+    "b_IsActive": 1,
+    "d_Cost": 230.0,
+    "d_PerksValue": 35.0,
+    "i_Level": 19,
+    "i_PerksId": 3,
+    "i_PropId": 14,
+    "i_id": 1419
+  },
+  {
+    "b_IsActive": 1,
+    "d_Cost": 230.0,
+    "d_PerksValue": 40.0,
+    "i_Level": 20,
+    "i_PerksId": 3,
+    "i_PropId": 14,
+    "i_id": 1420
+  },
+  {
+    "b_IsActive": 1,
+    "d_Cost": 200.0,
+    "d_PerksValue": 0.16,
+    "i_Level": 1,
+    "i_PerksId": 1,
+    "i_PropId": 15,
+    "i_id": 1501
+  },
+  {
+    "b_IsActive": 1,
+    "d_Cost": 200.0,
+    "d_PerksValue": 0.19,
+    "i_Level": 2,
+    "i_PerksId": 1,
+    "i_PropId": 15,
+    "i_id": 1502
+  },
+  {
+    "b_IsActive": 1,
+    "d_Cost": 200.0,
+    "d_PerksValue": 0.22,
+    "i_Level": 3,
+    "i_PerksId": 1,
+    "i_PropId": 15,
+    "i_id": 1503
+  },
+  {
+    "b_IsActive": 1,
+    "d_Cost": 200.0,
+    "d_PerksValue": 0.25,
+    "i_Level": 4,
+    "i_PerksId": 1,
+    "i_PropId": 15,
+    "i_id": 1504
+  },
+  {
+    "b_IsActive": 1,
+    "d_Cost": 200.0,
+    "d_PerksValue": 0.41,
+    "i_Level": 5,
+    "i_PerksId": 1,
+    "i_PropId": 15,
+    "i_id": 1505
+  },
+  {
+    "b_IsActive": 1,
+    "d_Cost": 250.0,
+    "d_PerksValue": 0.44,
+    "i_Level": 6,
+    "i_PerksId": 1,
+    "i_PropId": 15,
+    "i_id": 1506
+  },
+  {
+    "b_IsActive": 1,
+    "d_Cost": 250.0,
+    "d_PerksValue": 0.47,
+    "i_Level": 7,
+    "i_PerksId": 1,
+    "i_PropId": 15,
+    "i_id": 1507
+  },
+  {
+    "b_IsActive": 1,
+    "d_Cost": 250.0,
+    "d_PerksValue": 0.5,
+    "i_Level": 8,
+    "i_PerksId": 1,
+    "i_PropId": 15,
+    "i_id": 1508
+  },
+  {
+    "b_IsActive": 1,
+    "d_Cost": 250.0,
+    "d_PerksValue": 0.53,
+    "i_Level": 9,
+    "i_PerksId": 1,
+    "i_PropId": 15,
+    "i_id": 1509
+  },
+  {
+    "b_IsActive": 1,
+    "d_Cost": 250.0,
+    "d_PerksValue": 0.69,
+    "i_Level": 10,
+    "i_PerksId": 1,
+    "i_PropId": 15,
+    "i_id": 1510
+  },
+  {
+    "b_IsActive": 1,
+    "d_Cost": 300.0,
+    "d_PerksValue": 0.72,
+    "i_Level": 11,
+    "i_PerksId": 1,
+    "i_PropId": 15,
+    "i_id": 1511
+  },
+  {
+    "b_IsActive": 1,
+    "d_Cost": 300.0,
+    "d_PerksValue": 0.75,
+    "i_Level": 12,
+    "i_PerksId": 1,
+    "i_PropId": 15,
+    "i_id": 1512
+  },
+  {
+    "b_IsActive": 1,
+    "d_Cost": 300.0,
+    "d_PerksValue": 0.78,
+    "i_Level": 13,
+    "i_PerksId": 1,
+    "i_PropId": 15,
+    "i_id": 1513
+  },
+  {
+    "b_IsActive": 1,
+    "d_Cost": 300.0,
+    "d_PerksValue": 0.81,
+    "i_Level": 14,
+    "i_PerksId": 1,
+    "i_PropId": 15,
+    "i_id": 1514
+  },
+  {
+    "b_IsActive": 1,
+    "d_Cost": 300.0,
+    "d_PerksValue": 0.97,
+    "i_Level": 15,
+    "i_PerksId": 1,
+    "i_PropId": 15,
+    "i_id": 1515
+  },
+  {
+    "b_IsActive": 1,
+    "d_Cost": 350.0,
+    "d_PerksValue": 1.0,
+    "i_Level": 16,
+    "i_PerksId": 1,
+    "i_PropId": 15,
+    "i_id": 1516
+  },
+  {
+    "b_IsActive": 1,
+    "d_Cost": 350.0,
+    "d_PerksValue": 1.03,
+    "i_Level": 17,
+    "i_PerksId": 1,
+    "i_PropId": 15,
+    "i_id": 1517
+  },
+  {
+    "b_IsActive": 1,
+    "d_Cost": 350.0,
+    "d_PerksValue": 1.06,
+    "i_Level": 18,
+    "i_PerksId": 1,
+    "i_PropId": 15,
+    "i_id": 1518
+  },
+  {
+    "b_IsActive": 1,
+    "d_Cost": 350.0,
+    "d_PerksValue": 1.09,
+    "i_Level": 19,
+    "i_PerksId": 1,
+    "i_PropId": 15,
+    "i_id": 1519
+  },
+  {
+    "b_IsActive": 1,
+    "d_Cost": 350.0,
+    "d_PerksValue": 1.25,
+    "i_Level": 20,
+    "i_PerksId": 1,
+    "i_PropId": 15,
+    "i_id": 1520
+  },
+  {
+    "b_IsActive": 1,
+    "d_Cost": 200.0,
+    "d_PerksValue": 0.23,
+    "i_Level": 1,
+    "i_PerksId": 2,
+    "i_PropId": 16,
+    "i_id": 1601
+  },
+  {
+    "b_IsActive": 1,
+    "d_Cost": 200.0,
+    "d_PerksValue": 0.26,
+    "i_Level": 2,
+    "i_PerksId": 2,
+    "i_PropId": 16,
+    "i_id": 1602
+  },
+  {
+    "b_IsActive": 1,
+    "d_Cost": 200.0,
+    "d_PerksValue": 0.29,
+    "i_Level": 3,
+    "i_PerksId": 2,
+    "i_PropId": 16,
+    "i_id": 1603
+  },
+  {
+    "b_IsActive": 1,
+    "d_Cost": 200.0,
+    "d_PerksValue": 0.32,
+    "i_Level": 4,
+    "i_PerksId": 2,
+    "i_PropId": 16,
+    "i_id": 1604
+  },
+  {
+    "b_IsActive": 1,
+    "d_Cost": 200.0,
+    "d_PerksValue": 0.55,
+    "i_Level": 5,
+    "i_PerksId": 2,
+    "i_PropId": 16,
+    "i_id": 1605
+  },
+  {
+    "b_IsActive": 1,
+    "d_Cost": 250.0,
+    "d_PerksValue": 0.58,
+    "i_Level": 6,
+    "i_PerksId": 2,
+    "i_PropId": 16,
+    "i_id": 1606
+  },
+  {
+    "b_IsActive": 1,
+    "d_Cost": 250.0,
+    "d_PerksValue": 0.61,
+    "i_Level": 7,
+    "i_PerksId": 2,
+    "i_PropId": 16,
+    "i_id": 1607
+  },
+  {
+    "b_IsActive": 1,
+    "d_Cost": 250.0,
+    "d_PerksValue": 0.64,
+    "i_Level": 8,
+    "i_PerksId": 2,
+    "i_PropId": 16,
+    "i_id": 1608
+  },
+  {
+    "b_IsActive": 1,
+    "d_Cost": 250.0,
+    "d_PerksValue": 0.67,
+    "i_Level": 9,
+    "i_PerksId": 2,
+    "i_PropId": 16,
+    "i_id": 1609
+  },
+  {
+    "b_IsActive": 1,
+    "d_Cost": 250.0,
+    "d_PerksValue": 0.9,
+    "i_Level": 10,
+    "i_PerksId": 2,
+    "i_PropId": 16,
+    "i_id": 1610
+  },
+  {
+    "b_IsActive": 1,
+    "d_Cost": 300.0,
+    "d_PerksValue": 0.93,
+    "i_Level": 11,
+    "i_PerksId": 2,
+    "i_PropId": 16,
+    "i_id": 1611
+  },
+  {
+    "b_IsActive": 1,
+    "d_Cost": 300.0,
+    "d_PerksValue": 0.96,
+    "i_Level": 12,
+    "i_PerksId": 2,
+    "i_PropId": 16,
+    "i_id": 1612
+  },
+  {
+    "b_IsActive": 1,
+    "d_Cost": 300.0,
+    "d_PerksValue": 0.99,
+    "i_Level": 13,
+    "i_PerksId": 2,
+    "i_PropId": 16,
+    "i_id": 1613
+  },
+  {
+    "b_IsActive": 1,
+    "d_Cost": 300.0,
+    "d_PerksValue": 1.02,
+    "i_Level": 14,
+    "i_PerksId": 2,
+    "i_PropId": 16,
+    "i_id": 1614
+  },
+  {
+    "b_IsActive": 1,
+    "d_Cost": 300.0,
+    "d_PerksValue": 1.25,
+    "i_Level": 15,
+    "i_PerksId": 2,
+    "i_PropId": 16,
+    "i_id": 1615
+  },
+  {
+    "b_IsActive": 1,
+    "d_Cost": 350.0,
+    "d_PerksValue": 1.28,
+    "i_Level": 16,
+    "i_PerksId": 2,
+    "i_PropId": 16,
+    "i_id": 1616
+  },
+  {
+    "b_IsActive": 1,
+    "d_Cost": 350.0,
+    "d_PerksValue": 1.31,
+    "i_Level": 17,
+    "i_PerksId": 2,
+    "i_PropId": 16,
+    "i_id": 1617
+  },
+  {
+    "b_IsActive": 1,
+    "d_Cost": 350.0,
+    "d_PerksValue": 1.34,
+    "i_Level": 18,
+    "i_PerksId": 2,
+    "i_PropId": 16,
+    "i_id": 1618
+  },
+  {
+    "b_IsActive": 1,
+    "d_Cost": 350.0,
+    "d_PerksValue": 1.37,
+    "i_Level": 19,
+    "i_PerksId": 2,
+    "i_PropId": 16,
+    "i_id": 1619
+  },
+  {
+    "b_IsActive": 1,
+    "d_Cost": 350.0,
+    "d_PerksValue": 1.6,
+    "i_Level": 20,
+    "i_PerksId": 2,
+    "i_PropId": 16,
+    "i_id": 1620
+  },
+  {
+    "b_IsActive": 1,
+    "d_Cost": 200.0,
+    "d_PerksValue": 0.23,
+    "i_Level": 1,
+    "i_PerksId": 4,
+    "i_PropId": 17,
+    "i_id": 1701
+  },
+  {
+    "b_IsActive": 1,
+    "d_Cost": 200.0,
+    "d_PerksValue": 0.26,
+    "i_Level": 2,
+    "i_PerksId": 4,
+    "i_PropId": 17,
+    "i_id": 1702
+  },
+  {
+    "b_IsActive": 1,
+    "d_Cost": 200.0,
+    "d_PerksValue": 0.29,
+    "i_Level": 3,
+    "i_PerksId": 4,
+    "i_PropId": 17,
+    "i_id": 1703
+  },
+  {
+    "b_IsActive": 1,
+    "d_Cost": 200.0,
+    "d_PerksValue": 0.32,
+    "i_Level": 4,
+    "i_PerksId": 4,
+    "i_PropId": 17,
+    "i_id": 1704
+  },
+  {
+    "b_IsActive": 1,
+    "d_Cost": 200.0,
+    "d_PerksValue": 0.55,
+    "i_Level": 5,
+    "i_PerksId": 4,
+    "i_PropId": 17,
+    "i_id": 1705
+  },
+  {
+    "b_IsActive": 1,
+    "d_Cost": 250.0,
+    "d_PerksValue": 0.58,
+    "i_Level": 6,
+    "i_PerksId": 4,
+    "i_PropId": 17,
+    "i_id": 1706
+  },
+  {
+    "b_IsActive": 1,
+    "d_Cost": 250.0,
+    "d_PerksValue": 0.61,
+    "i_Level": 7,
+    "i_PerksId": 4,
+    "i_PropId": 17,
+    "i_id": 1707
+  },
+  {
+    "b_IsActive": 1,
+    "d_Cost": 250.0,
+    "d_PerksValue": 0.64,
+    "i_Level": 8,
+    "i_PerksId": 4,
+    "i_PropId": 17,
+    "i_id": 1708
+  },
+  {
+    "b_IsActive": 1,
+    "d_Cost": 250.0,
+    "d_PerksValue": 0.67,
+    "i_Level": 9,
+    "i_PerksId": 4,
+    "i_PropId": 17,
+    "i_id": 1709
+  },
+  {
+    "b_IsActive": 1,
+    "d_Cost": 250.0,
+    "d_PerksValue": 0.9,
+    "i_Level": 10,
+    "i_PerksId": 4,
+    "i_PropId": 17,
+    "i_id": 1710
+  },
+  {
+    "b_IsActive": 1,
+    "d_Cost": 300.0,
+    "d_PerksValue": 0.93,
+    "i_Level": 11,
+    "i_PerksId": 4,
+    "i_PropId": 17,
+    "i_id": 1711
+  },
+  {
+    "b_IsActive": 1,
+    "d_Cost": 300.0,
+    "d_PerksValue": 0.96,
+    "i_Level": 12,
+    "i_PerksId": 4,
+    "i_PropId": 17,
+    "i_id": 1712
+  },
+  {
+    "b_IsActive": 1,
+    "d_Cost": 300.0,
+    "d_PerksValue": 0.99,
+    "i_Level": 13,
+    "i_PerksId": 4,
+    "i_PropId": 17,
+    "i_id": 1713
+  },
+  {
+    "b_IsActive": 1,
+    "d_Cost": 300.0,
+    "d_PerksValue": 1.02,
+    "i_Level": 14,
+    "i_PerksId": 4,
+    "i_PropId": 17,
+    "i_id": 1714
+  },
+  {
+    "b_IsActive": 1,
+    "d_Cost": 300.0,
+    "d_PerksValue": 1.25,
+    "i_Level": 15,
+    "i_PerksId": 4,
+    "i_PropId": 17,
+    "i_id": 1715
+  },
+  {
+    "b_IsActive": 1,
+    "d_Cost": 350.0,
+    "d_PerksValue": 1.28,
+    "i_Level": 16,
+    "i_PerksId": 4,
+    "i_PropId": 17,
+    "i_id": 1716
+  },
+  {
+    "b_IsActive": 1,
+    "d_Cost": 350.0,
+    "d_PerksValue": 1.31,
+    "i_Level": 17,
+    "i_PerksId": 4,
+    "i_PropId": 17,
+    "i_id": 1717
+  },
+  {
+    "b_IsActive": 1,
+    "d_Cost": 350.0,
+    "d_PerksValue": 1.34,
+    "i_Level": 18,
+    "i_PerksId": 4,
+    "i_PropId": 17,
+    "i_id": 1718
+  },
+  {
+    "b_IsActive": 1,
+    "d_Cost": 350.0,
+    "d_PerksValue": 1.37,
+    "i_Level": 19,
+    "i_PerksId": 4,
+    "i_PropId": 17,
+    "i_id": 1719
+  },
+  {
+    "b_IsActive": 1,
+    "d_Cost": 350.0,
+    "d_PerksValue": 1.6,
+    "i_Level": 20,
+    "i_PerksId": 4,
+    "i_PropId": 17,
+    "i_id": 1720
+  }
+]

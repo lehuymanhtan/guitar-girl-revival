@@ -1,0 +1,132 @@
+[
+  {
+    "b_IsActive": 1,
+    "i_Area": 0,
+    "i_MonthGroupIndex": 0,
+    "i_RepeatMonth": 8,
+    "i_StartYear": 2020,
+    "i_TimeLimit": 1,
+    "i_id": 1,
+    "s_Type": "Pass"
+  },
+  {
+    "b_IsActive": 1,
+    "i_Area": 0,
+    "i_MonthGroupIndex": 0,
+    "i_RepeatMonth": 9,
+    "i_StartYear": 2020,
+    "i_TimeLimit": 1,
+    "i_id": 2,
+    "s_Type": "Pass"
+  },
+  {
+    "b_IsActive": 1,
+    "i_Area": 0,
+    "i_MonthGroupIndex": 0,
+    "i_RepeatMonth": 10,
+    "i_StartYear": 2020,
+    "i_TimeLimit": 1,
+    "i_id": 3,
+    "s_Type": "Pass"
+  },
+  {
+    "b_IsActive": 1,
+    "i_Area": 0,
+    "i_MonthGroupIndex": 0,
+    "i_RepeatMonth": 11,
+    "i_StartYear": 2020,
+    "i_TimeLimit": 1,
+    "i_id": 4,
+    "s_Type": "Pass"
+  },
+  {
+    "b_IsActive": 1,
+    "i_Area": 0,
+    "i_MonthGroupIndex": 0,
+    "i_RepeatMonth": 12,
+    "i_StartYear": 2020,
+    "i_TimeLimit": 1,
+    "i_id": 5,
+    "s_Type": "Pass"
+  },
+  {
+    "b_IsActive": 1,
+    "i_Area": 0,
+    "i_MonthGroupIndex": 0,
+    "i_RepeatMonth": 1,
+    "i_StartYear": 2021,
+    "i_TimeLimit": 1,
+    "i_id": 6,
+    "s_Type": "Pass"
+  },
+  {
+    "b_IsActive": 1,
+    "i_Area": 0,
+    "i_MonthGroupIndex": 0,
+    "i_RepeatMonth": 2,
+    "i_StartYear": 2021,
+    "i_TimeLimit": 1,
+    "i_id": 7,
+    "s_Type": "Pass"
+  },
+  {
+    "b_IsActive": 1,
+    "i_Area": 0,
+    "i_MonthGroupIndex": 0,
+    "i_RepeatMonth": 3,
+    "i_StartYear": 2021,
+    "i_TimeLimit": 1,
+    "i_id": 8,
+    "s_Type": "Pass"
+  },
+  {
+    "b_IsActive": 1,
+    "i_Area": 0,
+    "i_MonthGroupIndex": 0,
+    "i_RepeatMonth": 4,
+    "i_StartYear": 2021,
+    "i_TimeLimit": 1,
+    "i_id": 9,
+    "s_Type": "Pass"
+  },
+  {
+    "b_IsActive": 1,
+    "i_Area": 0,
+    "i_MonthGroupIndex": 0,
+    "i_RepeatMonth": 5,
+    "i_StartYear": 2021,
+    "i_TimeLimit": 1,
+    "i_id": 10,
+    "s_Type": "Pass"
+  },
+  {
+    "b_IsActive": 1,
+    "i_Area": 0,
+    "i_MonthGroupIndex": 0,
+    "i_RepeatMonth": 6,
+    "i_StartYear": 2021,
+    "i_TimeLimit": 1,
+    "i_id": 11,
+    "s_Type": "Pass"
+  },
+  {
+    "b_IsActive": 1,
+    "i_Area": 0,
+    "i_MonthGroupIndex": 0,
+    "i_RepeatMonth": 7,
+    "i_StartYear": 2021,
+    "i_TimeLimit": 1,
+    "i_id": 12,
+    "s_Type": "Pass"
+  },
+  {
+    "b_IsActive": 1,
+    "i_Area": 0,
+    "i_MonthGroupIndex": 1,
+    "i_RepeatMonth": 6,
+    "i_StartYear": 2021,
+    "i_TimeLimit": 1,
+    "i_id": 13,
+    "s_Type": "Pass"
+  }
+]
