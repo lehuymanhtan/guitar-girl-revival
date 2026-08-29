@@ -59,7 +59,17 @@ def setEventReward(request: HttpRequest):
             ).order_by('reward_num').first()
 
             if next_reward is None:
-                return _error(900, "All rewards already claimed")
+                if event.idx != 3:
+                    return _error(900, "All rewards already claimed")
+                
+                # Special case for event_idx=3 (DailyAttendance): reset rewards if all claimed
+                models.UserEventReward.objects.filter(
+                    player=player,
+                    event_reward__event=event
+                ).delete()
+                
+                next_reward = event.rewards.order_by('reward_num').first()
+                
 
             # 3. Apply reward server-side
             area1 = player.areas.filter(u_area_num=1).first()
