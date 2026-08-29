@@ -6,6 +6,8 @@ import thrift_gen.tapsonic.general.ttypes as common_type
 import thrift_gen.tapsonic.store_buyContents_en.ttypes as endpoint_types
 
 from gameapi import models
+from gamedata.models import GuitarData, SkillData, UnitData, CostumeData
+
 from .. import _helper as helper
 
 logger = logging.getLogger(__name__)
@@ -17,6 +19,7 @@ def buyContents(request: HttpRequest):
     # - unit
     # - guitar
     # - skill
+    # - costume
     raw_data = request.POST.get('tapsonic_data', None)
     if not raw_data:
         return HttpResponse("Bad Request", status=400)
@@ -38,13 +41,12 @@ def buyContents(request: HttpRequest):
         )
 
     try:
-        from gamedata.models import GuitarData, SkillData, UnitData
         with transaction.atomic():
             player = models.Player.objects.select_for_update().get(u_seq=req_obj.data.u_seq)
             type_val = req_obj.data.type
             idx = req_obj.data.idx
             
-            if type_val not in ['guitar', 'skill', 'unit']:
+            if type_val not in ['guitar', 'skill', 'unit', 'costume']:
                 return _error(900, "Unsupported Type")
                 
             cost = 0.0
@@ -113,8 +115,28 @@ def buyContents(request: HttpRequest):
                     i_id=user_item.i_id,
                     i_Level=user_item.i_Level
                 )
+                
+            elif type_val == 'costume':
+                try:
+                    data = CostumeData.objects.get(i_id=idx)
+                except CostumeData.DoesNotExist:
+                    return _error(900, "Item Not Found")
+                    
+                user_item, created = models.UserCostume.objects.get_or_create(
+                    player=player, i_id=idx, defaults={'i_Level': 1, 'i_BonusLevel': 0}
+                )
+                
+                currency = data.s_GoodsType
+                current_level = user_item.i_Level if not created else 0
+                base_cost = float(data.s_Cost) if data.s_Cost else 0.0
+                cost = base_cost + (current_level - 1) * float(data.f_CostIncreaseRate or 0)
+                
+                if not created:
+                    user_item.i_Level += 1
             
-            if currency == 'CP':
+            if currency in ['NotForSale', 'Package']:
+                return _error(900, "Item Not For Sale")
+            elif currency == 'CP':
                 if player.u_cp < cost:
                     return _error(900, "Not enough CP")
                 player.u_cp -= int(cost)
