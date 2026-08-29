@@ -1,4 +1,4 @@
-from datetime import datetime
+from datetime import datetime, timedelta
 from django.db import transaction
 from django.http import HttpRequest, HttpResponse
 
@@ -76,7 +76,7 @@ def setEventReward(request: HttpRequest):
             helper.apply_reward(player, area1, next_reward.reward_type, next_reward.reward_id, next_reward.reward_value)
 
             # 4. Mark as claimed
-            get_date = int(datetime.now().strftime("%Y%m%d"))
+            get_date = int((datetime.now() + timedelta(hours=2)).strftime("%Y%m%d")) # TODO: proper timezone handling
             models.UserEventReward.objects.create(
                 player=player,
                 event_reward=next_reward,
