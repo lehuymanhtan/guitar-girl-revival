@@ -26,6 +26,7 @@ from .views.user_setEventReward_en import setEventReward
 from .views.user_setUserFollowerProfileReward_en import setUserFollowerProfileReward
 from .views.eventMode_getSamSeckList_en import getSamSeckList
 from .views.eventMode_getSamSeckReward_en import getSamSeckReward
+from .views.user_getMusicReward_en import getMusicReward
 
 urlpatterns = [
     path('main/getGameDataList/en/', getGameDataList, name='getGameDataList'),
@@ -54,5 +55,6 @@ urlpatterns = [
     path('user/setUserFollowerProfileReward/en/', setUserFollowerProfileReward, name='setUserFollowerProfileReward'),
     path('eventMode/getSamSeckList/en/', getSamSeckList, name='getSamSeckList'),
     path('eventMode/getSamSeckReward/en/', getSamSeckReward, name='getSamSeckReward'),
+    path('user/getMusicReward/en/', getMusicReward, name='getMusicReward'),
 ]
 

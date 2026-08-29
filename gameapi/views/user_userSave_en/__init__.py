@@ -108,6 +108,15 @@ def userSave(request: HttpRequest):
                     "i_BonusLevel": follower.i_BonusLevel
                 },
             )
+            models.UserFollowerProfile.objects.get_or_create(
+                player=user,
+                i_id=follower.i_id,
+                defaults={
+                    "i_Level": 1,
+                    "d_Exp": 0,
+                    "i_AddCandy": 0
+                },
+            )
     
     # save user music info
     if musics := req.data.user_music:
